@@ -8,8 +8,25 @@ Project Name : Sephora Clone
 Member Name :
 
 1. Rashmi Gautam	fw19_0825
+
+
+
 2. Suman	fw19_0613
+
+
+
+
 3. Swapnil Vhantale	fw19_0173
+
+
+
 4. Yash Raj	fw19_1019
+    SalesPage  Header Footer Navbar
+
+
 5. Pavan Bajait	fw19_0258
+
+
+
 6. Gaurav Kumar	fw19_1198
+

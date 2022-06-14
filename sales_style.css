@@ -1,0 +1,103 @@
+svg {
+  border: 1px solid red;
+  width: 25px;
+  margin: 10px;
+}
+.navtop {
+  border: 3px solid teal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f3f3;
+}
+img {
+  border: 1px solid red;
+  width: 28%;
+  border-right: 3px solid grey;
+  padding-right: 20px;
+}
+.navtop > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navtop > div:first-child {
+  width: 30%;
+  border: 3px solid black;
+}
+.navtop > div:first-child > p {
+  display: flex;
+
+  margin: 10px;
+}
+.navtop > div:nth-child(2) {
+  border: 3px solid green;
+}
+p {
+  font-size: 18px;
+  margin: 10px;
+}
+h1 {
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 55px;
+  font-weight: 500;
+}
+.navbw,
+#stick {
+  border: 4px solid gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.navbw > p {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: "Avenir-NextBold";
+}
+#sticky {
+  visibility: hidden;
+  background-color: red;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  /* transition: transform 1s ease-out, visibility 10s; */
+}
+#sticky > div {
+  display: flex;
+}
+#sticky > div:first-child {
+  margin-left: 20px;
+  letter-spacing: 5px;
+}
+#sticky > div:last-child {
+  margin-right: 20px;
+}
+#sales_page > div:first-child > img {
+  width: 100%;
+}
+#sales_page > div {
+  margin-top: 20px;
+  cursor: pointer;
+}
+#sales_page > div:nth-child(2) > img {
+  width: 100%;
+}
+#sales_page > #beauty-offers {
+  display: grid;
+  width: 95%;
+  border: 3px solid teal;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  margin: auto;
+}
+#sales_page > #beauty-offers > div {
+  border-top: 1px solid gray;
+}
+#sales_page > #beauty-offers > div > img {
+  width: 100%;
+}
