@@ -1,19 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 svg {
-  border: 1px solid red;
   width: 25px;
   margin: 10px;
 }
 .navtop {
-  border: 3px solid teal;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f3f3f3;
 }
 img {
-  border: 1px solid red;
   width: 28%;
-  border-right: 3px solid grey;
   padding-right: 20px;
 }
 .navtop > div {
@@ -23,18 +24,27 @@ img {
 }
 .navtop > div:first-child {
   width: 30%;
-  border: 3px solid black;
 }
 .navtop > div:first-child > p {
   display: flex;
-
   margin: 10px;
 }
-.navtop > div:nth-child(2) {
-  border: 3px solid green;
+
+.navtop > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navtop > div:last-child > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid gray;
+}
+.navtop > div:last-child > p:first-child {
+  border: none;
 }
 span {
-  border: 1px solid teal;
   margin: 0 1px;
   color: #ff42a0;
 }
@@ -74,7 +84,6 @@ p {
   font-weight: 500;
 }
 .navmid > div:last-child {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,10 +91,19 @@ p {
 }
 .navmid > div:last-child > div {
   margin: 10px;
+  padding-right: 4px;
+  border-right: 2px solid gray;
 }
-
+.navmid > div:last-child > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
 .navbw {
-  border: 4px solid gray;
+  border-bottom: 1px solid gray;
+  width: 98%;
+  margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -98,7 +116,7 @@ p {
 }
 #sticky {
   visibility: hidden;
-  background-color: red;
+  background-color: white;
   position: sticky;
   top: 0;
   width: 100%;
@@ -111,6 +129,8 @@ p {
 }
 #sticky > div {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #sticky > div:first-child {
   margin-left: 20px;
@@ -118,6 +138,11 @@ p {
 }
 #sticky > div:last-child {
   margin-right: 20px;
+}
+#sticky > div:last-child > p {
+  border-left: 1px solid gray;
+  margin-left: 20px;
+  padding-left: 10px;
 }
 #sales_page > div:first-child > img {
   width: 100%;
@@ -132,15 +157,17 @@ p {
 #sales_page > #beauty-offers {
   display: grid;
   width: 95%;
-  border: 3px solid teal;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
   margin: auto;
 }
-#sales_page > #beauty-offers > div {
-  border-top: 1px solid gray;
+#sales_page > h1 {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
 }
+
 #sales_page > #beauty-offers > div > img {
   width: 100%;
 }
@@ -175,5 +202,123 @@ p {
   background-color: rgb(210, 205, 205);
   padding: 7px;
   margin: 5px;
+  border: none;
+}
+
+#footer {
+  margin-top: 50px;
+}
+#footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer > div > button {
+  background-color: #abc72c;
+  padding: 10px 15px;
+  border: none;
+}
+#footer > #news {
+  padding: 60px 10px 20px 10px;
+  background-color: #f2f2f2;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+#footer > #footermiddle {
+  display: flex;
+  flex-direction: column;
+}
+#footer > #news > div:nth-child(2) {
+  width: 58%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer > #news > div:nth-child(2) > input {
+  border: none;
+  width: 76%;
+  border: none;
+  padding: 5px 10px;
+}
+#footer > #news > div:nth-child(2) > button {
+  padding: 5px 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+#footer > div > div > p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: gray;
+}
+#footer > div > div > h4 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #656565;
+}
+#footer > div:nth-child(4) {
+  display: flex;
+  margin-top: 20px;
+  letter-spacing: 5px;
+}
+#footer > div:nth-child(4) > h4 {
+  font-size: 14px;
+  margin: 30px;
+  font-weight: 900;
+}
+#footer > div:nth-child(4) > h4:hover {
+  color: #ff42a0;
+}
+#footer > div:nth-child(5) {
+  width: 100%;
+  height: 50px;
+}
+#footer > div:nth-child(5) > i {
+  margin: 20px;
+}
+#footer > div:nth-child(5) > i:hover {
+  color: #ff42a0;
+}
+#footer > div:nth-child(6) > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  border-right: 1px solid #656565;
+  padding-right: 1%;
+}
+#footer > div:nth-child(n + 7) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#footer > div:nth-child(n + 7) > div:first-child > h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+#footer > div:nth-child(n + 7) > div:last-child {
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#footer > div:nth-child(n + 7) > div:last-child > p {
+  border-right: 1px solid #292929;
+  padding-right: 1%;
+  margin-top: 5px;
+  font-size: 12px;
+}
+#footer > div:nth-child(n + 7) > div:last-child > p:hover {
+  color: #ff42a0;
+}
+#footer > div:nth-child(n + 7) > div:last-child > p:last-child {
   border: none;
 }
