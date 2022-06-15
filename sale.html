@@ -35,7 +35,9 @@
         <p>Loyalty</p>
       </div>
     </div>
-    <h1>SEPHORA</h1>
+    <div>
+      <h1>SEPHORA</h1>
+    </div>
     <div class="navbw">
       <p>SALE</p>
       <p>MAKEUP</p>
@@ -64,12 +66,20 @@
     </div>
 
     <div id="sales_page">
-      <div>
+      <div id="cruser1">
         <!-- FIRST SLIDER  -->
         <img
           src="https://logan.nnnow.com/content/dam/nnnow-project/10-june-2022/se-/Lancome_TopBanner_Get10offdesktop.jpg"
           alt=""
         />
+        <button id="b1"><</button>
+        <button id="b2">></button>
+        <div class="crouser_button">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
       </div>
 
       <div>
@@ -79,6 +89,7 @@
           alt=""
         />
       </div>
+
       <h1>Our Top Beauty Offers</h1>
       <div id="beauty-offers">
         <div>
@@ -202,4 +213,56 @@
       );
     }
   }
+
+  let slider1 = document.querySelector("#cruser1");
+  slider1.addEventListener("mouseenter", function () {
+    document.querySelector("#b1").style.display = "block";
+    document.querySelector("#b2").style.display = "block";
+  });
+  slider1.addEventListener("mouseleave", function () {
+    document.querySelector("#b1").style.display = "none";
+    document.querySelector("#b2").style.display = "none";
+  });
+
+  let img_cruser1 = [
+    "https://logan.nnnow.com/content/dam/nnnow-project/09-may-2022/se/SC_TopBanner_RoseGoldDetanglingBrushfreedesktop.jpg",
+    "https://logan.nnnow.com/content/dam/nnnow-project/10-june-2022/se-/Lancome_TopBanner_Get10offdesktop.jpg",
+    "https://logan.nnnow.com/content/dam/nnnow-project/11-april-2022/SC_Offerpage_DoublesidedcleansingbrushDesktop.jpg",
+    "https://logan.nnnow.com/content/dam/nnnow-project/10-june-2022/ABH_Offerpage_Primrosepalettedesktop.jpg",
+  ];
+  let bts = document.querySelectorAll(".crouser_button>button");
+  let num = 0;
+  let img = document.querySelector("#cruser1 > img");
+  document.querySelector("#b1").addEventListener("click", function () {
+    if (num == 0) document.querySelector("#b1").disabled = true;
+    else img.src = img_cruser1[--num];
+    if (num == 0) document.querySelector("#b1").disabled = true;
+    document.querySelector("#b2").disabled = false;
+    bts.forEach(function (el) {
+      el.style.backgroundColor = " rgb(210, 205, 205)";
+    });
+    bts[num].style.background = "red";
+  });
+  document.querySelector("#b2").addEventListener("click", function () {
+    img.src = img_cruser1[++num];
+    if (num == img_cruser1.length - 1)
+      document.querySelector("#b2").disabled = true;
+
+    document.querySelector("#b1").disabled = false;
+
+    bts.forEach(function (el) {
+      el.style.backgroundColor = " rgb(210, 205, 205)";
+    });
+    bts[num].style.background = "red";
+  });
+  bts.forEach(function (el, index) {
+    el.addEventListener("click", function () {
+      num = index;
+      img.src = img_cruser1[num];
+      bts.forEach(function (el) {
+        el.style.backgroundColor = " rgb(210, 205, 205)";
+      });
+      bts[num].style.background = "red";
+    });
+  });
 </script>
