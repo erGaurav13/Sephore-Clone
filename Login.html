@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+        }
+        #container{
+            width:350px;
+            border: 1px solid white;
+            border-radius: 15px;
+            margin:auto;
+            margin-top: 40px;
+            padding:0px 15px 0px 15px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+        }
+        #form1{
+            width:94%;
+            margin:auto; 
+            margin-bottom:30px;        
+        }
+        input{
+            width: 100%;
+            margin:8px;
+            margin-left: 0px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: medium;
+            border:1px solid grey;
+            border-radius: 5px;
+        }
+        label > div{
+            display:flex;
+            justify-content: space-between;
+            margin-bottom: -20px;
+        }
+        p{
+            color:grey;
+            font-size: 16px;
+            text-align: center;
+            margin-top: -10px;
+        }
+        #signin{
+            padding:12px;
+            width: 100%;
+            font-size: medium;
+            color:white;
+            font-weight: bold;
+            border:1px solid white;
+            border-radius: 5px;
+            background-color: #ff3399;
+        }
+        label {
+            font-size: medium;
+        }
+        span {
+            color:blue;
+            text-align: left;
+        } 
+        button {
+            width: 100%;
+            height:40px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            background-color: #4285f4;
+            font-weight: bold;
+            font-size: medium;
+            border: 1px solid white ;
+        }
+        button > img {
+            height: 60%;
+        }
+        button > div {
+            margin: auto;
+            color: white;
+        }
+        button + button {
+            background-color: #3b5998;
+            margin-top: 10px;
+        }
+        button + p {
+            margin-top: 30px;
+        }
+        #privacy{
+            color: #ff3399;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>LOGIN</h1>
+        <form id="form1">
+            <label for="">Email</label><br>
+            <input id="ipMail" type="email" placeholder="Enter email"><br>
+            <label for="">Password</label><br>
+            <input id="ipPassword" type="password" placeholder="Enter password">
+            <input type="submit" id="signin" value="SIGN IN">
+            <p>Or</p>
+            <button type="button" tabindex="0"><img src="https://static.nnnow.com/google-social-login.svg" alt="google sign-in"><div>Continue with Google</div></button>
+            <button><img src="https://static.nnnow.com/facebook.png" alt="facebook sign-in"><div>Continue with Facebook</div></button> 
+            <p >Don't have an account? <span><a href="SignUp.html">Sign Up</a> </span></p>
+            <p>By proceeding, you agree to <span ><a href="privacy.html" id="privacy">Privacy Policy, Terms & Conditions</a> </span></p>
+      </form>
+    </div>
+   
+</body>
+</html>
+
+<script>
+    let arrFrmLS=JSON.parse(localStorage.getItem("userData"));
+     
+    document.querySelector("#form1").addEventListener("submit", mySignIn);
+
+    function mySignIn(event){
+        event.preventDefault();   
+
+        checkEmailPwd(arrFrmLS);
+        
+    }
+    function checkEmailPwd(arrFrmLS){
+                       
+            arrFrmLS.forEach(function (el) {
+                let iUserEmail= document.querySelector("#ipMail").value;
+                let iUserPwd= document.querySelector("#ipPassword").value;
+                
+                 if(el.userEmail==iUserEmail && el.userPwd==iUserPwd){
+                    alert("Login Sucessful!");
+                    window.location.href="haircare.html";
+                 }else if(el.userEmail==iUserEmail || el.userPwd==iUserPwd){
+                    alert("Entered Email or Password are wrong!");
+                    console.log("x");
+                 }else{
+                    alert("Entered Credentials are wrong, Please Create Account!");
+                 }
+            });
+        }
+
+        
+</script>
