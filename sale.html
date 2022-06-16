@@ -91,9 +91,9 @@
         <p>TOOLS & BRUSHES</p>
         <p>BRANDS</p>
       </div>
-      <div>
+      <div >
         <span class="material-symbols-outlined"> shopping_bag </span>
-        <p onclick="login()">Login</p>
+        <p onclick="login()" >Login</p>
         <span class="material-symbols-outlined"> person </span>
       </div>
     </div>
@@ -409,6 +409,9 @@
 
     <div id="container_login">
       <div id="login_main">
+           <div id="cross" onclick="closeLogin()">
+            <img id="crossSymb" src="https://thumbs.dreamstime.com/b/red-cross-symbol-icon-as-delete-remove-fail-failure-incorr-incorrect-answer-89999776.jpg">
+           </div>
         <h1>LOGIN</h1>
         <form id="form1">
           <label for="">Email</label><br />
@@ -485,6 +488,11 @@
     console.log(document.getElementById("container_login"));
     document.getElementById("container_login").style.display = "block";
     document.querySelector("body").disabled = true;
+  }
+</script>
+<script>
+  function closeLogin(){
+    document.getElementById("container_login").style.display = "none";
   }
 </script>
 
