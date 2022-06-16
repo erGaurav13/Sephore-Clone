@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    /* #containertop1{
+      margin-left: 950px;
+    } */
+    #container,
+    #container1,
+    #container2,
+    #container3 {
+      display: flex;
+      width: auto;
+      margin-left: 100px;
+      justify-content: right;
+
+      border: 1px solid green;
+    }
+    #container div,
+    #container1 div,
+    #container2 div,
+    #container3 div {
+      border: 1px solid blue;
+      position: relative;
+    }
+    #container > div h3,
+    p,
+    #container1 > div h3,
+    p,
+    #container2 > div h3,
+    p,
+    #container3 > div h3,
+    p {
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    .child img,
+    .child1 img,
+    .child2 img,
+    .child3 img {
+      width: 139.55px;
+      height: 364.98;
+    }
+    .child,
+    .child1,
+    .child2,
+    .child3 {
+      display: none;
+    }
+    #containertop {
+      display: flex;
+      flex-direction: row;
+      border: 1px solid red;
+      width: 58%;
+      justify-content: flex-end;
+      margin: auto;
+    }
+    #containertop1 {
+      /* margin-top: 400px; */
+
+      display: flex;
+      flex-direction: row;
+      border: 1px solid olive;
+      width: 58%;
+      justify-content: flex-end;
+      margin: auto;
+      margin-top: 100px;
+    }
+    #containertop2 {
+      /* margin-top: 400px; */
+
+      display: flex;
+      flex-direction: row;
+      border: 1px solid olive;
+      width: 58%;
+      justify-content: flex-end;
+      margin: auto;
+      margin-top: 100px;
+    }
+    #containertop3 {
+      /* margin-top: 400px; */
+
+      display: flex;
+      flex-direction: row;
+      border: 1px solid olive;
+      width: 58%;
+      justify-content: flex-end;
+      margin: auto;
+      margin-top: 100px;
+    }
+    #btnright,
+    #btnright1,
+    #btnright2,
+    #btnright3 {
+      width: 60px;
+      height: 30px;
+      border-radius: 50%;
+      padding: 10px;
+      margin-top: 110px;
+      background-color: transparent;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    #btnleft,
+    #btnleft1,
+    #btnleft2,
+    #btnleft3 {
+      width: 60px;
+      height: 30px;
+      border-radius: 50%;
+      padding: 10px;
+      margin-top: 110px;
+      background-color: transparent;
+      font-weight: 900;
+      margin-right: -100px;
+      cursor: pointer;
+    }
+    .card-btn,
+    .card-btn1,
+    .card-btn2,
+    .card-btn3 {
+      position: absolute;
+      bottom: 0px;
+      height: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
+      width: 100%;
+      text-transform: capitalize;
+      border: none;
+      outline: none;
+      background: #069bcf;
+      /* border-radius: 20px 20px 0px 0px; */
+      transition: 0.5s;
+      /* cursor: pointer; */
+      opacity: 0;
+      /*  */
+      display: flex;
+
+      /* border: 10px solid saddlebrown; */
+    }
+    .card-btn:hover,
+    .card-btn1:hover,
+    .card-btn2:hover,
+    .card-btn3:hover {
+      background: #21dfcf;
+      color: #21dfcf;
+    }
+    #container > div:hover .card-btn,
+    #container1 > div:hover .card-btn1,
+    #container1 > div:hover .card-btn1,
+    #container1 > div:hover .card-btn1 {
+      opacity: 1;
+    }
+    #cartcollection button,
+    #cartcollection1 button,
+    #cartcollection2 button,
+    #cartcollection3 button {
+      /* border: 1px solid rgb(255, 47, 220); */
+      display: grid;
+      /* justify-content: center;
+      align-items: center; */
+      flex-direction: row;
+    }
+
+    #cartcollection,
+    #cartcollection1,
+    #cartcollection2,
+    #cartcollection3 {
+      width: 40%;
+      height: 40%;
+      display: inline-block;
+      margin-right: 10px;
+      border-radius: 20px;
+      border: none;
+    }
+    #bagcollection,
+    #bagcollection1,
+    #bagcollection2,
+    #bagcollection3 {
+      width: 40%;
+      height: 40%;
+      display: inline-block;
+      border-radius: 20px;
+      border: none;
+    }
+    #cartcollection img,
+    #cartcollection1 img,
+    #cartcollection1 img,
+    #cartcollection1 img {
+      /* border: 1px solid red; */
+      width: 100%;
+      /* background-color: aqua; */
+      height: 100%;
+      background: #21dfcf;
+      color: #21dfcf;
+    }
+    #bagcollection img,
+    #bagcollection1 img,
+    #bagcollection img,
+    #bagcollection3 img {
+      /* border: 1px solid red; */
+      width: 100%;
+      /* background-color: aqua; */
+      height: 100%;
+      display: block;
+      /* position: absolute;
+        top: 10px; */
+      background: #21dfcf;
+      color: #21dfcf;
+    }
+  </style>
+  <body onload="onshow()">
+    <div id="containertop">
+      <button onclick="moveleft()" id="btnleft"><</button>
+      <div id="container"></div>
+      <button onclick="moveright()" id="btnright">></button>
+    </div>
+    <div id="containertop1">
+      <button onclick="moveleft1()" id="btnleft1"><</button>
+      <div id="container1"></div>
+      <button onclick="moveright1()" id="btnright1">></button>
+    </div>
+    <div id="containertop2">
+      <button onclick="moveleft2()" id="btnleft2"><</button>
+      <div id="container2"></div>
+      <button onclick="moveright2()" id="btnright2">></button>
+    </div>
+    <div id="containertop3">
+      <button onclick="moveleft3()" id="btnleft3"><</button>
+      <div id="container3"></div>
+      <button onclick="moveright3()" id="btnright3">></button>
+    </div>
+  </body>
+</html>
+<script>
+  // changr array name to mens data
+  var mensData = [
+    {
+      image_url:
+        "https://cdn16.nnnow.com/web-images/medium/styles/8CNXO3WNP02/1533194318316/1.jpg",
+      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+      price: "1170",
+      strikedoffprice: "$2599",
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/7V2LWZ4JE2N/1533194318313/1.jpg",
+      name: "Face Konjac Radiance Sponge ",
+      price: 699,
+      pop: 1,
+    },
+    {
+      image_url:
+        "https://cdn05.nnnow.com/web-images/medium/styles/UPN1DIYDEOO/1539585373094/1.jpg",
+      name: " Silicone Makup Sponge",
+      price: 945,
+      strikedoffprice: 2099,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn17.nnnow.com/web-images/medium/styles/DQ4XG8LX9KO/1533194318318/1.jpg",
+      name: "Advance of Brush Set",
+      price: 399,
+      strikedoffprice: 799,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://cdn10.nnnow.com/web-images/medium/styles/E3ATWR0QI78/1533194318319/1.jpg",
+      name: "Sold Brush Cleaner ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV7329/reebok_FV7329_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING ASTRO BOOSTER SHOES ",
+      price: 1440,
+      strikedoffprice: 3199,
+      brand: "Retrac ble lip",
+    },
+    {
+      image_url:
+        "https://cdn19.nnnow.com/web-images/medium/styles/X8JIWKM2HL1/1517466587226/1.jpg ",
+      name: " Instant Brush Cleaner  ",
+      price: 1999,
+      strikedoffprice: 3199,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/DTFXF1QNQOF/1525433681244/1.jpg",
+      name: "Counter Shadow Brush  ",
+      price: 769,
+      strikedoffprice: 1099,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GP7180/reebok_GP7180_1.jpg.plp",
+      name: " Cheek Brush  ",
+      price: 1299,
+      strikedoffprice: 1440,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3924/reebok_EX3924_1.jpg.plp ",
+      name: "MEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
+      price: 699,
+      strikedoffprice: 999,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0343/reebok_FW0343_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING RUN SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV9519/MEN_SWIM_SLIPPERS_FV9519_1.jpg.plp ",
+      name: "MEN'S REEBOK SWIM RUSSLE FLIP SLIPPERS  ",
+      price: 599,
+      strikedoffprice: 999,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+      brand: "women",
+    },
+  ];
+
+  display();
+
+  function display() {
+    let count = 0;
+    mensData.forEach(function (elm) {
+      let div = document.createElement("div");
+      div.setAttribute("class", "child");
+      count++;
+      div.setAttribute("id", "c" + count);
+
+      let img = document.createElement("img");
+      img.setAttribute("src", elm.image_url);
+      let btn = document.createElement("button");
+
+      btn.setAttribute("type", "submit");
+
+      btn.setAttribute("class", "card-btn");
+
+      btn.style.color = "yellow";
+
+      let cartbtn = document.createElement("button");
+      cartbtn.addEventListener("click", function () {
+        addtocart(elm);
+      });
+      cartbtn.setAttribute("type", "submit");
+      cartbtn.setAttribute("id", "cartcollection");
+      cartbtn.innerText = "Add to Wishlist";
+      cartbtn.style.color = "white";
+      cartbtn.style.backgroundColor = "#21DFCF";
+      cartbtn.style.cursor = "pointer";
+      let img1 = document.createElement("img");
+      img1.setAttribute("src", "https://img.icons8.com/ios/344/like--v1.png");
+      cartbtn.append(img1);
+
+      let bagbtn = document.createElement("button");
+      bagbtn.addEventListener("click", function () {
+        addtobag(elm);
+      });
+      bagbtn.setAttribute("type", "submit");
+      bagbtn.setAttribute("id", "bagcollection");
+      bagbtn.innerText = "Add to Cart";
+      bagbtn.style.color = "white";
+      bagbtn.style.backgroundColor = "#21DFCF";
+      bagbtn.style.cursor = "pointer";
+      let img2 = document.createElement("img");
+      img2.setAttribute(
+        "src",
+        "https://cdn-icons.flaticon.com/png/512/2662/premium/2662503.png?token=exp=1655185488~hmac=811f605fe8ac7e398397fce2f66a401d"
+      );
+      bagbtn.append(img2);
+
+      btn.append(cartbtn, bagbtn);
+
+      let h3 = document.createElement("h3");
+      h3.innerText = "SEPHORA COLLECTION";
+      let p = document.createElement("p");
+      p.innerText = elm.name;
+      let pr = document.createElement("p");
+      pr.innerText = "Rs-" + elm.price;
+
+      div.append(img, btn, h3, p, pr);
+
+      let box = document.querySelector("#container");
+
+      box.append(div);
+    });
+  }
+  var left = 1;
+  var right = 5;
+  function onshow() {
+    for (let i = left; i <= right; i++) {
+      document.getElementById("c" + i).style.display = "inline-block";
+      onshow1();
+      onshow2();
+      onshow3();
+      // ------------onshow1
+    }
+  }
+  function moveright() {
+    if (left <= 3 && right <= 7) {
+      document.getElementById("c" + left).style.display = "none";
+      left += 1;
+      right += 1;
+      for (let i = left; i <= right; i++) {
+        document.getElementById("c" + i).style.display = "inline-block";
+      }
+    } else {
+      return;
+    }
+  }
+
+  function moveleft() {
+    if (left >= 2 && right >= 6) {
+      document.getElementById("c" + right).style.display = "none";
+      left -= 1;
+      right -= 1;
+      for (let i = left; i <= right; i++) {
+        document.getElementById("c" + i).style.display = "inline-block";
+      }
+    } else {
+      return;
+    }
+  }
+
+  //   function for add to cart
+  // function addtocart(elm){
+  // console.log(elm)
+  // }
+
+  // // function add to favorites bagbtn
+  // function addtobag(elm){
+  //     console.log(elm)
+  // }
+
+  // aaaaayhgboyibgoiyb
+  var menData = [
+    {
+      image_url:
+        "https://cdn16.nnnow.com/web-images/medium/styles/8CNXO3WNP02/1533194318316/1.jpg",
+      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+      price: "1170",
+      strikedoffprice: "$2599",
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/7V2LWZ4JE2N/1533194318313/1.jpg",
+      name: "Face Konjac Radiance Sponge ",
+      price: 699,
+      pop: 1,
+    },
+    {
+      image_url:
+        "https://cdn05.nnnow.com/web-images/medium/styles/UPN1DIYDEOO/1539585373094/1.jpg",
+      name: " Silicone Makup Sponge",
+      price: 945,
+      strikedoffprice: 2099,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn17.nnnow.com/web-images/medium/styles/DQ4XG8LX9KO/1533194318318/1.jpg",
+      name: "Advance of Brush Set",
+      price: 399,
+      strikedoffprice: 799,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://cdn10.nnnow.com/web-images/medium/styles/E3ATWR0QI78/1533194318319/1.jpg",
+      name: "Sold Brush Cleaner ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV7329/reebok_FV7329_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING ASTRO BOOSTER SHOES ",
+      price: 1440,
+      strikedoffprice: 3199,
+      brand: "Retrac ble lip",
+    },
+    {
+      image_url:
+        "https://cdn19.nnnow.com/web-images/medium/styles/X8JIWKM2HL1/1517466587226/1.jpg ",
+      name: " Instant Brush Cleaner  ",
+      price: 1999,
+      strikedoffprice: 3199,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/DTFXF1QNQOF/1525433681244/1.jpg",
+      name: "Counter Shadow Brush  ",
+      price: 769,
+      strikedoffprice: 1099,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GP7180/reebok_GP7180_1.jpg.plp",
+      name: " Cheek Brush  ",
+      price: 1299,
+      strikedoffprice: 1440,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3924/reebok_EX3924_1.jpg.plp ",
+      name: "MEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
+      price: 699,
+      strikedoffprice: 999,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0343/reebok_FW0343_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING RUN SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV9519/MEN_SWIM_SLIPPERS_FV9519_1.jpg.plp ",
+      name: "MEN'S REEBOK SWIM RUSSLE FLIP SLIPPERS  ",
+      price: 599,
+      strikedoffprice: 999,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+      brand: "women",
+    },
+  ];
+  display1();
+
+  function display1() {
+    let count1 = 0;
+    // ------count1
+    console.log(menData);
+    menData.forEach(function (elm) {
+      let div = document.createElement("div");
+      div.setAttribute("class", "child1");
+      count1++;
+      // count1++;
+      div.setAttribute("id", "d" + count1);
+
+      let img = document.createElement("img");
+      img.setAttribute("src", elm.image_url);
+      let btn = document.createElement("button");
+
+      btn.setAttribute("type", "submit");
+
+      btn.setAttribute("class", "card-btn1");
+
+      btn.style.color = "yellow";
+
+      let cartbtn = document.createElement("button");
+      cartbtn.addEventListener("click", function () {
+        addtocart(elm);
+      });
+      cartbtn.setAttribute("type", "submit");
+      cartbtn.setAttribute("id", "cartcollection1");
+      cartbtn.innerText = "Add to Wishlist";
+      cartbtn.style.color = "white";
+      cartbtn.style.backgroundColor = "#21DFCF";
+      cartbtn.style.cursor = "pointer";
+      let img1 = document.createElement("img");
+      img1.setAttribute("src", "https://img.icons8.com/ios/344/like--v1.png");
+      cartbtn.append(img1);
+
+      let bagbtn = document.createElement("button");
+      bagbtn.addEventListener("click", function () {
+        // addtobag(elm)
+      });
+      bagbtn.setAttribute("type", "submit");
+      bagbtn.setAttribute("id", "bagcollection1");
+      bagbtn.innerText = "Add to Cart";
+      bagbtn.style.color = "white";
+      bagbtn.style.backgroundColor = "#21DFCF";
+      bagbtn.style.cursor = "pointer";
+      let img2 = document.createElement("img");
+      img2.setAttribute(
+        "src",
+        "https://cdn-icons.flaticon.com/png/512/2662/premium/2662503.png?token=exp=1655185488~hmac=811f605fe8ac7e398397fce2f66a401d"
+      );
+      bagbtn.append(img2);
+
+      btn.append(cartbtn, bagbtn);
+
+      let h3 = document.createElement("h3");
+      h3.innerText = "SEPHORA COLLECTION";
+      let p = document.createElement("p");
+      p.innerText = elm.name;
+      let pr = document.createElement("p");
+      pr.innerText = "Rs-" + elm.price;
+
+      div.append(img, btn, h3, p, pr);
+
+      let box = document.querySelector("#container1");
+
+      box.append(div);
+    });
+  }
+  var left1 = 1;
+  var right1 = 5;
+  function onshow1() {
+    for (let i = left1; i <= right1; i++) {
+      document.getElementById("d" + i).style.display = "inline-block";
+      // ---------------------use=d
+    }
+  }
+  function moveright1() {
+    if (left1 <= 3 && right1 <= 7) {
+      document.getElementById("d" + left1).style.display = "none";
+      left1 += 1;
+      right1 += 1;
+      for (let i = left1; i <= right1; i++) {
+        document.getElementById("d" + i).style.display = "inline-block";
+      }
+    } else {
+      return;
+    }
+  }
+
+  function moveleft1() {
+    if (left1 >= 2 && right1 >= 6) {
+      document.getElementById("d" + right1).style.display = "none";
+      left1 -= 1;
+      right1 -= 1;
+      for (let i = left1; i <= right1; i++) {
+        document.getElementById("d" + i).style.display = "inline-block";
+      }
+    } else {
+      return;
+    }
+  }
+  // 2222222222222222222222222222222222222
+  var mensData2 = [
+    {
+      image_url:
+        "https://cdn16.nnnow.com/web-images/medium/styles/8CNXO3WNP02/1533194318316/1.jpg",
+      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+      price: "1170",
+      strikedoffprice: "$2599",
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/7V2LWZ4JE2N/1533194318313/1.jpg",
+      name: "Face Konjac Radiance Sponge ",
+      price: 699,
+      pop: 1,
+    },
+    {
+      image_url:
+        "https://cdn05.nnnow.com/web-images/medium/styles/UPN1DIYDEOO/1539585373094/1.jpg",
+      name: " Silicone Makup Sponge",
+      price: 945,
+      strikedoffprice: 2099,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn17.nnnow.com/web-images/medium/styles/DQ4XG8LX9KO/1533194318318/1.jpg",
+      name: "Advance of Brush Set",
+      price: 399,
+      strikedoffprice: 799,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://cdn10.nnnow.com/web-images/medium/styles/E3ATWR0QI78/1533194318319/1.jpg",
+      name: "Sold Brush Cleaner ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV7329/reebok_FV7329_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING ASTRO BOOSTER SHOES ",
+      price: 1440,
+      strikedoffprice: 3199,
+      brand: "Retrac ble lip",
+    },
+    {
+      image_url:
+        "https://cdn19.nnnow.com/web-images/medium/styles/X8JIWKM2HL1/1517466587226/1.jpg ",
+      name: " Instant Brush Cleaner  ",
+      price: 1999,
+      strikedoffprice: 3199,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/DTFXF1QNQOF/1525433681244/1.jpg",
+      name: "Counter Shadow Brush  ",
+      price: 769,
+      strikedoffprice: 1099,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GP7180/reebok_GP7180_1.jpg.plp",
+      name: " Cheek Brush  ",
+      price: 1299,
+      strikedoffprice: 1440,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3924/reebok_EX3924_1.jpg.plp ",
+      name: "MEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
+      price: 699,
+      strikedoffprice: 999,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0343/reebok_FW0343_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING RUN SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV9519/MEN_SWIM_SLIPPERS_FV9519_1.jpg.plp ",
+      name: "MEN'S REEBOK SWIM RUSSLE FLIP SLIPPERS  ",
+      price: 599,
+      strikedoffprice: 999,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+      brand: "women",
+    },
+  ];
+
+  display2();
+
+function display2() {
+  let count2 = 0;
+  // ------count1
+  console.log(menData);
+  mensData2.forEach(function (elm) {
+    let div = document.createElement("div");
+    div.setAttribute("class", "child2");
+    count2++;
+    // count1++;
+    div.setAttribute("id", "e" + count2);
+
+    let img = document.createElement("img");
+    img.setAttribute("src", elm.image_url);
+    let btn = document.createElement("button");
+
+    btn.setAttribute("type", "submit");
+
+    btn.setAttribute("class", "card-btn2");
+
+    btn.style.color = "yellow";
+
+    let cartbtn = document.createElement("button");
+    cartbtn.addEventListener("click", function () {
+      addtocart(elm);
+    });
+    cartbtn.setAttribute("type", "submit");
+    cartbtn.setAttribute("id", "cartcollection2");
+    cartbtn.innerText = "Add to Wishlist";
+    cartbtn.style.color = "white";
+    cartbtn.style.backgroundColor = "#21DFCF";
+    cartbtn.style.cursor = "pointer";
+    let img1 = document.createElement("img");
+    img1.setAttribute("src", "https://img.icons8.com/ios/344/like--v1.png");
+    cartbtn.append(img1);
+
+    let bagbtn = document.createElement("button");
+    bagbtn.addEventListener("click", function () {
+      // addtobag(elm)
+    });
+    bagbtn.setAttribute("type", "submit");
+    bagbtn.setAttribute("id", "bagcollection2");
+    bagbtn.innerText = "Add to Cart";
+    bagbtn.style.color = "white";
+    bagbtn.style.backgroundColor = "#21DFCF";
+    bagbtn.style.cursor = "pointer";
+    let img2 = document.createElement("img");
+    img2.setAttribute(
+      "src",
+      "https://cdn-icons.flaticon.com/png/512/2662/premium/2662503.png?token=exp=1655185488~hmac=811f605fe8ac7e398397fce2f66a401d"
+    );
+    bagbtn.append(img2);
+
+    btn.append(cartbtn, bagbtn);
+
+    let h3 = document.createElement("h3");
+    h3.innerText = "SEPHORA COLLECTION";
+    let p = document.createElement("p");
+    p.innerText = elm.name;
+    let pr = document.createElement("p");
+    pr.innerText = "Rs-" + elm.price;
+
+    div.append(img, btn, h3, p, pr);
+
+    let box = document.querySelector("#container2");
+
+    box.append(div);
+  });
+}
+var left2 = 1;
+var right2 = 5;
+function onshow2() {
+  for (let i = left2; i <= right2; i++) {
+    document.getElementById("e" + i).style.display = "inline-block";
+    // ---------------------use=d
+  }
+}
+function moveright2() {
+  if (left2 <= 3 && right2 <= 7) {
+    document.getElementById("e" + left2).style.display = "none";
+    left2 += 1;
+    right2 += 1;
+    for (let i = left2; i <= right2; i++) {
+      document.getElementById("e" + i).style.display = "inline-block";
+    }
+  } else {
+    return;
+  }
+}
+
+function moveleft2() {
+  if (left2 >= 2 && right2 >= 6) {
+    document.getElementById("e" + right2).style.display = "none";
+    left2 -= 1;
+    right2 -= 1;
+    for (let i = left2; i <= right2; i++) {
+      document.getElementById("e" + i).style.display = "inline-block";
+    }
+  } else {
+    return;
+  }
+}
+// 3333333333333333333333333333333333333333333333
+var mensData3 = [
+    {
+      image_url:
+        "https://cdn16.nnnow.com/web-images/medium/styles/8CNXO3WNP02/1533194318316/1.jpg",
+      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+      price: "1170",
+      strikedoffprice: "$2599",
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/7V2LWZ4JE2N/1533194318313/1.jpg",
+      name: "Face Konjac Radiance Sponge ",
+      price: 699,
+      pop: 1,
+    },
+    {
+      image_url:
+        "https://cdn05.nnnow.com/web-images/medium/styles/UPN1DIYDEOO/1539585373094/1.jpg",
+      name: " Silicone Makup Sponge",
+      price: 945,
+      strikedoffprice: 2099,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn17.nnnow.com/web-images/medium/styles/DQ4XG8LX9KO/1533194318318/1.jpg",
+      name: "Advance of Brush Set",
+      price: 399,
+      strikedoffprice: 799,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://cdn10.nnnow.com/web-images/medium/styles/E3ATWR0QI78/1533194318319/1.jpg",
+      name: "Sold Brush Cleaner ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV7329/reebok_FV7329_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING ASTRO BOOSTER SHOES ",
+      price: 1440,
+      strikedoffprice: 3199,
+      brand: "Retrac ble lip",
+    },
+    {
+      image_url:
+        "https://cdn19.nnnow.com/web-images/medium/styles/X8JIWKM2HL1/1517466587226/1.jpg ",
+      name: " Instant Brush Cleaner  ",
+      price: 1999,
+      strikedoffprice: 3199,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/DTFXF1QNQOF/1525433681244/1.jpg",
+      name: "Counter Shadow Brush  ",
+      price: 769,
+      strikedoffprice: 1099,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GP7180/reebok_GP7180_1.jpg.plp",
+      name: " Cheek Brush  ",
+      price: 1299,
+      strikedoffprice: 1440,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3924/reebok_EX3924_1.jpg.plp ",
+      name: "MEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
+      price: 699,
+      strikedoffprice: 999,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0343/reebok_FW0343_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING RUN SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+      brand: "women",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV9519/MEN_SWIM_SLIPPERS_FV9519_1.jpg.plp ",
+      name: "MEN'S REEBOK SWIM RUSSLE FLIP SLIPPERS  ",
+      price: 599,
+      strikedoffprice: 999,
+      brand: "mens",
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+      brand: "women",
+    },
+  ];
+
+  display3();
+
+function display3() {
+  let count3 = 0;
+  // ------count1
+  console.log(menData);
+  mensData3.forEach(function (elm) {
+    let div = document.createElement("div");
+    div.setAttribute("class", "child3");
+    count3++;
+    // count1++;
+    div.setAttribute("id", "f" + count3);
+
+    let img = document.createElement("img");
+    img.setAttribute("src", elm.image_url);
+    let btn = document.createElement("button");
+
+    btn.setAttribute("type", "submit");
+
+    btn.setAttribute("class", "card-btn3");
+
+    btn.style.color = "yellow";
+
+    let cartbtn = document.createElement("button");
+    cartbtn.addEventListener("click", function () {
+      addtocart(elm);
+    });
+    cartbtn.setAttribute("type", "submit");
+    cartbtn.setAttribute("id", "cartcollection3");
+    cartbtn.innerText = "Add to Wishlist";
+    cartbtn.style.color = "white";
+    cartbtn.style.backgroundColor = "#21DFCF";
+    cartbtn.style.cursor = "pointer";
+    let img1 = document.createElement("img");
+    img1.setAttribute("src", "https://img.icons8.com/ios/344/like--v1.png");
+    cartbtn.append(img1);
+
+    let bagbtn = document.createElement("button");
+    bagbtn.addEventListener("click", function () {
+      // addtobag(elm)
+    });
+    bagbtn.setAttribute("type", "submit");
+    bagbtn.setAttribute("id", "bagcollection3");
+    bagbtn.innerText = "Add to Cart";
+    bagbtn.style.color = "white";
+    bagbtn.style.backgroundColor = "#21DFCF";
+    bagbtn.style.cursor = "pointer";
+    let img2 = document.createElement("img");
+    img2.setAttribute(
+      "src",
+      "https://cdn-icons.flaticon.com/png/512/2662/premium/2662503.png?token=exp=1655185488~hmac=811f605fe8ac7e398397fce2f66a401d"
+    );
+    bagbtn.append(img2);
+
+    btn.append(cartbtn, bagbtn);
+
+    let h3 = document.createElement("h3");
+    h3.innerText = "SEPHORA COLLECTION";
+    let p = document.createElement("p");
+    p.innerText = elm.name;
+    let pr = document.createElement("p");
+    pr.innerText = "Rs-" + elm.price;
+
+    div.append(img, btn, h3, p, pr);
+
+    let box = document.querySelector("#container3");
+
+    box.append(div);
+  });
+}
+var left3 = 1;
+var right3 = 5;
+function onshow3() {
+  for (let i = left3; i <= right3; i++) {
+    document.getElementById("f" + i).style.display = "inline-block";
+    // ---------------------use=d
+  }
+}
+function moveright3() {
+  if (left3 <= 3 && right3 <= 7) {
+    document.getElementById("f" + left3).style.display = "none";
+    left3 += 1;
+    right3 += 1;
+    for (let i = left3; i <= right3; i++) {
+      document.getElementById("f" + i).style.display = "inline-block";
+    }
+  } else {
+    return;
+  }
+}
+
+function moveleft3() {
+  if (left3 >= 2 && right3 >= 6) {
+    document.getElementById("f" + right2).style.display = "none";
+    left3 -= 1;
+    right3 -= 1;
+    for (let i = left3; i <= right3; i++) {
+      document.getElementById("f" + i).style.display = "inline-block";
+    }
+  } else {
+    return;
+  }
+}
+</script>
+
+<!-- KEEP IN MIND -->
+<!-- 1. do not use same id and classes which is used in this slider
+    2.move only #containertop
+    containertop is the outer box so just move this only 
+    3.do not touch the single css property ,javascript,etc
+    4.if you have any sujjestion just conatact to me or teammates 
+              -->
+<!-- local storge for bag 
+ l-----   addtocart
+    addtobag
+-->
