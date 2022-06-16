@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#main {
+    width: 90%;
+    border: 1px solid yellow;
+    margin: auto;
+}
+img {
+    width: 100%;
+}
+.section1 {
+    border: 1px solid blue; 
+    margin-top: 40px;
+    width: 100%; 
+    display: flex;
+}
+.nav2 {
+    border: 1px solid red; 
+    width: 25%; 
+}
+.nav2 > p {
+     margin-top: 8px;
+}
+.nav2 > h4 {
+     margin-top: 8px;
+     margin-bottom: 12px;
+}
+
+.article{
+    border: 1px solid red; 
+    width:1000px;
+}
+.hairProd {
+    width:160px;
+    text-align: center;
+    border: 1px solid orange;
+}
+.hairProd > div:last-child{
+    width:90%;
+    border: 1px solid orange;
+    margin:auto;
+}
+h3{
+    margin-bottom: 5px;
+}
+.hairProd p:last-child{
+   font-weight: bold;
+}
+.prodlist{
+    display:flex;
+    margin-bottom: 80px;
+    justify-content: space-around;
+}
+.anchor {
+    display: block;
+    text-align: end;
+    margin-top: 50px;
+    color: #000;
+    text-decoration: none;
+}
+
