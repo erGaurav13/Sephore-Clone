@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <link rel="stylesheet" href="sales_style.css" />
+    <link rel="stylesheet" href="login_styles.css" />
   </head>
   <body>
     <div class="navtop">
@@ -50,6 +51,7 @@
         <p><span class="material-symbols-outlined"> wine_bar </span>Loyalty</p>
       </div>
     </div>
+
     <div class="navmid">
       <div>
         <span class="material-symbols-outlined"> search </span>
@@ -59,9 +61,12 @@
       <div>
         <div><span class="material-symbols-outlined"> favorite </span></div>
         <div><span class="material-symbols-outlined"> shopping_bag </span></div>
-        <div><span class="material-symbols-outlined"> person </span> Login</div>
+        <div onclick="login()">
+          <span class="material-symbols-outlined"> person </span> Login
+        </div>
       </div>
     </div>
+
     <div class="navbw">
       <p>SALE</p>
       <p>MAKEUP</p>
@@ -71,6 +76,7 @@
       <p>TOOLS & BRUSHES</p>
       <p>BRANDS</p>
     </div>
+
     <div id="sticky">
       <div>
         <p>SEPHORA</p>
@@ -87,10 +93,11 @@
       </div>
       <div>
         <span class="material-symbols-outlined"> shopping_bag </span>
-        <p>Login</p>
+        <p onclick="login()">Login</p>
         <span class="material-symbols-outlined"> person </span>
       </div>
     </div>
+
     <div id="sales_page">
       <div id="cruser1">
         <!-- FIRST SLIDER  -->
@@ -200,6 +207,7 @@
         </div>
       </div>
     </div>
+
     <div id="footer">
       <div><button id="top">^ BACK TO TOP</button></div>
 
@@ -398,6 +406,46 @@
         </div>
       </div>
     </div>
+
+    <div id="container_login">
+      <div id="login_main">
+        <h1>LOGIN</h1>
+        <form id="form1">
+          <label for="">Email</label><br />
+          <input id="ipMail" type="email" placeholder="Enter email" /><br />
+          <label for="">Password</label><br />
+          <input id="ipPassword" type="password" placeholder="Enter password" />
+          <input type="submit" id="signin" value="SIGN IN" />
+          <p>Or</p>
+          <button type="button" tabindex="0">
+            <img
+              src="https://static.nnnow.com/google-social-login.svg"
+              alt="google sign-in"
+            />
+            <div>Continue with Google</div>
+          </button>
+          <button>
+            <img
+              src="https://static.nnnow.com/facebook.png"
+              alt="facebook sign-in"
+            />
+            <div>Continue with Facebook</div>
+          </button>
+          <p>
+            Don't have an account?
+            <span><a href="SignUp.html">Sign Up</a> </span>
+          </p>
+          <p>
+            By proceeding, you agree to
+            <span
+              ><a href="privacy.html" id="privacy"
+                >Privacy Policy, Terms & Conditions</a
+              >
+            </span>
+          </p>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -494,3 +542,40 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"
 ></script>
+<script>
+  document.getElementById("container_login").style.display = "none";
+  function login() {
+    console.log(document.getElementById("container_login"));
+    document.getElementById("container_login").style.display = "block";
+    document.querySelector("body").disabled = true;
+  }
+</script>
+
+<script>
+  let arrFrmLS = JSON.parse(localStorage.getItem("userData")) || [];
+  let flag = localStorage.getItem("islogin") || false;
+  document.querySelector("#form1").addEventListener("submit", mySignIn);
+
+  function mySignIn(event) {
+    event.preventDefault();
+
+    checkEmailPwd(arrFrmLS);
+  }
+  function checkEmailPwd(arrFrmLS) {
+    arrFrmLS.forEach(function (el) {
+      let iUserEmail = document.querySelector("#ipMail").value;
+      let iUserPwd = document.querySelector("#ipPassword").value;
+
+      if (el.userEmail == iUserEmail && el.userPwd == iUserPwd) {
+        alert("Login Sucessful!");
+        localStorage.setItem("islogin", true);
+        window.location.href = "sale.html";
+      } else if (el.userEmail == iUserEmail || el.userPwd == iUserPwd) {
+        alert("Entered Email or Password are wrong!");
+        console.log("x");
+      } else {
+        alert("Entered Credentials are wrong, Please Create Account!");
+      }
+    });
+  }
+</script>

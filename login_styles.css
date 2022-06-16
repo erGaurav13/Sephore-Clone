@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+#container_login {
+  width: 20%;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 0px 15px 0px 15px;
+}
+#container_login > #login_main {
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  top: 150px;
+  right: 50px;
+  background-color: white;
+  width: 30%;
+  padding: 20px;
+}
+#container_login > #login_main > #form1 {
+  width: 94%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+#container_login > #login_main > #form1 > input {
+  width: 100%;
+  margin: 8px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: medium;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+#container_login label > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+}
+#container_login p {
+  color: grey;
+  font-size: 16px;
+  text-align: center;
+  margin-top: -10px;
+}
+#container_login #signin {
+  padding: 12px;
+  width: 100%;
+  font-size: medium;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #ff3399;
+}
+#container_login label {
+  font-size: medium;
+}
+#container_login span {
+  color: blue;
+  text-align: left;
+}
+#container_login button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4285f4;
+  font-weight: bold;
+  font-size: medium;
+  border: 1px solid white;
+}
+#container_login button > img {
+  height: 60%;
+}
+#container_login button > div {
+  margin: auto;
+  color: white;
+}
+#container_login button + button {
+  background-color: #3b5998;
+  margin-top: 10px;
+}
+#container_login button + p {
+  margin-top: 30px;
+}
+#container_login #privacy {
+  color: #ff3399;
+}
+#container_login button + button > img {
+  width: 12%;
+  margin-left: 30px;
+}
