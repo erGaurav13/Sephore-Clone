@@ -311,7 +311,7 @@
       </div>
 
       <div>
-        <i class="fa fa-facebook-f" style="font-size: 24px , color:black"></i>
+        <i class="fa fa-facebook-f" style="font-size: 24px ; color:black"></i>
         <i
           class="fa fa-instagram"
           aria-hidden="true"
@@ -449,8 +449,11 @@
   </body>
 </html>
 
+
+
+<!-- Navbar -->
 <script>
-  window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", function () {
     scrollFunction();
   });
 
@@ -470,7 +473,79 @@
       );
     }
   }
+</script>
 
+<!-- Login -->
+<script>
+   document.getElementById("top").addEventListener("click", function () {
+    document.documentElement.scrollTop = 0;
+  });
+  document.getElementById("container_login").style.display = "none";
+  function login() {
+    console.log(document.getElementById("container_login"));
+    document.getElementById("container_login").style.display = "block";
+    document.querySelector("body").disabled = true;
+  }
+</script>
+
+<script>
+  let arrFrmLS = JSON.parse(localStorage.getItem("userData")) || [];
+  let flag = localStorage.getItem("islogin") || false;
+  document.querySelector("#form1").addEventListener("submit", mySignIn);
+
+  function mySignIn(event) {
+    event.preventDefault();
+
+    checkEmailPwd(arrFrmLS);
+  }
+  function checkEmailPwd(arrFrmLS) {
+    let flagx=0;
+    arrFrmLS.forEach(function (el) {
+      let iUserEmail = document.querySelector("#ipMail").value;
+      let iUserPwd = document.querySelector("#ipPassword").value;
+
+      if (el.userEmail == iUserEmail && el.userPwd == iUserPwd) {
+        flagx=1;
+        console.log("x");
+      } else if (el.userEmail == iUserEmail || el.userPwd == iUserPwd) {
+        flagx=2;
+        console.log("y");
+      } 
+    });
+
+    if(flagx==1){
+        alert("Login Sucessful!");
+        console.log("x");
+        localStorage.setItem("islogin", true);
+        window.location.href = "sale.html";
+    }else if(flagx==2){
+        alert("Entered Email or Password are wrong!");
+        console.log("y");
+    }else {
+        alert("Entered Credentials are wrong, Please Create Account!");
+        window.location.href = "SignUp.html";
+    }
+  }
+</script>
+
+
+<!-- Bootstrap -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
+<script>
   let slider1 = document.querySelector("#cruser1");
   slider1.addEventListener("mouseenter", function () {
     document.querySelector("#b1").style.display = "block";
@@ -522,60 +597,5 @@
       bts[num].style.background = "red";
     });
   });
-
-  document.getElementById("top").addEventListener("click", function () {
-    document.documentElement.scrollTop = 0;
-  });
-</script>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"
-></script>
-<script>
-  document.getElementById("container_login").style.display = "none";
-  function login() {
-    console.log(document.getElementById("container_login"));
-    document.getElementById("container_login").style.display = "block";
-    document.querySelector("body").disabled = true;
-  }
 </script>
 
-<script>
-  let arrFrmLS = JSON.parse(localStorage.getItem("userData")) || [];
-  let flag = localStorage.getItem("islogin") || false;
-  document.querySelector("#form1").addEventListener("submit", mySignIn);
-
-  function mySignIn(event) {
-    event.preventDefault();
-
-    checkEmailPwd(arrFrmLS);
-  }
-  function checkEmailPwd(arrFrmLS) {
-    arrFrmLS.forEach(function (el) {
-      let iUserEmail = document.querySelector("#ipMail").value;
-      let iUserPwd = document.querySelector("#ipPassword").value;
-
-      if (el.userEmail == iUserEmail && el.userPwd == iUserPwd) {
-        alert("Login Sucessful!");
-        localStorage.setItem("islogin", true);
-        window.location.href = "sale.html";
-      } else if (el.userEmail == iUserEmail || el.userPwd == iUserPwd) {
-        alert("Entered Email or Password are wrong!");
-        console.log("x");
-      } else {
-        alert("Entered Credentials are wrong, Please Create Account!");
-      }
-    });
-  }
-</script>
