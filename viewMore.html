@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #container {
+            border: 1px solid black;
+            display: flex;
+            width: 85%;
+            margin: auto;
+        }
+        #container>div:first-child{
+            border : 1px solid black;
+            width: 30%;
+        }
+    #box{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #box>div{
+        text-align: center;
+    }
+    #box>div>img{
+        width: 266px;
+        height: 345px;
+    }
+    h4::before{
+        content: "Rs.";
+    }
+    /* #box>div>img+div{
+        background-color:#62ddc8;
+        width: 266px;
+        height: 100px;
+        position:absolute;
+        z-index: 10;
+        opacity: 0.7; */
+        /* transform: translate(0 ,-40px); */
+    /* }
+    img+div:hover{
+        transform: translate(0 ,-60px); 
+       opacity: 0.1;
+    } */
+    
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a href="cart.html">Cart</a>
+        <a href="favourite.html">favourite</a>
+        <div>
+            <h2>category</h2>
+        </div>
+        <div id="box">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let viewPage=[
+        {image:"https://cdn13.nnnow.com/web-images/large/styles/310JKV5TVRG/1604477899670/1.jpg", name:"SEPHORA COLLECTION", use:"Face Mask - Grapefruit",price:"360",qty:1}, 
+        {image:"https://cdn07.nnnow.com/web-images/large/styles/BGOHZI41RY6/1604477899661/1.jpg", name:"SEPHORA COLLECTION", use:"Face Mask - Lychee",price:"360",qty:1}, 
+        {image:"https://cdn00.nnnow.com/web-images/large/styles/I8UUFDY6LA6/1633524342165/1.jpg", name:"CLINIQUE", use:"Clinique Smart Clinical Repair Wrinkle correcting Serum",price:"1900",qty:1}, 
+        {image:"https://cdn12.nnnow.com/web-images/large/styles/YZCFJWPBXKS/1593757556347/1.jpg", name:"SHISEIDO", use:"Refreshig Cleansing",price:"1600",qty:1}, 
+        {image:"https://cdn17.nnnow.com/web-images/medium/styles/K3VYOYGWCJY/1604478015053/1.jpg", name:"SEPHORA COLLECTION", use:"Face Mask - pineapple", price:"360",qty:1}, 
+        {image:"https://cdn01.nnnow.com/web-images/large/styles/C7BKD0ZNJFB/1604477899681/1.jpg", name:"SEPHORA COLLECTION", use:"Face Mask - Matcha Tea", price:"360",qty:1}, 
+        {image:"https://cdn11.nnnow.com/web-images/large/styles/7I89U5NMD9A/1605083609928/1.jpg", name:"ELIZABETH ARDEN", use:"Ceramide Lift And Firm Day Cream SPF 30",price:"5800",qty:1},
+        
+        {image:"https://cdn06.nnnow.com/web-images/large/styles/97M9BKJ157C/1604477892823/1.jpg", name:"SEPHORA COLLECT", use:"Eye Mask - Cucumber",price:"270",qty:1}, 
+        {image:"https://cdn17.nnnow.com/web-images/large/styles/87UJ86VNS8T/1604477892815/1.jpg", name:"SEPHORA COLLECTION", use:"Charcoal Nose Strip",price:"240",qty:1}, 
+        {image:"https://cdn00.nnnow.com/web-images/large/styles/1A3TQTNQVMH/1535611149327/1.jpg", name:"SHISEIDO", use:"Waso Color-Smart Day Time Moisturizer",price:"2700",qty:1}, 
+        {image:"https://cdn19.nnnow.com/web-images/large/styles/JTB5OSW7GL1/1604037714353/1.jpg", name:"SEPHORA COLLECTION", use:"Eye Mask - Watermelon",price:"270",qty:1}, 
+        {image:"https://cdn07.nnnow.com/web-images/large/styles/QFH4QNAOP8R/1535611149409/1.jpg", name:"SHISEIDO", use:"Waso Fresh Jelly Lotion",price:"2300",qty:1}, 
+        {image:"https://cdn03.nnnow.com/web-images/large/styles/2N6U7DSAFYD/1566551690729/1.jpg", name:"SEPHORA COLLECTION", use:"Peel-Off Mask",price:"1280",qty:1}, 
+        {image:"https://cdn14.nnnow.com/web-images/large/styles/U0IUHLUYASS/1604927995899/1.jpg", name:"SEPHORA COLLECTION", use:"Face Mask - Spirulina",price:"360",qty:1}, 
+        {image:"https://cdn18.nnnow.com/web-images/large/styles/WYPHYOAHM39/1566556752958/1.jpg", name:"SEPHORA COLLECTION", use:"Ultra Glow Serum",price:"1850",qty:1}, 
+        {image:"https://cdn03.nnnow.com/web-images/large/styles/CNT8WX1LDG2/1636699241589/1.jpg", name:"MARIO BADESCU", use:"Enyme Cleansing Gel",price:"1250",qty:1}, 
+        {image:"https://cdn17.nnnow.com/web-images/large/styles/T1CA0US0QOH/1614353172645/1.jpg", name:"FOREST ESSENTIALS", use:"Soundarya Radiance Cream With 24 Karat Gold And SPF 25",price:"340",qty:1}, 
+        {image:"https://cdn02.nnnow.com/web-images/large/styles/USW3I7NTGRE/1583393866808/1.jpg", name:"SEPHORA COLLECTION", use:"Organic Cotton Pads",price:"320",qty:1}, 
+        {image:"https://cdn12.nnnow.com/web-images/large/styles/87FOPLM1NG3/1604477892851/1.jpg", name:"SEPHORA COLLECTION", use:"Hand Mask - Cucumber",price:"420",qty:1}, 
+        {image:"https://cdn18.nnnow.com/web-images/large/styles/HZFZETO55P8/1604037714348/1.jpg", name:"SEPHORA COLLECTION", use:"Face Mask - Coconut",price:"360",qty:1}, 
+        {image:"https://cdn10.nnnow.com/web-images/large/styles/W0WARIH5HKW/1604478015092/1.jpg", name:"SEPHORA COLLECTION", use:"Foot Mask - Cactus",price:"420",qty:1}, 
+        {image:"https://cdn08.nnnow.com/web-images/large/styles/HDI63G7NCKS/1604927995904/1.jpg", name:"SEPHORA COLLECTION", use:"Cleansing Face Wipes - Aloe Vera",price:"720",qty:1}, 
+        {image:"https://cdn12.nnnow.com/web-images/large/styles/BDWKRAJ0MEA/1604477899645/1.jpg", name:"SEPHORA COLLECTION", use:"Cleansing Face Wipes - Coconut",price:"720",qty:1}, 
+        {image:"https://cdn07.nnnow.com/web-images/large/styles/F4TXVHMNKHB/1566551690915/1.jpg", name:"SEPHORA COLLECTION", use:"All Day Hydrator",price:"1500",qty:1}, 
+        {image:"https://cdn19.nnnow.com/web-images/large/styles/CNWQUALE7TE/1602058685569/1.jpg", name:"SEPHORA COLLECTION", use:"Face Serum - Grapefruit",price:"1080",qty:1}, 
+        {image:"https://cdn05.nnnow.com/web-images/large/styles/8I9U0DQTORN/1494572046851/1.jpg", name:"CLINIQUE", use:"Liquid Facial Soap Mild - Dry Combination Skin",price:"2000",qty:1}, 
+        {image:"https://cdn14.nnnow.com/web-images/large/styles/SOGOI60WHJM/1602058416231/1.jpg", name:"SEPHORA COLLECTION", use:"Face Serum - Ginger",price:"1080",qty:1}, 
+        {image:"https://cdn12.nnnow.com/web-images/large/styles/JZQYA0FT6X5/1617724678609/1.jpg", name:"SEPHORA COLLECTION", use:"pores Serum",price:"1440",qty:1}, 
+        {image:"https://cdn01.nnnow.com/web-images/large/styles/ITXIPNQAWY8/1585571862845/1.jpg", name:"PIXI", use:"Peel & Polish Resurfacing Concentrate",price:"2400",qty:1}, 
+    ]
+  
+   
+    viewPage.forEach(function(elem){
+        let divchild=document.createElement("div")
+
+        let photo=document.createElement("img")
+        photo.setAttribute("src",elem.image)
+        let divsmal=document.createElement("div")
+        let head1=document.createElement("h4")
+        head1.innerText = elem.name;
+        let para=document.createElement("p")
+        para.innerText = elem.use;
+        let head2=document.createElement("h4")
+        head2.innerText =elem.price 
+        let addTocart=document.createElement("button")
+        addTocart.innerText ="add to cart";
+        
+        addTocart.addEventListener("click",function(){
+            addtocart(elem)
+        })
+        let fav = document.createElement("button")
+        fav.innerText ="favourite"
+        fav.addEventListener("click",function(){
+            favourite(elem)
+        })
+        divchild.append(photo,divsmal,head1,para,head2,addTocart,fav);
+        document.querySelector("#box").append(divchild);
+    })
+
+    
+    let arr=JSON.parse(localStorage.getItem("addtoBag"))||[]
+    let arrfav=JSON.parse(localStorage.getItem("addtoFav"))||[]
+   
+    function addtocart (elem){
+        
+        arr.push(elem)
+        localStorage.setItem("addtoBag",JSON.stringify(arr));
+    }
+    
+    function favourite(elem){
+        arrfav.push(elem)
+        localStorage.setItem("addtoFav",JSON.stringify(arrfav));
+    }
+</script>

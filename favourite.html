@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #navbar {
+        background-color: rgb(76, 131, 234);
+        height: 50px;
+        padding: 20px 0px 0px 50px;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+      }
+      #container {
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+      #container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #container > div > div > img {
+        width: 150px;
+      }
+      #container > div > div:last-child {
+        width: 40%;
+        margin: 20px;
+        margin-top: 20px;
+      }
+      #container > div > div:last-child > h4 {
+        margin-top: 16px;
+      }
+      #container > div > div:last-child > p:first-child {
+        margin-top: 10px;
+        color: rgb(36, 35, 35);
+      }
+      #container > div > div:last-child > p:nth-child(2) {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      #container > div > div:last-child > div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      #container > div > div:last-child > div > button {
+        border: none;
+
+        background-color: transparent;
+        color: #ff42a0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">MY FAVOURITES</div>
+    <div id="container">
+      <!-- <div> flex
+            <div>photo</div> 
+            <div>detail</div>
+        </div> -->
+    </div>
+  </body>
+</html>
+<script>
+  let fav = JSON.parse(localStorage.getItem("addtoFav")) || [];
+  display(fav);
+
+  function display(fav) {
+    document.querySelector("#container").innerHTML = "";
+    fav.forEach(function (elem, index) {
+      let parentdiv = document.createElement("div");
+      let div1 = document.createElement("div");
+      let div2 = document.createElement("div");
+
+      let photo = document.createElement("img");
+      photo.setAttribute("src", elem.image);
+
+      let head1 = document.createElement("p");
+
+      head1.innerText = elem.name;
+      let para = document.createElement("p");
+      para.innerText = elem.use;
+      let head2 = document.createElement("h4");
+      head2.innerText = elem.price;
+
+      let div3 = document.createElement("div");
+      let btn1 = document.createElement("button");
+      btn1.innerText = "Move to bag";
+      btn1.addEventListener("click", function () {
+        addtoBag(elem, index);
+      });
+      let btn2 = document.createElement("button");
+      btn2.innerText = "Remove";
+      btn2.addEventListener("click", function () {
+        removeFromfav(index);
+      });
+      div3.append(btn1, btn2);
+      div1.append(photo);
+      div2.append(head1, para, head2, div3);
+      parentdiv.append(div1, div2);
+      document.querySelector("#container").append(parentdiv);
+    });
+    localStorage.setItem("addtoFav", JSON.stringify(fav));
+  }
+
+  
+    function addtoBag(elem, index) {
+    let car = JSON.parse(localStorage.getItem("addtoBag")) || [];
+    car.push(elem);
+    removeFromfav(index);
+    localStorage.setItem("addtoBag", JSON.stringify(car));
+  }
+
+  function removeFromfav(index) {
+    fav.splice(index, 1);
+    localStorage.setItem("addtofav", JSON.stringify(fav));
+    display(fav);
+    console.log(fav);
+  }
+</script>
