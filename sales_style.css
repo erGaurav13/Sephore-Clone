@@ -52,7 +52,18 @@ p {
   font-size: 18px;
   margin: 10px;
 }
-
+#logDiv > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logDivSticky > div{
+  border-left: 1px solid grey;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .navmid {
   display: flex;
   justify-content: space-between;
@@ -124,8 +135,10 @@ p {
   align-items: center;
   /* transition: transform 1s ease-out, visibility 10s; */
   font-family: sans-serif;
-  font-weight: 400;
   font-size: 14px;
+  z-index: +1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-weight: bold;
 }
 #sticky > div {
   display: flex;
@@ -321,4 +334,91 @@ p {
 }
 #footer > div:nth-child(n + 7) > div:last-child > p:last-child {
   border: none;
+}
+
+/* gaurav code */
+#navbar {
+  width: 97%;
+  height: 90px;
+  position: relative;
+}
+#navbar ul li {
+  margin: auto;
+}
+.homediv {
+  color: white;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  left: 10px;
+  top: 58px;
+  height: 200px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  opacity: 0;
+}
+.cnt{
+    margin-right:20px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+}
+li {
+  margin-left: 10px;
+  padding: 10px;
+}
+li:hover{
+    color: #FF42A3;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#navbar li:hover .homediv {
+  opacity: 1;
+  color: black;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 200px;
+  left: 0px;
+  padding: 0px 100px;
+  top: 58px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, */
+    /* rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, */
+    /* rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  bottom: 10px;
+  visibility: visible;
+  display: flex;
+  margin-right: 0px;
+}
+.homediv>div p{
+  font-size: 12px;
+  color: black;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px 10px;
+}
+.homediv>div p:hover{
+    color: #FF42A3;
+    cursor: pointer;
+}
+.homediv>div h6{
+    margin: 0px;
+  padding: 10px;
+}
+.homediv>div h6:hover{
+    color: #FF42A3;
+    cursor: pointer;
+}
+#carouselExampleIndicators{
+    /* border: 1px solid green; */
+    width: 95%;
+    margin: auto;
 }
