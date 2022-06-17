@@ -81,7 +81,7 @@
             <label for="">Password</label><br>
             <input id="password" type="password" placeholder="Enter password">
             <input id="signup" type="submit" value="Sign Up" />
-            <p id="ptag">Already have an account? <span><a href="Login.html">Sign In</a></span></p>
+            <p id="ptag">Already have an account? <span><a href="sale.html">Sign In</a></span></p>
             
         </form>
     </div>
@@ -100,25 +100,25 @@
         userEmail: document.querySelector("#email").value,
         userPwd: document.querySelector("#password").value,
     };
-        
+    let flag=false;
     if(userArr.length>=1){
-        let flag=false;
-                console.log("x")
+                console.log("x");
             userArr.forEach(function (el) {
 
             if(el.userName==queObj.userName && el.userEmail==queObj.userEmail && el.userPwd==queObj.userPwd){
                 flag=true;
             }
         });
-        if(flag==true){
+        
+    }if(flag==true){
             alert("You Already have an Account, Please Login!");
-            window.location.href="Login.html";
+            window.location.href="sale.html";
          }
-    }
         else{
+            console.log("y");
             userArr.push(queObj);
             alert("Account Created Successfully!");
-            window.location.href="Login.html";
+            window.location.href="sale.html";
             localStorage.setItem("userData", JSON.stringify(userArr));
         }
     }

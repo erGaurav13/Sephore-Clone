@@ -25,11 +25,11 @@
   <body>
     <div class="navtop">
       <div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.
           <path
             d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
-          />
+          /> -->
         </svg>
         <img
           src="https://cdn02.nnnow.com/web-images/master/navtree_metaData/59b2425ae4b0d70964ee66e0/1505806763887/12NNNOWLOGODESKTOP.png"
@@ -61,21 +61,176 @@
       <div>
         <div><span class="material-symbols-outlined"> favorite </span></div>
         <div><span class="material-symbols-outlined"> shopping_bag </span></div>
-        <div onclick="login()">
-          <span class="material-symbols-outlined"> person </span> Login
-        </div>
+        
+        <div id="logDiv"></div>
       </div>
     </div>
 
-    <div class="navbw">
-      <p>SALE</p>
-      <p>MAKEUP</p>
-      <p>SKINCARE</p>
-      <p>FRAGNANCE</p>
-      <p>HAIRCARE</p>
-      <p>TOOLS & BRUSHES</p>
-      <p>BRANDS</p>
+    <div class="navbw" id="navbar">
+      <ul>
+        <li>SALE</li>
+        <li>
+          MAKEUP
+          <div class="homediv">
+            <div class="cnt">
+                <h6>FACE</h6>
+              <p>Foundation</p>
+              <p>Night Creams</p>  
+              <p>BB & CC Cream</p> 
+              <p>Concealer</p> 
+              <p>Face Primer</p>
+               <p>Highlighter</p>
+               <p>Face Brushes</p>
+            </div>
+            <div class="cnt">
+                <h6>MAKEUP ACCESSORIES</h6>
+              <p>Tweezers & Eyebrow Tools</p>
+              <p>Makeup Removers</p> 
+              <p>Sponges & Applicators</p>   
+              <p>Makeup Bags & Travel Cases</p>
+                    
+            </div>
+            <div class="cnt">
+                <h6>EYE</h6>
+              <p>Mascara</p>
+              <p>Eyeliner</p> 
+             <p>Eyebrow</p>
+            </div>
+            <div class="cnt">
+                <h6>Eye Creams & Treatments</h6>
+              <p>MASKS</p>
+              <p>Face Masks</p> 
+             <p>Shoot Masks</p>    
+             <p>Ey ni Masks </p>
+             <p></p> 
+            </div>
+            <div class="cnt">
+                <h6>LIP</h6>
+              <p>Lipstick</p>
+              <p>Lip Stain</p> 
+             <p>Lip Gloss</p>    
+             <p>Lip Liner </p>
+             <p>Lip Balm & Treatment</p> 
+             <p>Lip Brushes</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          SKINCARE
+          <div class="homediv">
+            <div class="cnt">
+                <h6>MOISTURIZERS</h6>
+              <p>Moisturizers</p>
+              <p>Night Creams</p>  
+              <p>Mists & Essences</p> 
+              <p>BB & CC Creams</p> 
+               
+            </div>
+            <div class="cnt">
+                <h6>CLEANSERS</h6>
+              <p>Face Wash & Cleansers</p>
+              <p>Makeup Removers</p> 
+              <p>Face Wipes</p>   
+              <p>Hand Sanitizers</p>
+              <p>Eye Lashes</p> 
+              <p>Assceories</p>      
+            </div>
+            <div class="cnt">
+                <h6>TREATMENTS & HIGH TECH TOOLS</h6>
+              <p>Face Serums</p>
+              <p>Cleansing Tools</p> 
+             <p>Toners</p>     
+            </div>
+            <div class="cnt">
+                <h6>Eye Creams & Treatments</h6>
+              <p>MASKS</p>
+              <p>Face Masks</p> 
+             <p>Shoot Masks</p>    
+             <p>Ey ni Masks </p>
+             <p></p> 
+            </div>
+          </div>
+        </li>
+        <li>
+          FRAGRANCE
+          <div class="homediv">
+            <div class="cnt">
+                <h6>MENS</h6>
+              <p>BODY SPRAY & DEODRANT</p>
+              <p>PerFume</p>   
+            </div>
+            <div class="cnt">
+                <h6>WOMEN</h6>
+              <p>Mists and Deodorants</p>
+              <p>PerFume</p>   
+            </div>
+          </div>
+        </li>
+        <li>
+          HAIRCARE
+          <div class="homediv">
+            <div class="cnt">
+                <h6>SHAMPOO & CONDITIONER</h6>
+              <p>Shampoo</p>
+              <p>conditioners</p>   
+            </div>
+            <div class="cnt">
+                <h6>HAIR STYLING & TREATEMENTS</h6>
+              <p>Hair Spray & Styling Product </p>
+              <p>Hair Oil</p> 
+              <p>Hair Masks</p>   
+              <p>Hair Clips</p>     
+            </div>
+          </div>
+        </li>
+        <li>
+          TOOLS & BRUSHES
+          <div class="homediv">
+            <div class="cnt">
+                <h6>BRUSHES</h6>
+              <p>Face Brush</p>
+              <p>Eye Brush</p>  
+              <p>Lip Brush</p>  
+               
+            </div>
+            <div class="cnt">
+                <h6>TOOLS</h6>
+              <p>Sponge & Application </p>
+              <p>Face Tool</p> 
+              <p>Hair Masks</p>   
+              <p>Hair Clips</p>
+              <p>Eye Lashes</p> 
+              <p>Assceories</p>      
+            </div>
+            <div class="cnt">
+                <h6>VEGAN</h6>
+              <p>Face Brush</p>
+              <p>Eye Brush</p> 
+             
+              
+                   
+            </div>
+          </div>
+        </li>
+        <li>BRAND
+            <div class="homediv">
+                <div class="cnt">
+                    <h6>MENS BRAND</h6>
+                  <p>BODY SPRAY & DEODRANT</p>
+                  <p>PerFume</p>   
+                </div>
+                <div class="cnt">
+                    <h6>WOMEN BRAND</h6>
+                  <p>Mists and Deodorants</p>
+                  <p>PerFume</p>   
+                </div>
+    
+              </div>
+        </li>
+      </ul>
+      
     </div>
+    
 
     <div id="sticky">
       <div>
@@ -91,10 +246,9 @@
         <p>TOOLS & BRUSHES</p>
         <p>BRANDS</p>
       </div>
-      <div>
+      <div >
         <span class="material-symbols-outlined"> shopping_bag </span>
-        <p onclick="login()">Login</p>
-        <span class="material-symbols-outlined"> person </span>
+        <div id="logDivSticky"></div>
       </div>
     </div>
 
@@ -311,7 +465,7 @@
       </div>
 
       <div>
-        <i class="fa fa-facebook-f" style="font-size: 24px , color:black"></i>
+        <i class="fa fa-facebook-f" style="font-size: 24px ; color:black"></i>
         <i
           class="fa fa-instagram"
           aria-hidden="true"
@@ -409,6 +563,9 @@
 
     <div id="container_login">
       <div id="login_main">
+           <div id="cross" onclick="closeLogin()">
+            <img id="crossSymb" src="https://thumbs.dreamstime.com/b/red-cross-symbol-icon-as-delete-remove-fail-failure-incorr-incorrect-answer-89999776.jpg">
+           </div>
         <h1>LOGIN</h1>
         <form id="form1">
           <label for="">Email</label><br />
@@ -449,8 +606,11 @@
   </body>
 </html>
 
+
+
+<!-- Navbar -->
 <script>
-  window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", function () {
     scrollFunction();
   });
 
@@ -470,7 +630,142 @@
       );
     }
   }
+</script>
 
+<!-- Login -->
+<script>
+   document.getElementById("top").addEventListener("click", function () {
+    document.documentElement.scrollTop = 0;
+  });
+  document.getElementById("container_login").style.display = "none";
+  function login() {
+    console.log(document.getElementById("container_login"));
+    document.getElementById("container_login").style.display = "block";
+    document.querySelector("body").disabled = true;
+  }
+</script>
+<script>
+  function closeLogin(){
+    document.getElementById("container_login").style.display = "none";
+  }
+</script>
+
+<script>
+  let arrFrmLS = JSON.parse(localStorage.getItem("userData")) || [];
+  document.querySelector("#form1").addEventListener("submit", mySignIn);
+
+  function mySignIn(event) {
+    event.preventDefault();
+
+    checkEmailPwd(arrFrmLS);
+  }
+  function checkEmailPwd(arrFrmLS) {
+    let flagx=0;
+    arrFrmLS.forEach(function (el) {
+      let iUserEmail = document.querySelector("#ipMail").value;
+      let iUserPwd = document.querySelector("#ipPassword").value;
+
+      if (el.userEmail == iUserEmail && el.userPwd == iUserPwd) {
+        flagx=1;
+        localStorage.setItem("userName",el.userName);
+      } else if (el.userEmail == iUserEmail || el.userPwd == iUserPwd) {
+        flagx=2;
+      } 
+    });
+
+    if(flagx==1){
+        alert("Login Sucessful!");
+        localStorage.setItem("islogin", true);
+        window.location.href = "sale.html";
+    }else if(flagx==2){
+        alert("Entered Email or Password are wrong!");
+        localStorage.setItem("islogin", false);
+
+    }else {
+        alert("Entered Credentials are wrong, Please Create Account!");
+        localStorage.setItem("islogin", false);
+        window.location.href = "SignUp.html";
+    }
+  }
+</script>
+
+<script>
+
+  // login option for navmid
+   let x=localStorage.getItem("islogin");
+   let user = localStorage.getItem("userName");
+
+ if(x=="false"){
+      document.querySelector("#logDiv").innerHTML= '<div onclick="login()"><span class="material-symbols-outlined"> person </span> Login</div>';
+      // document.querySelector("#logDiv").style.display = "1px";
+ }else 
+    if(x=="true"){
+      let loginDiv= document.querySelector("#logDiv");
+      loginDiv.innerHTML = "";
+      let select  =  document.createElement("select");
+      select.style.border = "none";
+      select.setAttribute("id","logOut");
+      select.setAttribute("onchange","logoutFun()");
+      let opt1 = document.createElement("option");
+      opt1.innerHTML = '<span onclick="" class="material-symbols-outlined"> person </span>';
+      opt1.innerText = user;
+      let opt2 = document.createElement("option");
+      opt2.setAttribute("value", "log_out")
+      opt2.innerText="Log Out";
+      select.append(opt1,opt2);
+      loginDiv.append(select);
+      console.log(opt2,select,user);
+    } 
+    function logoutFun(){
+    let logSelect = document.querySelector("#logOut").value;
+    if(logSelect=="log_out"){
+          localStorage.setItem("islogin", false);
+          window.location.reload();
+    }
+ }
+
+       // login option for sticky
+ if(x=="false"){
+      document.querySelector("#logDivSticky").innerHTML= '<div onclick="login()"><span class="material-symbols-outlined"> person </span> Login</div>';
+      // document.querySelector("#logDiv").style. = "1px";
+ }else 
+    if(x=="true"){
+      let loginDiv= document.querySelector("#logDivSticky");
+      loginDiv.innerHTML = "";
+      let select  =  document.createElement("select");
+      select.style.border = "none";
+      select.setAttribute("id","logOut1");
+      select.setAttribute("onchange","logoutFun()");
+      let opt1 = document.createElement("option");
+      opt1.innerHTML = '<span onclick="" class="material-symbols-outlined"> person </span>';
+      opt1.innerText = user;
+      let opt2 = document.createElement("option");
+      opt2.setAttribute("value", "log_out")
+      opt2.innerText="Log Out";
+      select.append(opt1,opt2);
+      loginDiv.append(select);
+      console.log(opt2,select,user);
+    } 
+    
+</script>
+
+<!-- Bootstrap -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
+<script>
   let slider1 = document.querySelector("#cruser1");
   slider1.addEventListener("mouseenter", function () {
     document.querySelector("#b1").style.display = "block";
@@ -522,60 +817,7 @@
       bts[num].style.background = "red";
     });
   });
-
-  document.getElementById("top").addEventListener("click", function () {
-    document.documentElement.scrollTop = 0;
-  });
-</script>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"
-></script>
-<script>
-  document.getElementById("container_login").style.display = "none";
-  function login() {
-    console.log(document.getElementById("container_login"));
-    document.getElementById("container_login").style.display = "block";
-    document.querySelector("body").disabled = true;
-  }
 </script>
 
-<script>
-  let arrFrmLS = JSON.parse(localStorage.getItem("userData")) || [];
-  let flag = localStorage.getItem("islogin") || false;
-  document.querySelector("#form1").addEventListener("submit", mySignIn);
 
-  function mySignIn(event) {
-    event.preventDefault();
 
-    checkEmailPwd(arrFrmLS);
-  }
-  function checkEmailPwd(arrFrmLS) {
-    arrFrmLS.forEach(function (el) {
-      let iUserEmail = document.querySelector("#ipMail").value;
-      let iUserPwd = document.querySelector("#ipPassword").value;
-
-      if (el.userEmail == iUserEmail && el.userPwd == iUserPwd) {
-        alert("Login Sucessful!");
-        localStorage.setItem("islogin", true);
-        window.location.href = "sale.html";
-      } else if (el.userEmail == iUserEmail || el.userPwd == iUserPwd) {
-        alert("Entered Email or Password are wrong!");
-        console.log("x");
-      } else {
-        alert("Entered Credentials are wrong, Please Create Account!");
-      }
-    });
-  }
-</script>
