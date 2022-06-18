@@ -692,10 +692,11 @@
 <script>
 
   // login option for navmid
-   let x=localStorage.getItem("islogin");
+   let x=localStorage.getItem("islogin") || "false";
    let user = localStorage.getItem("userName");
-
  if(x=="false"){
+  console.log(x);
+
       document.querySelector("#logDiv").innerHTML= '<div onclick="login()"><span class="material-symbols-outlined"> person </span> Login</div>';
       // document.querySelector("#logDiv").style.display = "1px";
  }else 
