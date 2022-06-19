@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #navbar2 {
+    background-color: rgb(76, 131, 234);
+    height: 70px;
+    padding: 20px 0px 0px 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width:100%;
+  }
+  #container {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  #container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #container > div > div > img {
+    width: 150px;
+  }
+  #container > div > div:last-child {
+    width: 40%;
+    margin: 20px;
+    margin-top: 20px;
+  }
+  #container > div > div:last-child > h4 {
+    margin-top: 16px;
+  }
+  #container > div > div:last-child > p:first-child {
+    margin-top: 10px;
+    color: rgb(36, 35, 35);
+  }
+  #container > div > div:last-child > p:nth-child(2) {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  #container > div > div:last-child > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  #container > div > div:last-child > div > button {
+    border: none;
+
+    background-color: transparent;
+    color: #ff42a0;
+  }

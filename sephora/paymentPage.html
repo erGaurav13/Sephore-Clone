@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #charge > form > input {
+        font-size: 20px;
+        padding: 10px;
+        margin: 10px;
+        background-color: rgb(209, 209, 209);
+        border: none;
+        border-radius: 10px;
+      }
+      #charge > form > label {
+        margin: 10px;
+        font-size: 18px;
+      }
+      /* #charge > form > input:last-child {
+        width: 20px;
+      } */
+      #charge > form > input:nth-child(6) {
+        width: 10px;
+      }
+      #payment {
+        display: flex;
+        width: 90%;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+      }
+      #payment > div:first-child > div:first-child {
+        display: flex;
+        justify-content: space-between;
+      }
+      #payment > div:first-child > div:nth-child(2) {
+        border-bottom: 1px solid gray;
+      }
+      #charge {
+        width: 500px;
+
+        margin-left: 20px;
+      }
+      #charge > form {
+        height: 400px;
+      }
+      #charge > form > label {
+        padding-top: 20px;
+      }
+      #cvv {
+        width: 60px;
+      }
+      #bill {
+        width: 400px;
+      }
+      #bill > div:nth-child(1) {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        background-color: rgb(242, 239, 239);
+        font-weight: bolder;
+      }
+      #bill > div:nth-child(2) {
+        width: 95%;
+        height: 250px;
+        margin: auto;
+        margin-top: 40px;
+        background-color: rgb(242, 239, 239);
+      }
+      #bx > h3 {
+        padding: 20px;
+      }
+      .billsection {
+        width: 90%;
+        margin: auto;
+      }
+      .billsection > div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -20px;
+      }
+      .billsection > div:last-child {
+        margin-top: 2px;
+      }
+      .billsection > div:nth-child(2) {
+        color: rgb(235, 28, 166);
+      }
+      #continue {
+        width: 95%;
+        height: 45px;
+        margin: auto;
+        margin-top: 18px;
+        background-color: #f6548a;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="payment">
+      <div>
+        <div>
+          <h3>TOTAL PAYABLE AMOUNT</h3>
+          <h3 id="payme">Rs.</h3>
+        </div>
+        <div>
+          <h3>PAYMENT METHOD</h3>
+        </div>
+        <div id="charge">
+          <h4>Credit / Debit Card</h4>
+          <form action="">
+            <label>Enter your card number (Visa, Mastercard, Amex)</label>
+            <br />
+            <input id="card" type="number" />
+            <br />
+            <label>Enter Name on Card</label>
+            <br />
+            <input id="name" type="text" />
+            <br />
+            <label>CVV</label>
+            <input id="cvv" type="text" />
+            <br />
+            <input id="month" type="month" />
+            <!-- <input id="yr" type="year" /> -->
+            <br />
+            <input type="submit" />
+          </form>
+        </div>
+      </div>
+      <div id="bill">
+        <div style="background-color: transparent"></div>
+
+        <div id="bx">
+          <h3>OVERVIEW</h3>
+          <!-- billing session -->
+          <div class="billsection">
+            <div>
+              <p>Subtotal</p>
+              <p id="subtotal">Rs.0</p>
+            </div>
+            <div>
+              <p>Discount</p>
+              <p>Rs.0</p>
+            </div>
+            <div>
+              <p>GST</p>
+              <p>Rs.0</p>
+            </div>
+            <div>
+              <p>Delivery Charges</p>
+              <p>Rs.0</p>
+            </div>
+            <div>
+              <h3>Total</h3>
+              <h3 id="total">Rs.</h3>
+            </div>
+          </div>
+        </div>
+        <div id="continue">Place Order</div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+   let islogged = localStorage.getItem("islogin");
+
+   if(islogged=="false"||islogged ==null)
+    {
+      alert("Please login");
+
+      window.location.href = "homepage.html";
+      document.querySelector("#container_login").style.display = "block";
+    }
+   let orderbtn = document.querySelector("#continue");
+  let payme = localStorage.getItem("Pay");
+  document.querySelector("#payme").innerText = "Rs." + payme;
+
+  let formTag = document.querySelector("form");
+
+  formTag.addEventListener("submit", function () {
+    let card = formTag.card.value;
+    let name = formTag.name.value;
+    let cvv = formTag.cvv.value;
+    let yr = formTag.month.value;
+    event.preventDefault();
+    console.log(yr);
+    if (
+      card == "123456" &&
+      name == "Swapnil Kumar" &&
+      cvv == "123" &&
+      yr == "2022-07"
+    ) {
+      alert("Payment done successfully");
+      orderbtn.addEventListener("click",function(){
+        alert("Order Placed Successfully");
+        window.location.href = "homepage.html"
+  });
+    } else {
+      alert("Incorrect Information");
+    }
+  });
+
+  document.querySelector("#total").innerText = "Rs." + payme;
+  let subtotal = localStorage.getItem("subPay");
+  document.querySelector("#subtotal").innerText = "Rs." + subtotal;
+</script>

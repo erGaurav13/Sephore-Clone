@@ -1,0 +1,42 @@
+#box{
+    height: auto;
+    width:50%;
+    /* border:1px solid red; */
+}
+#box>h1{
+    text-align: center;
+    font-weight: 400;
+}
+#box>form>input{
+    height: 40px;
+    width: 80%;
+    background-color:rgb(244, 240, 240);
+    border: none;
+    margin: 5px 60px 5px 60px;
+}
+#box>form>label{
+    margin:0px 60px 0px 60px;
+    color: gray;
+}
+#box>form>#mob,#box>form>#pinC{
+    width:39%;
+    margin: 5px 5px 5px 60px;
+}
+#box>form>#num,#box>form>#landmark{
+    width:39%;
+    margin: 5px 60px 5px 5px;
+}
+#box>form>label[for="num"]{
+    margin-left: 165px;
+}
+#box>form>label[for="landmark"]{
+    margin-left: 155px;
+}
+#box>form>input:last-child{
+    width:40%;
+    text-align: center;
+    margin:5px 120px 5px 200px;
+    background-color:gray;
+    color:white;
+    font-weight: bold;
+}

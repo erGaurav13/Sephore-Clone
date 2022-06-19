@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="addressBar.css" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #container > div:nth-child(1) {
+        padding: 20px 0px 0px 50px;
+        height: 40px;
+        font-size: 20px;
+      }
+      #navbar {
+        background-color: rgb(76, 131, 234);
+        height: 40px;
+        padding: 20px 0px 0px 50px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+      }
+      #parentbx {
+        display: flex;
+        width: 90%;
+        margin: auto;
+      }
+      #cartbx {
+        width: 100%;
+      }
+      #cartbx > div {
+        border-bottom: 1px solid rgb(201, 196, 196);
+        display: flex;
+        width: 90%;
+      }
+      #cartbx > div > div > img {
+        margin-top: 15px;
+        width: 100px;
+      }
+      #cartbx > div > div:nth-child(2) {
+        margin: 50px;
+        margin-left: 10px;
+        width: 200px;
+      }
+      /* #cartbx > div > div:nth-child(2) > button {
+        border: none;
+        background-color: white;
+        margin-right: 10px;
+        font-size: 12px;
+        margin-top: 15px;
+        color: rgb(44, 42, 42);
+        border-bottom: 1px solid grey;
+      } */
+      /* #cartbx > div > div:nth-child(2) > button:hover {
+        color: rgb(244, 105, 195);
+      } */
+      #cartbx > div > div:nth-child(3) {
+        display: flex;
+        margin-top: 20px;
+      }
+      #cartbx > div > div:nth-child(3) > select {
+        width: 40px;
+        height: 40px;
+      }
+      /* #cartbx > div > div:nth-child(4) > h2 {
+        margin: 10px 0px 0px 70px;
+        font-weight: lighter;
+        font-size: 16px;
+      } */
+      /* bill session CSS */
+      #parentbx > div:nth-child(2) {
+        width: 45%;
+        height: 700px;
+      }
+      #parentbx > div:nth-child(2) > div:nth-child(1) {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        background-color: rgb(242, 239, 239);
+        font-weight: bolder;
+      }
+      #parentbx > div:nth-child(2) > div:nth-child(1):hover {
+        color: rgb(239, 21, 137);
+      }
+      #parentbx > div:nth-child(2) > div:nth-child(1) > img {
+        padding-top: 5px;
+        width: 30px;
+        height: 30px;
+      }
+      #parentbx > div:nth-child(2) > div:nth-child(2) {
+        width: 95%;
+        height: 250px;
+        margin: auto;
+        margin-top: 40px;
+        background-color: rgb(242, 239, 239);
+      }
+      #parentbx > div:nth-child(2) > div:nth-child(2) > h3 {
+        padding: 20px;
+      }
+
+      /* billing session */
+      .billsection > div {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+        padding-right: 10px;
+      }
+      .billsection {
+        margin-top: -20px;
+      }
+      .billsection > div:nth-child(2) {
+        color: rgb(239, 21, 137);
+      }
+      .billsection > div:last-child {
+        border-top: 1px solid gray;
+        padding-top: 20px;
+      }
+      /* #parentbx > div:nth-child(2) > div:nth-child(2) > div {
+          display: flex;
+          border: 1px solid blue;
+          width: 85%;
+          margin: auto;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        } */
+      #parentbx > div:nth-child(2) > div:nth-child(3) {
+        width: 95%;
+        height: 35px;
+        margin: auto;
+        margin-top: 20px;
+        background-color: #f6548a;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        padding-top: 20px;
+      }
+      /* #parentbx > div:nth-child(2) > div:nth-child(4) {
+        border: 2px solid black;
+        width: 94%;
+        height: 35px;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        font-weight: bold;
+      }
+       */
+      /* #parentbx > div:nth-child(2) > div:nth-child(5) {
+        width: 95%;
+        height: 100px;
+        margin: auto;
+        margin-top: 20px;
+      } */
+
+      /* edit */
+      #edit {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+      }
+      #box {
+        position: absolute;
+        left: 20%;
+        top: 20%;
+        display: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+        padding: 20px;
+      }
+    </style>
+    <style>
+      #promocode {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: white;
+        width: 700px;
+        height: 400px;
+        margin: auto;
+        position: absolute;
+        display: none;
+        top: 20%;
+        left: 30%;
+      }
+      #promocode > h1 {
+        text-align: center;
+        padding-top: 25px;
+      }
+      #promocode > input {
+        border: 2px solid rgb(192, 187, 187);
+        border-radius: 5px;
+        width: 600px;
+        height: 50px;
+        margin-left: 40px;
+      }
+      #promocode > h3 {
+        margin-left: 40px;
+      }
+      #promocode > div {
+        width: 270px;
+        height: 100px;
+        margin-left: 40px;
+        color: rgb(192, 187, 187);
+      }
+      #promobtn {
+        color: white;
+        background-color: #ff3399;
+        font-size: 20px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="promocode">
+      <h1>Apply / Select promo code</h1>
+      <input id="promovalue" type="text" placeholder="Enter Promocode" />
+      <h3>UNLOCK TO AVAIL</h3>
+      <div>
+        % Buy For 8000 And Get Extra 10% Off Buy For 8000 And Get Extra 10% Off
+        Valid till : 12:00 AM | 27th June, 2022
+      </div>
+      <input id="promobtn" type="submit" />
+    </div>
+    <div id="box">
+      <h1>Add Address</h1>
+      <form>
+        <label for="name">Name*:</label><br />
+        <input type="text" id="nam" name="name" /><br /><br />
+        <label for="address">Address*:</label><br />
+        <input
+          type="text"
+          id="add"
+          name="address"
+          placeholder="(House/Flat No.,Building,Street,Area/Locality)"
+        /><br /><br />
+        <label for="phone">Phone*:</label>
+        <label for="num">Alternate Number:</label>
+        <input type="number" id="mob" name="Phone" />
+        <input type="number" id="num" name="Alternate Number" /><br /><br />
+        <label for="Pincode">Pincode*:</label>
+        <label for="landmark">Landmark:</label>
+        <input type="number" id="pinC" name="pincode" />
+        <input
+          type="text"
+          id="landmark"
+          name="Landmark"
+        /><br /><br /><br /><br /><br /><br />
+        <input type="submit" value="SAVE" />
+      </form>
+    </div>
+    <div id="container">
+      <div style="letter-spacing: 5px">SEPHORA</div>
+      <div id="navbar">CHECKOUT</div>
+      <div id="parentbx">
+        <div id="cartbx">
+          <div>
+            <h3>IMPORTANT</h3>
+            <p>
+              Dear customer, the actual delivery timelines may vary depending on
+              the government restrictions in your location
+            </p>
+          </div>
+          <!-- <div divparent>
+                         <div>img</div>
+                         <div>text</div>
+                         <div>select</div>
+                  </div> -->
+        </div>
+
+        <div>
+          <div id="getpromo">
+            <img
+              src="https://static.nnnow.com/client/assets/images/promotions/icon_promo.png"
+              alt=""
+            />
+            APPLY PROMO CODE
+          </div>
+          <div>
+            <h3>OVERVIEW</h3>
+            <!-- billing session -->
+            <div class="billsection">
+              <div>
+                <p>Subtotal</p>
+                <p>Rs.0</p>
+              </div>
+              <div>
+                <p>Discount</p>
+                <p id="dis">Rs.0</p>
+              </div>
+              <div>
+                <p>GST</p>
+                <p>Rs.0</p>
+              </div>
+              <div>
+                <p>Delivery Charges</p>
+                <p>Rs.0</p>
+              </div>
+              <div>
+                <h3>Total</h3>
+                <h3>Rs.</h3>
+              </div>
+            </div>
+          </div>
+          <div id="continue">CONTINUE</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let cart = JSON.parse(localStorage.getItem("addtoBag")) || [];
+  if(cart.length==0)
+    {
+    
+      alert("Your cart is empty");
+
+      window.location.href = "homepage.html";
+     
+    }
+       
+  let discount = 0;
+  display(cart);
+  // sum(cart);
+  subt = subtotal(cart);
+  total(subt, discount);
+
+  function display(cart) {
+    document.querySelector("#cartbx").innerHTML = "";
+    let divmsg = document.createElement("div");
+    divmsg.style.display = "flex";
+    divmsg.style.flexDirection = "column";
+    divmsg.style.padding = "20px";
+    divmsg.style.margin = "10px";
+    divmsg.style.border = "2px solid orange";
+    let h4 = document.createElement("h4");
+    h4.innerText = "Important !! ";
+    h4.style.marginBottom = "10px";
+    h4.style.marginleft = "-10px";
+    let p = document.createElement("p");
+    p.innerText =
+      "Dear customer, the actual delivery timelines may vary" +
+      "depending on the government restrictions in your location";
+    divmsg.append(h4, p);
+    document.querySelector("#cartbx").append(divmsg);
+    cart.forEach(function (elem, index) {
+      let div1 = document.createElement("div");
+      let div2 = document.createElement("div");
+      let div3 = document.createElement("div");
+      // let div4 = document.createElement("div");
+      let divparent = document.createElement("div");
+      // div1
+      let photo = document.createElement("img");
+      photo.setAttribute("src", elem.img);
+      //    div2
+      let head1 = document.createElement("h4");
+      head1.innerText = elem.name;
+      let para = document.createElement("p");
+      para.innerText = elem.use;
+      let head2 = document.createElement("h4");
+      head2.innerText = elem.price;
+
+      let qnty = document.createElement("p");
+      qnty.innerText = "Qt - " + elem.qty;
+      qnty.style.marginBottom = "30px";
+
+      let cost = document.createElement("h4");
+      cost.innerText = "Rs." + Number(elem.qty) * Number(elem.price);
+
+      div1.append(photo);
+      div2.append(head1, para, qnty, cost);
+      //  div3.append(qnty);
+      // div4.append(cost);
+      divparent.append(div1, div2, div3);
+      document.querySelector("#cartbx").append(divparent);
+    });
+
+    let div5 = document.createElement("div");
+    div5.innerText = "Edit";
+    div5.addEventListener("click", function () {
+      window.location = "cart.html";
+    });
+    div5.setAttribute("id", "edit");
+    document.querySelector("#cartbx").append(div5);
+  }
+
+  let count = 0;
+  function qtyAdd(qty, elem) {
+    elem.qty = qty;
+    console.log(elem);
+    // sum(cart);
+    changeprice(cart);
+    let subt = subtotal(cart);
+    total(subt, discount);
+  }
+  function subtotal(cart) {
+    let subtotal = 0;
+    for (let i = 0; i < cart.length; i++) {
+      subtotal += Number(cart[i].qty) * Number(cart[i].price);
+    }
+    let x = document.querySelector(
+      ".billsection> div:first-child>p:last-child"
+    );
+    x.innerText = "Rs." + subtotal;
+    localStorage.setItem("subPay", subtotal);
+    return subtotal;
+  }
+
+  function total(subt, discount) {
+    let total = subt - discount;
+    let x = document.querySelector(".billsection>div:last-child>h3:last-child");
+    x.innerText = "Rs." + total;
+    localStorage.setItem("Pay", total);
+  }
+  function changeprice(cart) {
+    let up = document.querySelectorAll("#cartbx>div>div:nth-child(4)>h2");
+    for (let i = 0; i < up.length; i++) {
+      let itmtotalcost = Number(cart[i].qty) * Number(cart[i].price);
+      up[i].innerText = "Rs." + itmtotalcost;
+    }
+  }
+  document.querySelector("#continue").addEventListener("click", function () {
+    document.getElementById("box").style.display = "block";
+  });
+
+  document.querySelector("form").addEventListener("submit", function () {
+    paymentPage();
+  });
+  function paymentPage() {
+    event.preventDefault();
+    document.querySelector("#box").style.display = "none";
+    window.location.href = "paymentPage.html";
+  }
+
+  document.querySelector("#getpromo").addEventListener("click", function () {
+    document.querySelector("#promocode").style.display = "block";
+  });
+
+  document.querySelector("#promobtn").addEventListener("click", function () {
+    let x = document.querySelector("#promovalue").value;
+    if (x == "masai 30") {
+      console.log(subt);
+      discount = subt * 0.3;
+      document.querySelector("#promocode").style.display = "none";
+      document.querySelector("#dis").innerText = "-Rs" + discount;
+      total(subt, discount);
+    } else {
+      document.querySelector("#promocode").style.display = "none";
+      alert("Invalid Promo");
+    }
+  });
+</script>
