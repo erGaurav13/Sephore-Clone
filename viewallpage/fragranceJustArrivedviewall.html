@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makeup Products</title>
-    <link rel="icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <title>makeup-newarrivals</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -354,6 +353,38 @@
     margin-right: 0px;
     z-index: +1;
   }
+  #navbars ul li {
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 0px;
+  padding: 0px;
+  display: grid;
+  align-items: center;
+ 
+  text-align: center;
+}
+#navbars>div ul {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+}
+#navbars li:hover .homediv {
+  opacity: 1;
+  color: black;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 200px;
+  left: 0px;
+  padding: 0px 100px;
+  top: 58px;
+ 
+  bottom: 10px;
+  visibility: visible;
+  display: flex;
+  margin-right: 0px;
+}
   .homediv>div p{
     font-size: 12px;
     color: black;
@@ -638,41 +669,7 @@
         background: #21DFCF;
       color: #21DFCF;
     }
-    #navbars ul li {
-  width: 150px;
-  margin-top: 15px;
-  margin-left: 0px;
-  padding: 0px;
-  display: grid;
-  align-items: center;
- 
-  text-align: center;
 
-}
-/* ++++++++++++++++++++++++++++++++++*/
-#navbars li:hover .homediv {
-  opacity: 1;
-  color: black;
-  background-color: #FFFFFF;
-  display: block;
-  width: 100%;
-  height: 200px;
-  left: 0px;
-  padding: 0px 100px;
-  top: 58px;
- 
-  bottom: 10px;
-  visibility: visible;
-  display: flex;
-  margin-right: 0px;
-}
-/* +++++++++++++ */
-#navbars>div ul {
-  list-style: none;
-  display: flex;
-  font-weight: 700;
-  width: 100%;
-}
 </style>
 </head>
 <body>
@@ -685,7 +682,7 @@
         alt=""
       />
       <p>
-         <span class="material-symbols-outlined"> pin_drop </span> Store
+        | <span class="material-symbols-outlined"> pin_drop </span> Store
         Locator
       </p>
     </div>
@@ -1072,33 +1069,13 @@
             change the value,innertext and in label change innertext -->
             <h3>Category</h3>
             <div>
-              <input class="rd1" type="radio" value="Nail" name="category">
-              <label for="Nail">Nail</label>
-              </div>
-             <div>
-              <input class="rd1" type="radio" value="Lip Stick" name="category">
-              <label for="Nail">Lip Stick</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Eye Shadow" name="category">
-              <label for="Nail">Eye Shadow</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Foundation" name="category">
-              <label for="Nail">Foundation</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Lip Stain" name="category">
-              <label for="Nail">Lip Stain</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Eye Liner" name="category">
-              <label for="Nail">Eye Liner</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Eye Brows" name="category">
-              <label for="Nail">Eye Brows</label>
-             </div>
+            <input class="rd1" type="radio" value="Perfume" name="category">
+            <label for="Nail">Perfume</label>
+            </div>
+           <div>
+            <input class="rd1" type="radio" value="Deodorant" name="category">
+            <label for="Nail">Deodorant</label>
+           </div>
         </div>
         <div id="product1">
             <div>
@@ -1362,7 +1339,7 @@
 </html>
 <script>
 //  Keep in mind do not chane the array name according to you
-// just copy paste your array of object AND give the name =>makeupbestSellers
+// just copy paste your array of object AND give the name =>fragrancedatajustarrived
 // insid your array of objects the keys are 
 // {  img:"",
 //    name:"",
@@ -1373,131 +1350,117 @@
 //    date:"",
 //  },
 
-let makeupbestSellers=[
-    {
-    img:"https://cdn02.nnnow.com/web-images/medium/styles/KO2GNHYI7VN/1539589546533/1.jpg",
-    name:"BENEFIT COSMETICCS",
-    description:"Precisely, My Brow Pencil 05 - Warm Black-Brown",
-    pop:3,
-    price:2390,
-    cat:"Eye Liner",
-    date:20,
-    qty:1,
-    },
-    {
-    img:"https://cdn02.nnnow.com/web-images/medium/styles/KO2GNHYI7VN/1539589546533/1.jpg",
-    name:"STILA",
-    description:"One Step Correct",
-    pop:2,
-    price:2640,
-    cat:"Nail",
-    date:12,
-    qty:1
-    },
-    {
-    img:"https://cdn18.nnnow.com/web-images/medium/styles/LF9B8BFLIIQ/1519382076017/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Cream Lip Stain 41 Vintage Rosewood",
-    pop:15,
-    price:976,
-    cat:"Lip Stain",
-    date:6,
-    qty:1
-    },
-    {
-    img:"https://cdn02.nnnow.com/web-images/medium/styles/KO2GNHYI7VN/1539589546533/1.jpg",
-    name:"CLINIQUE",
-    description:"High Impact Custom Kajal-Black",
-    pop:60,
-    price:1450,
-    cat:"Eye Liner",
-    date:9,
-    qty:1
-    },
-    {
-    img:"https://cdn06.nnnow.com/web-images/medium/styles/MWMVLMAOP67/1605089862026/1.jpg",
-    name:"BENEFIT COSMETICS",
-    description:"BADgal Bang! Volumizing Mascara Mini - Black",
-    pop:4,
-    price:868,
-    cat:"Eye Shadows",
-    date:6,
-    qty:1
-    },
-    {
-    img:"https://cdn07.nnnow.com/web-images/medium/styles/XIFN4DSF1J7/1559120900591/1.jpg",
-    name:"ANASTASIA BEVERLY HILLS",
-    description:"DIPBROwe Pomade - Dark Brown",
-    pop:20,
-    price:2280,
-    cat:"Eye Brows",
-    date:10,
-    qty:1,
-    },
-    {
-    img:"https://cdn08.nnnow.com/web-images/medium/styles/M5ZVMIS526D/1597900132612/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"High Precision Brush Long Lastin Eyeliner Black",
-    pop:70,
-    price:920,
-    cat:"Eye Liner",
-    date:5,
-    qty:1
-    },
-    {
-    img:"https://cdn02.nnnow.com/web-images/medium/styles/KO2GNHYI7VN/1539589546533/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Cream Lip Stain 86 English Rose",
-    pop:2,
-    price:12200,
-    cat:"Lip Stain",
-    date:5,
-    qty:1
-    },
-    {
-    img:"https://cdn06.nnnow.com/web-images/medium/styles/49DEKADYV67/1585829779043/1.jpg",
-    name:"PIXI",
-    description:"Correction Concentrate - Brightening Peach",
-    pop:50,
-    price:952,
-    cat:"Nail",
-    date:4,
-    qty:1
-    },
-    {
-    img:"https://cdn04.nnnow.com/web-images/medium/styles/M9GWJN6FQYC/1566556752968/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Colorful Magnetic Eye Shadow - Big Bang",
-    pop:40,
-    price:450,
-    cat:"Eye Shadow",
-    date:18,
-    qty:1,
-    },
-    {
-    img:"https://cdn12.nnnow.com/web-images/medium/styles/WKV4GMBEYXU/1530092287299/1.jpg",
-    name:"BENEFIT COSMETICS",
-    description:"Dandelion Twinkle Powder Highlighter Mini - Nude Pink",
-    pop:9,
-    price:978,
-    cat:"Foundation",
-    date:20,
-    qty:1,
-    },
-    {
-    img:"https://cdn07.nnnow.com/web-images/medium/styles/D4VD9J96SU3/1591170208769/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Smoothing Translucent Setting Powder",
-    pop:4,
-    price:950,
-    cat:"Nail",
-    date:18,
-    qty:1,
-    },
- ];
- displayTable(makeupbestSellers);
- function displayTable(makeupbestSellers){
-    makeupbestSellers.forEach(element => {
+let fragrancedatajustarrived=[
+  {
+  img:"https://cdn08.nnnow.com/web-images/medium/styles/R1DQOG5MQLY/1655275910931/1.jpg",
+  name:"GIVENCHY",
+  description:"Gentleman Reserve Privee Eau De Parfum",
+  pop:7,
+  price:9875,
+  cat:"Deodorant",
+  date:2,
+  },
+  {
+  img:"https://cdn07.nnnow.com/web-images/medium/styles/D7MJYULTEGZ/1652776303560/1.jpg",
+  name:"PACO RABANNE",
+  description:"1 Million Elixir Eau De Parfum",
+  pop:9,
+  price:11350,
+  cat:"Perfume",
+  date:7
+  },
+  {
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/1HO7W7XAPUR/1652413416999/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"CK Everyone Eau De Parfum",
+  pop:15,
+  price:6100,
+  cat:"Deodorant",
+  date:15,
+  },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/YNSNR56EXVY/1650545656519/1.jpg",
+  name:"BVLGARI",
+  description:"Bvlgari Rose Goldea Blossom Delight Eau de Toilette",
+  pop:20,
+  price:9150,
+  cat:"Deodorant",
+  date:15,
+  },{
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/KU2MM9G9RZE/1650002581278/1.jpg",
+  name:"DIESEL",
+  description:"Bad Eau De Toilette",
+  pop:17,
+  price:4500,
+  cat:"Perfume",
+  date:15,
+  },{
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/9ANXW5ZJDM6/1648186544636/1.jpg",
+  name:"CHLOE",
+  description:"Nomade Naturelle Eau De Parfum",
+  pop:5,
+  price:10600,
+  cat:"Deodorant",
+  date:16,
+  },
+  {
+  img:"https://cdn01.nnnow.com/web-images/medium/styles/PMP0XO0CP3G/1647235697400/1.jpg",
+  name:"HUGO BOSS",
+  description:"Boss Bottled Eau De Parfum",
+  pop:5,
+  price:8650,
+  cat:"Perfume",
+  date:19,
+  },
+  {
+  img:"https://cdn16.nnnow.com/web-images/medium/styles/03ADD3EG7P4/1645701168218/1.jpg",
+  name:"CAROLINA HERRERA",
+  description:"212 Heroes For Her Eau De Parfum ",
+  pop:15,
+  price:8000,
+  cat:"Deodorant",
+  date:19,
+  },
+  {
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/XL27VHQEIMT/1645680546949/1.jpg",
+  name:"GIVENCHY",
+  description:"L'Interdit Eau De Parfum Rouge",
+  pop:14,
+  price:10770,
+  cat:"Perfume",
+  date:20,
+  },
+  {
+  img:"https://cdn19.nnnow.com/web-images/medium/styles/6YXF1SN5MC4/1645442982932/1.jpg",
+  name:"CHOPARD",
+  description:"Love Chopard Eau de Parfum",
+  pop:12,
+  price:6950,
+  cat:"Deodrant",
+  date:25,
+  },
+  {
+  img:"https://cdn11.nnnow.com/web-images/medium/styles/Q0VOLPS69D6/1593590000733/1.jpg",
+  name:"MARC JACOBS",
+  description:"Perfect Intense Eau De Parfum",
+  pop:7,
+  price:9200,
+  cat:"Deodorant",
+  date:25
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/YSEXKORYALZ/1643810302317/1.jpg",
+  name:"SALVATORE FERRAGAMO",
+  description:"Ferragamo Intense Leather Eau De Parfum",
+  pop:16,
+  price:4600,
+  cat:"Perfum",
+  date:17,
+  },
+]; displayTable(fragrancedatajustarrived);
+ 
+  function displayTable(fragrancedatajustarrived){
+    fragrancedatajustarrived.forEach(element => {
     let div=document.createElement("div");
     let img=document.createElement("img");
     img.setAttribute("src",element.img)
@@ -1564,43 +1527,43 @@ let makeupbestSellers=[
  function changefunction(){
     let selected=document.querySelector("#sort").value;
     if(selected==" "){
-        displayTable(makeupbestSellers);
+        displayTable(fragrancedatajustarrived);
     }
     else if(selected=="lowtohigh"){
-        let x=makeupbestSellers.sort(function(a,b){
+        let x=fragrancedatajustarrived.sort(function(a,b){
             if(a.price>b.price) return 1;
             if(a.price<b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeupbestSellers);
+        displayTable(fragrancedatajustarrived);
     }
     else if(selected=="hightolow"){
-        let x=makeupbestSellers.sort(function(a,b){
+        let x=fragrancedatajustarrived.sort(function(a,b){
             if(a.price<b.price) return 1;
             if(a.price>b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeupbestSellers);
+        displayTable(fragrancedatajustarrived);
     }
     else if(selected=="Newest"){
-        let x=makeupbestSellers.sort(function(a,b){
+        let x=fragrancedatajustarrived.sort(function(a,b){
             if(a.date<b.date) return 1;
             if(a.date>b.date) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeupbestSellers);
+        displayTable(fragrancedatajustarrived);
     }
     else if(selected=="Popularity"){
-        let x=makeupbestSellers.sort(function(a,b){
+        let x=fragrancedatajustarrived.sort(function(a,b){
             if(a.pop>b.pop) return 1;
             if(a.pop<b.pop) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeupbestSellers);
+        displayTable(fragrancedatajustarrived);
     }
     
  }
@@ -1610,7 +1573,7 @@ checkbox.forEach(element => {
     element.addEventListener("change",myfunction);
 function myfunction(event){
     let x=event.target.value;
-    let y=makeupbestSellers;
+    let y=fragrancedatajustarrived;
     arr=[];
     y.forEach(ele => {
         if(x===ele.cat){

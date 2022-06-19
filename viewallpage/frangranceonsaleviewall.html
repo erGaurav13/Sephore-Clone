@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools & Brushes Products</title>
-    <link rel="icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <title>makeup-newarrivals</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -354,6 +353,38 @@
     margin-right: 0px;
     z-index: +1;
   }
+  #navbars ul li {
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 0px;
+  padding: 0px;
+  display: grid;
+  align-items: center;
+ 
+  text-align: center;
+}
+#navbars>div ul {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+}
+#navbars li:hover .homediv {
+  opacity: 1;
+  color: black;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 200px;
+  left: 0px;
+  padding: 0px 100px;
+  top: 58px;
+ 
+  bottom: 10px;
+  visibility: visible;
+  display: flex;
+  margin-right: 0px;
+}
   .homediv>div p{
     font-size: 12px;
     color: black;
@@ -638,41 +669,6 @@
         background: #21DFCF;
       color: #21DFCF;
     }
-    #navbars ul li {
-  width: 150px;
-  margin-top: 15px;
-  margin-left: 0px;
-  padding: 0px;
-  display: grid;
-  align-items: center;
- 
-  text-align: center;
-
-}
-/* ++++++++++++++++++++++++++++++++++*/
-#navbars li:hover .homediv {
-  opacity: 1;
-  color: black;
-  background-color: #FFFFFF;
-  display: block;
-  width: 100%;
-  height: 200px;
-  left: 0px;
-  padding: 0px 100px;
-  top: 58px;
- 
-  bottom: 10px;
-  visibility: visible;
-  display: flex;
-  margin-right: 0px;
-}
-/* +++++++++++++ */
-#navbars>div ul {
-  list-style: none;
-  display: flex;
-  font-weight: 700;
-  width: 100%;
-}
 
 </style>
 </head>
@@ -686,7 +682,7 @@
         alt=""
       />
       <p>
-         <span class="material-symbols-outlined"> pin_drop </span> Store
+        | <span class="material-symbols-outlined"> pin_drop </span> Store
         Locator
       </p>
     </div>
@@ -1073,25 +1069,13 @@
             change the value,innertext and in label change innertext -->
             <h3>Category</h3>
             <div>
-              <input class="rd1" type="radio" value="Eye Brushes" name="category">
-              <label for="Eye Brushes">Eye Brushes</label>
-              </div>
-             <div>
-              <input class="rd1" type="radio" value="Face Brushes" name="category">
-              <label for="Face Brushes">Face Brushes</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Sponge" name="category">
-              <label for="Sponge">Sponge</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Lip Brushes" name="category">
-              <label for="Lip Brushes">Lip Brushes</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Brush Cleaner" name="category">
-              <label for="Brush Cleaner">Brush Cleaner</label>
-             </div>
+            <input class="rd1" type="radio" value="Perfume" name="category">
+            <label for="Nail">Perfume</label>
+            </div>
+           <div>
+            <input class="rd1" type="radio" value="Deodorant" name="category">
+            <label for="Nail">Deodorant</label>
+           </div>
         </div>
         <div id="product1">
             <div>
@@ -1355,7 +1339,7 @@
 </html>
 <script>
 //  Keep in mind do not chane the array name according to you
-// just copy paste your array of object AND give the name =>toolshighTechTools
+// just copy paste your array of object AND give the name =>fragranceOnSale
 // insid your array of objects the keys are 
 // {  img:"",
 //    name:"",
@@ -1365,154 +1349,118 @@
 //    cat:"",
 //    date:"",
 //  },
-//High-Tech Tools
-let toolshighTechTools=[
-  
+
+let fragranceOnSale=[
   {
-  img:"https://cdn01.nnnow.com/web-images/medium/styles/1O7T64B0PJ9/1583391378166/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"4-Step Buffer",
-  price:380,
-  qty:1,
-  pop:2,
-  cat: "Eye Brushes",
-  date:4,
+  img:"https://cdn04.nnnow.com/web-images/medium/styles/FZPI0PN22AO/1605083781855/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"Green Tea Scent Spray",
+  pop:20,
+  price:3000,
+  cat:"Perfume",
+  date:15,
+  },{
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/P4FI87Z9XKE/1607690426098/1.jpg",
+  name:"BURBERRY",
+  description:"London Men Eau De Toilette",
+  pop:17,
+  price:5050,
+  cat:"Perfume",
+  date:15,
+  },{
+  img:"https://cdn02.nnnow.com/web-images/medium/styles/TFDW6SL2KES/1529904529029/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"Be Eau De Toilette",
+  pop:5,
+  price:4200,
+  cat:"Perfume",
+  date:15,
   },
   {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/2I790D9UT7O/1652089065578/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Cuticle Nipper",
-  price:2400,
-  qty:1,
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/5F6JJIT6VSC/1600752475867/1.jpg",
+  name:"COSTUME NATIONAL",
+  description:"So Nude Eau De Toilette",
   pop:4,
-  cat: "Face Brushes",
+  price:5600,
+  cat:"Perfume",
+  date:15,
+  },
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/AWSXWW1MCB0/1529906811438/1.jpg",
+  name:"ERMENEGILDO ZEGNA",
+  description:"Elements of Man Passion Eau De Parfum",
+  pop:6,
+  price:17000,
+  cat:"Perfume",
+  date:18
+  },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/RO62IZO7E44/1602228145463/1.jpg",
+  name:"ERMENEGILDO ZEGNA",
+  description:"Acqua Di Bergamotto Eau De Toilette",
+  pop:5,
+  price:7800,
+  cat:"Perfume",
+  date:18,
+  },
+  {
+  img:"https://cdn16.nnnow.com/web-images/medium/styles/4102PSN00G3/1644494062149/1.jpg",
+  name:"CHOPARD",
+  description:"Happy Bigaradia Eau De Parfum",
+  pop:5,
+  price:8999,
+  cat:"Perfume",
   date:4,
   },
   {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/A05XEE6C8EP/1633933976478/1.jpg",
-  name:"FOREO",
-  description:"LUNATM mini 3 Midnight",
-  price:1590,
-  qty:1,
-  pop:7,
-  cat: "Sponge",
-  date:9,
+  img:"https://cdn07.nnnow.com/web-images/medium/styles/DF36OYB9553/1604552492842/1.jpg",
+  name:"DIESEL",
+  description:"Sprit Of The Brave Eau De Toilette ",
+  pop:12,
+  price:5800,
+  cat:"Perfume",
+  date:4,
   },
   {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/VTDCZ7YJD7V/1495780516953/1.jpg",
-  name:"FOREO",
-  description:"LUNATM Mini 2 Facial Cleansing Device All Skin Types",
-  price:1349,
-  qty:1,
-  pop:1,
-  cat: "Brush Cleaner",
+  img:"https://cdn16.nnnow.com/web-images/medium/styles/6NRQA1NTKZR/1529906811428/1.jpg",
+  name:"ERMENEGILDO ZEGNA",
+  description:"Elements Of Man Integrity Eau De Parfum",
+  pop:14,
+  price:17000,
+  cat:"Perfume",
+  date:5,
+  },
+  {
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/TDX3WVWG5EC/1604658376921/1.jpg",
+  name:"KENZO",
+  description:"Flower By Kenzo Eau De Vie Eau De",
+  pop:8,
+  price:5300,
+  cat:"Deodorant",
+  date:5,
+  },
+  {
+  img:"https://cdn11.nnnow.com/web-images/medium/styles/Q0VOLPS69D6/1593590000733/1.jpg",
+  name:"CAROLINA HERRERA",
+  description:"212 VIP Sweat To Sparkle Sport Collector Edition Eau De Parfum",
+  pop:7,
+  price:6700,
+  cat:"Perfume",
   date:6,
   },
   {
-  img:"https://cdn18.nnnow.com/web-images/medium/styles/PXOHLMXF9VP/1650558360800/1.jpg",
-  name:"FOREO",
-  description:"UFO Smart Face Treatment - Pearl Pink",
-  price:1890,
-  qty:1,
-  pop:5,
-  cat: "Eye Brushes",
-  date:3,
-  },
-  {
-  img:"https://cdn16.nnnow.com/web-images/medium/styles/1XXYANS1HCO/1580451959408/1.jpg",
-  name:"FOREO",
-  description:"Luna Mini 3",
-  price:1600,
-  qty:1,
-  pop:8,
-  cat: "Sponge",
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/MESW798WZYQ/1535611149372/1.jpg",
+  name:"DAVIDOFF",
+  description:"Cool Water Woman Wave Eau De Toilette",
+  pop:1,
+  price:4600,
+  cat:"Deodorant",
   date:7,
   },
-  {
-  img:"https://cdn01.nnnow.com/web-images/medium/styles/AV44YHJPXLF/1650557954967/1.jpg",
-  name:"FOREO",
-  description:"UFO Mini Smart Face Treatment Fuchsia",
-  price:9600,
-  qty:1,
-  pop:2,
-  cat: "Face Brushes",
-  date:6,
-  },
-  {
-  img:"https://cdn10.nnnow.com/web-images/medium/styles/RU1UWVX0TTA/1636383743531/1.jpg",
-  name:"FOREO",
-  description:"LUNA 3 for Combination Skin",
-  price:1890,
-  qty:1,
-  pop:5,
-  cat: "Eye Brushes",
-  date:9,
-  },
-  {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/QD9NC7HMDQE/1491888383498/1.jpg",
-  name:"FOREO",
-  description:"IRISTM Iluminating Eye Massager",
-  price:1290,
-  qty:1,
-  pop:9,
-  cat: "Face Brushes",
-  date:6,
-  },
-  {
-  img:"https://cdn08.nnnow.com/web-images/medium/styles/53YADCMD2BT/1636383743565/1.jpg",
-  name:"FOREO",
-  description:"Luna 3 for Normal Skin",
-  price:1890,
-  qty:1,
-  pop:5,
-  cat: "Eye Brushes",
-  date:8,
-  },
-  {
-  img:"https://cdn18.nnnow.com/web-images/medium/styles/IEJJUB51XOU/1650558067798/1.jpg",
-  name:"FOREO",
-  description:"UFO Mini Smart Face Treatment - Pearl Pink",
-  price:9600,
-  qty:1,
-  pop:4,
-  cat: "Sponge Brushes",
-  date:6,
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/DGJDTF7SUO9/1650558075716/1.jpg",
-  name:"FOREO",
-  description:"UFO Mini Smart Face Treatment Mint",
-  price:9600,
-  qty:1,
-  pop:9,
-  cat: "Face Brushes",
-  date:1,
-  },
-  {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/FHLKJOGYT7Z/1635850597463/1.jpg",
-  name:"FOREO",
-  description:"ESPADATM Blue Light Acne Treatment Cobalt Blue",
-  price:1390,
-  qty:1,
-  pop:2,
-  cat: "Brush Cleaner",
-  date:3,
-  },
-  {
-  img:"https://cdn04.nnnow.com/web-images/medium/styles/PZXLHXYYCU0/1635851563878/1.jpg",
-  name:"FOREO",
-  description:"ESPADATM Blue Light Acne Treatment Magenta",
-  price:1390,
-  qty:1,
-  pop:6,
-  cat: "Eye Brushes",
-  date:6,
-  },
 ];
-
- displayTable(toolshighTechTools);
- function displayTable(toolshighTechTools){
-    toolshighTechTools.forEach(element => {
+ displayTable(fragranceOnSale);
+ function displayTable(fragranceOnSale){
+    fragranceOnSale.forEach(element => {
     let div=document.createElement("div");
     let img=document.createElement("img");
     img.setAttribute("src",element.img)
@@ -1579,43 +1527,43 @@ let toolshighTechTools=[
  function changefunction(){
     let selected=document.querySelector("#sort").value;
     if(selected==" "){
-        displayTable(toolshighTechTools);
+        displayTable(fragranceOnSale);
     }
     else if(selected=="lowtohigh"){
-        let x=toolshighTechTools.sort(function(a,b){
+        let x=fragranceOnSale.sort(function(a,b){
             if(a.price>b.price) return 1;
             if(a.price<b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolshighTechTools);
+        displayTable(fragranceOnSale);
     }
     else if(selected=="hightolow"){
-        let x=toolshighTechTools.sort(function(a,b){
+        let x=fragranceOnSale.sort(function(a,b){
             if(a.price<b.price) return 1;
             if(a.price>b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolshighTechTools);
+        displayTable(fragranceOnSale);
     }
     else if(selected=="Newest"){
-        let x=toolshighTechTools.sort(function(a,b){
+        let x=fragranceOnSale.sort(function(a,b){
             if(a.date<b.date) return 1;
             if(a.date>b.date) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolshighTechTools);
+        displayTable(fragranceOnSale);
     }
     else if(selected=="Popularity"){
-        let x=toolshighTechTools.sort(function(a,b){
+        let x=fragranceOnSale.sort(function(a,b){
             if(a.pop>b.pop) return 1;
             if(a.pop<b.pop) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolshighTechTools);
+        displayTable(fragranceOnSale);
     }
     
  }
@@ -1625,7 +1573,7 @@ checkbox.forEach(element => {
     element.addEventListener("change",myfunction);
 function myfunction(event){
     let x=event.target.value;
-    let y=toolshighTechTools;
+    let y=fragranceOnSale;
     arr=[];
     y.forEach(ele => {
         if(x===ele.cat){

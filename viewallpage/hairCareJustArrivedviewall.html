@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makeup Products</title>
-    <link rel="icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <title>makeup-newarrivals</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -373,6 +372,38 @@
       color: #FF42A3;
       cursor: pointer;
   }
+  #navbars ul li {
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 0px;
+  padding: 0px;
+  display: grid;
+  align-items: center;
+ 
+  text-align: center;
+}
+#navbars>div ul {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+}
+#navbars li:hover .homediv {
+  opacity: 1;
+  color: black;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 200px;
+  left: 0px;
+  padding: 0px 100px;
+  top: 58px;
+ 
+  bottom: 10px;
+  visibility: visible;
+  display: flex;
+  margin-right: 0px;
+}
 /* pavan */
 * {
     box-sizing: border-box;
@@ -638,41 +669,7 @@
         background: #21DFCF;
       color: #21DFCF;
     }
-    #navbars ul li {
-  width: 150px;
-  margin-top: 15px;
-  margin-left: 0px;
-  padding: 0px;
-  display: grid;
-  align-items: center;
- 
-  text-align: center;
 
-}
-/* ++++++++++++++++++++++++++++++++++*/
-#navbars li:hover .homediv {
-  opacity: 1;
-  color: black;
-  background-color: #FFFFFF;
-  display: block;
-  width: 100%;
-  height: 200px;
-  left: 0px;
-  padding: 0px 100px;
-  top: 58px;
- 
-  bottom: 10px;
-  visibility: visible;
-  display: flex;
-  margin-right: 0px;
-}
-/* +++++++++++++ */
-#navbars>div ul {
-  list-style: none;
-  display: flex;
-  font-weight: 700;
-  width: 100%;
-}
 </style>
 </head>
 <body>
@@ -685,7 +682,7 @@
         alt=""
       />
       <p>
-         <span class="material-symbols-outlined"> pin_drop </span> Store
+        | <span class="material-symbols-outlined"> pin_drop </span> Store
         Locator
       </p>
     </div>
@@ -1072,33 +1069,33 @@
             change the value,innertext and in label change innertext -->
             <h3>Category</h3>
             <div>
-              <input class="rd1" type="radio" value="Nail" name="category">
-              <label for="Nail">Nail</label>
-              </div>
-             <div>
-              <input class="rd1" type="radio" value="Lip Stick" name="category">
-              <label for="Nail">Lip Stick</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Eye Shadow" name="category">
-              <label for="Nail">Eye Shadow</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Foundation" name="category">
-              <label for="Nail">Foundation</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Lip Stain" name="category">
-              <label for="Nail">Lip Stain</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Eye Liner" name="category">
-              <label for="Nail">Eye Liner</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Eye Brows" name="category">
-              <label for="Nail">Eye Brows</label>
-             </div>
+            <input class="rd1" type="radio" value="Conditioner" name="category">
+            <label for="Nail">Conditioner</label>
+            </div>
+           <div>
+            <input class="rd1" type="radio" value="Shampoo" name="category">
+            <label for="Nail">Shampoo</label>
+           </div>
+           <div>
+            <input class="rd1" type="radio" value="Hair Styling Products" name="category">
+            <label for="Nail">Hair Styling Products</label>
+            </div>
+           <div>
+            <input class="rd1" type="radio" value="Hair Oil" name="category">
+            <label for="Nail">Hair Oil</label>
+           </div>
+           <div>
+            <input class="rd1" type="radio" value="Hair Masks" name="category">
+            <label for="Nail">Hair Masks</label>
+            </div>
+           <div>
+            <input class="rd1" type="radio" value="Hair Spray" name="category">
+            <label for="Nail">Hair Spray</label>
+           </div>
+           <div>
+            <input class="rd1" type="radio" value="Hair Clips" name="category">
+            <label for="Nail">Hair Clips</label>
+           </div>
         </div>
         <div id="product1">
             <div>
@@ -1362,7 +1359,7 @@
 </html>
 <script>
 //  Keep in mind do not chane the array name according to you
-// just copy paste your array of object AND give the name =>makeuplipSticks
+// just copy paste your array of object AND give the name =>hairCareJustArrived
 // insid your array of objects the keys are 
 // {  img:"",
 //    name:"",
@@ -1372,133 +1369,120 @@
 //    cat:"",
 //    date:"",
 //  },
-let makeuplipSticks=[
-    {
-    img:"https://cdn03.nnnow.com/web-images/medium/styles/GOP1YXWVZPO/1555307201332/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Rouge Lacquer Lip Stick - Rise Above",
-    pop:12,
-    price:610,
-    cat:"Lip Stick",
-    date:19,
-    qty:1,
-    },
-    {
-    img:"https://cdn11.nnnow.com/web-images/medium/styles/WLXSHXH89YV/1555307201356/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Rouge Lacquer Lip Stick - No Regrets",
-    pop:16,
-    price:610,
-    cat:"Foundation",
-    date:21,
-    qty:1,
-    },
-    {
-    img:"https://cdn15.nnnow.com/web-images/medium/styles/37KKT0R3CF6/1612524207038/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"#Lipstories Lip Stick Street",
-    pop:45,
-    price:856,
-    cat:"Lip Stick",
-    date:2,
-    qty:1
-    },
-    {
-    img:"https://cdn09.nnnow.com/web-images/medium/styles/I98DWHW5MI7/1617177083567/1.jpg",
-    name:"CLINIQUE",
-    description:"Even Better Pop Lip Colour Foundation - Blush",
-    pop:45,
-    price:2050,
-    cat:"Lip Stain",
-    date:14,
-    qty:1,
-    },
-    {
-    img:"https://cdn05.nnnow.com/web-images/medium/styles/TQRGXAI5TXU/1595328042752/1.jpg",
-    name:"ELIZABETH ARDEN",
-    description:"Beautiful Color Bold Liquid Lip Stick Fearless Red",
-    pop:25,
-    price:2075,
-    cat:"Eye SHadows",
-    date:26,
-    qty:1,
-    },
-    {
-    img:"https://cdn09.nnnow.com/web-images/medium/styles/I98DWHW5MI7/1617177083567/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Rouge Lacquer Lipstick 34 My Rules",
-    pop:35,
-    price:4226,
-    cat:"Lip Stain",
-    date:11,
-    qty:1,
-    },
-    {
-    img:"https://cdn04.nnnow.com/web-images/medium/styles/BNQ9TM373BF/1612524207046/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"#Lipstories Lip Stick - Werk It",
-    pop:50,
-    price:595,
-    cat:"Eye Brows",
-    date:6,
-    qty:1
-    },
-    {
-    img:"https://cdn09.nnnow.com/web-images/medium/styles/I98DWHW5MI7/1617177083567/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"#Lipstories Lip Stick- Sink Or Swim",
-    pop:10,
-    price:425,
-    cat:"Eye Brows",
-    date:9,
-    qty:1
-    },
-    {
-    img:"https://cdn02.nnnow.com/web-images/medium/styles/QCG568II3OE/1603970726301/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Rouge Nude Lip Stick - 04 Good To Me",
-    pop:45,
-    price:610,
-    cat:"Nail",
-    date:3,
-    qty:1
-    },
-    {
-    img:"https://cdn18.nnnow.com/web-images/medium/styles/ODCPP1H32DD/1555306181795/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Rouge Satin Lip Stick Sunkissed",
-    pop:30,
-    price:610,
-    cat:"Nail",
-    date:18,
-    qty:1,
-    },
-    {
-    img:"https://cdn16.nnnow.com/web-images/medium/styles/ZASAU1JA8PJ/1555307201359/1.jpg",
-    name:"STILA",
-    description:"Stay All Day Liquid Lip Stick 117A Patina",
-    pop:55,
-    price:1680,
-    cat:"Eye Brows",
-    date:26,
-    qty:1,
-    },
-    {
-    img:"https://cdn02.nnnow.com/web-images/medium/styles/KO2GNHYI7VN/1539589546533/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"#Lipstories Lip Stick -27 Hong Kong By Night",
-    pop:70,
-    price:450,
-    cat:"Eye Shadows",
-    date:15,
-    qty:1,
-    }
- ];
 
-
- displayTable(makeuplipSticks);
- function displayTable(makeuplipSticks){
-    makeuplipSticks.forEach(element => {
+let hairCareJustArrived=[
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/NAG35MWAZB5/1603956012732/1.jpg",
+  name:"OLAPLEXK",
+  description:"N°4 Bond Maintenance Shampoo",
+  pop:20,
+  price:2950,
+  cat:"Shampoo",
+  date:4,
+  },
+  {
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/RB2GD0T4W14/1603859985717/1.jpg",
+  name:"OLAPLEXK",
+  description:"N°4 Bond Maintenance Conditioner",
+  pop:20,
+  price:2950,
+  cat:"Conditioner",
+  date:4,
+  },
+  {
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/KHFROVPTCI2/1599046960541/1.jpg",
+  name:"OLAPLEX",
+  description:"No. 7 Bonding Oil",
+  pop:14,
+  price:2655,
+  cat:"Hair Oil",
+  date:8
+  },
+  {
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/PSY9GYLUMYU/1634887017760/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Texture Clay Hair Cream",
+  pop:7,
+  price:2340,
+  cat:"Hair Masks",
+  date:18,
+  },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/626PU93RNYO/1652252610567/1.jpg",
+  name:"OUAI",
+  description:"Leave In Conditioner",
+  pop:4,
+  price:2200,
+  cat:"Conditioner",
+  date:12,
+  },
+  {
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/5WTNETORKC9/1634886109156/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Perfect Defence",
+  pop:13,
+  price:2655,
+  cat:"Hair Styling Products",
+  date:11,
+  },
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/7TU00OK7QSV/1634888036586/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Hydrating Shampoo",
+  pop:20,
+  price:2160,
+  cat:"Shampoo",
+  date:5,
+  },
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/7TU00OK7QSV/1634888036586/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Moisture Repair Shampoo",
+  pop:40,
+  price:1890,
+  cat:"Shampoo",
+  date:15,
+  },
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/7TU00OK7QSV/1634888036586/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Extra Volume Shampoo",
+  pop:40,
+  price:2160,
+  cat:"Shampoo",
+  date:15,
+  },
+  {
+  img:"https://cdn10.nnnow.com/web-images/medium/styles/SE57NC8WB0K/1634887017703/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Extra Volume Conditioner",
+  pop:51,
+  price:2160,
+  cat:"Conditioner",
+  date:15,
+  },
+  {
+  img:"https://cdn12.nnnow.com/web-images/medium/styles/QJ2QNWIE87T/1652252637863/1.jpg",
+  name:"OUAI",
+  description:"Hair Spray",
+  pop:17,
+  price:2200,
+  cat:"Hair Spray",
+  date:19,
+  },
+  {
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/5WTNETORKC9/1634886109156/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Perfect Defence",
+  pop:15,
+  price:2700,
+  cat:"Conditioner",
+  date:20,
+  },
+];
+displayTable(hairCareJustArrived);
+function displayTable(hairCareJustArrived){
+    hairCareJustArrived.forEach(element => {
     let div=document.createElement("div");
     let img=document.createElement("img");
     img.setAttribute("src",element.img)
@@ -1565,43 +1549,43 @@ let makeuplipSticks=[
  function changefunction(){
     let selected=document.querySelector("#sort").value;
     if(selected==" "){
-        displayTable(makeuplipSticks);
+        displayTable(hairCareJustArrived);
     }
     else if(selected=="lowtohigh"){
-        let x=makeuplipSticks.sort(function(a,b){
+        let x=hairCareJustArrived.sort(function(a,b){
             if(a.price>b.price) return 1;
             if(a.price<b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeuplipSticks);
+        displayTable(hairCareJustArrived);
     }
     else if(selected=="hightolow"){
-        let x=makeuplipSticks.sort(function(a,b){
+        let x=hairCareJustArrived.sort(function(a,b){
             if(a.price<b.price) return 1;
             if(a.price>b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeuplipSticks);
+        displayTable(hairCareJustArrived);
     }
     else if(selected=="Newest"){
-        let x=makeuplipSticks.sort(function(a,b){
+        let x=hairCareJustArrived.sort(function(a,b){
             if(a.date<b.date) return 1;
             if(a.date>b.date) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeuplipSticks);
+        displayTable(hairCareJustArrived);
     }
     else if(selected=="Popularity"){
-        let x=makeuplipSticks.sort(function(a,b){
+        let x=hairCareJustArrived.sort(function(a,b){
             if(a.pop>b.pop) return 1;
             if(a.pop<b.pop) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeuplipSticks);
+        displayTable(hairCareJustArrived);
     }
     
  }
@@ -1611,7 +1595,7 @@ checkbox.forEach(element => {
     element.addEventListener("change",myfunction);
 function myfunction(event){
     let x=event.target.value;
-    let y=makeuplipSticks;
+    let y=hairCareJustArrived;
     arr=[];
     y.forEach(ele => {
         if(x===ele.cat){

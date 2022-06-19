@@ -1,528 +1,444 @@
-// Just Arrived
-let toolsjustarrived=[
+let fragranceOnSale=[
   {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/UPN1DIYDEOO/1539585373094/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Advanced Brush Set",
-  pop:80,
-  price:3175,
-  cat:"Face Brush",
-  date:5,
-  qty:1
-  },
-  {
-  img:"https://cdn10.nnnow.com/web-images/medium/styles/E3ATWR0QI78/1533194318319/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Retractable Lip Brush",
-  pop:64,
-  price:1820,
-  cat:"Lip brush",
-  date:8
-,
-qty:1},
-  {
-  img:"https://cdn17.nnnow.com/web-images/medium/styles/DQ4XG8LX9KO/1533194318318/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Solid Brush Cleaner",
-  pop:45,
-  price:625,
-  cat:"Brush Cleaner",
-  date:8,
-  qty:1
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/7V2LWZ4JE2N/1533194318313/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Silicone Makeup Sponge",
-  pop:60,
-  price:460,
-  cat:"Sponge",
-  date:7,
-  qty:1
-  },
-  {
-  img:"https://cdn16.nnnow.com/web-images/medium/styles/8CNXO3WNP02/1533194318316/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Face Konjac Radiance Sponge",
-  pop:46,
-  price:950,
-  cat:"Sponge",
-  date:22,
-  qty:1,
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/DTFXF1QNQOF/1525433681244/1.jpg",
-  name:"SMASHBOX",
-  description:"Contour Shadow Brush",
-  pop:35,
-  price:2400,
-  cat:"Eye Brush",
-  date:11,
-  qty:1,
-  },
-  {
-  img:"https://cdn16.nnnow.com/web-images/medium/styles/QBNUP4RRW6N/1525433681249/1.jpg",
-  name:"SMASHBOX",
-  description:"Blurring Concealer Brush",
-  pop:55,
-  price:2000,
-  cat:"Face Brush",
-  date:9,
-  qty:1
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/9HN17UR8VKI/1525433681240/1.jpg",
-  name:"SMASHBOX",
-  description:"Buildable Foundation Brush",
-  pop:46,
-  price:3300,
-  cat:"Face Brush",
-  date:23,
-  qty:1,
-  },
-  {
-  img:"https://cdn07.nnnow.com/web-images/medium/styles/B52J53900ZD/1525433681241/1.jpg",
-  name:"SMASHBOX",
-  description:"Buildable Cheek Brush",
-  pop:66,
-  price:3600,
-  cat:"Face Brush",
-  date:14,
-  qty:1,
-  },
-  {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/EM25HKPUWSF/1525433681246/1.jpg",
-  name:"SMASHBOX",
-  description:"Lip Brush",
-  pop:45,
-  price:2050,
-  cat:"Lip Brush",
-  date:14,
-  qty:1,
-  },
-  {
-  img:"https://cdn19.nnnow.com/web-images/medium/styles/X8JIWKM2HL1/1517466587226/1.jpg",
-  name:"MAKE UP FOR EVER",
-  description:"Instant Brush Cleanser",
-  pop:25,
-  price:1800,
-  cat:"Cleanser",
-  date:8
-,
-qty:1},
-  {
-  img:"https://cdn18.nnnow.com/web-images/medium/styles/SM1PSOO14H5/1525433681251/1.jpg",
-  name:"SAMASHBOX",
-  description:"Pricise Brow & Liner Brush",
-  pop:5,
-  price:2000,
-  cat:"Eye Brush",
-  date:6,
-  qty:1
-  },
-];
-
-//Best Sellers
-let toolsbestSellers=[
-  {
-  img:"https://cdn15.nnnow.com/web-images/medium/styles/8TD6SKRKEP5/1583391378169/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"All-In-One Makeup Sponge",
-  pop:46,
-  price:475,
-  cat:"Sponge",
-  date:4,
-  qty:1
-  },
-  {
-  img:"https://cdn11.nnnow.com/web-images/medium/styles/V3WGKJS6KW8/1583391560342/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Multi-Texture Sponge",
-  pop:62,
-  price:500,
-  cat:"Sponge",
-  date:27,
-  qty:1,
-  },
-  {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/SFJGB37DTO2/1560852958803/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Foundation Brush # 47",
-  pop:49,
-  price:2000,
-  cat:"Face Brush",
-  date:24,
-  qty:1,
-  },
-  {
-  img:"https://cdn07.nnnow.com/web-images/medium/styles/SZAQ4AGR2OK/1560421515006/1.jpg",
-  name:"ANASTASIA BEVERLY HILLS",
-  description:"Tapered Blending Brush #23A",
-  pop:52,
-  price:2240,
-  cat:"Face Brush",
-  date:19,
-  qty:1,
-  },
-  {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/UPN1DIYDEOO/1539585373094/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Advanced Brush Set",
-  pop:69,
-  price:3175,
-  cat:"Face Brush",
-  date:18,
-  qty:1,
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/LQGCQXH1YN7/1518007568657/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Bronzer Brush 48",
-  pop:72,
-  price:3550,
-  cat:"Eye Brush",
-  date:29,
-  qty:1,
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/4TA594MACAP/1585728189786/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Eyelash Curler",
-  pop:58,
-  price:885,
-  cat:"Eye Brush",
-  date:18,
-  qty:1,
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/O1YJQ3LMNO6/1585728189816/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Eyelash Curler",
-  pop:46,
-  price:1770,
-  cat:"Eye Brush",
-  date:3,
-  qty:1
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/FSKQ5AJQA76/1491888383474/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Precision Crease Brush 17",
-  pop:76,
-  price:1115,
-  cat:"Eye Brush",
-  date:17,
-  qty:1,
-  },
-  {
-  img:"https://cdn18.nnnow.com/web-images/medium/styles/Z4JQV20T2HM/1518073456727/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Bent Liner Brush 23",
-  pop:77,
-  price:2110,
-  cat:"Eye Brush",
-  date:27,
-  qty:1,
-  },
-  {
-  img:"https://cdn11.nnnow.com/web-images/medium/styles/T5HJJAPLWBM/1491393102208/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Flawless Airbrush 56",
-  pop:89,
-  price:1735,
-  cat:"Face Brush",
-  date:17,
-  qty:1
-  },
-  {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/VTDCZ7YJD7V/1495780516953/1.jpg",
-  name:"LUNATM Mini 2 Facial Cleansing Device",
-  description:"All Skin Types",
-  pop:57,
-  price:2000,
-  cat:"Cleansing",
+  img:"https://cdn04.nnnow.com/web-images/medium/styles/FZPI0PN22AO/1605083781855/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"Green Tea Scent Spray",
+  pop:20,
+  price:3000,
+  cat:"Perfume",
   date:15,
-  qty:1,
-  },
-];
-
-//Makeup Brushes
-let toolsBrushes=[
-  {
-  img:"https://cdn15.nnnow.com/web-images/medium/styles/366XPCD0TVA/1560852958825/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Blush Brush #04",
-  pop:45,
-  price:960,
-  cat:"Face Brush",
-  date:8,
-  qty:1
-  },
-  {
-  img:"https://cdn11.nnnow.com/web-images/medium/styles/V3WGKJS6KW8/1583391560342/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Multi-Texture Sponge",
-  pop:62,
-  price:500,
-  cat:"Sponge",
-  date:27,
-  qty:1,
-  },
-  {
-  img:"https://cdn01.nnnow.com/web-images/medium/styles/JT4ECFC9Q96/1560852958783/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Foundation Brush #01",
-  pop:64,
-  price:1200,
-  cat:"Face Brush",
-  date:22,
-  qty:1,
-  },
-  {
-  img:"https://cdn15.nnnow.com/web-images/medium/styles/2OQ5IHLJNL4/1644913483501/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Concealer Brush # 57",
-  pop:35,
-  price:2100,
-  cat:"Face Brush",
+  },{
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/P4FI87Z9XKE/1607690426098/1.jpg",
+  name:"BURBERRY",
+  description:"London Men Eau De Toilette",
+  pop:17,
+  price:5050,
+  cat:"Perfume",
   date:15,
-  qty:1,
+  },{
+  img:"https://cdn02.nnnow.com/web-images/medium/styles/TFDW6SL2KES/1529904529029/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"Be Eau De Toilette",
+  pop:5,
+  price:4200,
+  cat:"Perfume",
+  date:15,
   },
   {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/17DJ9WVMCKA/1560852958821/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Brow Brush # 12",
-  pop:48,
-  price:720,
-  cat:"Eye Brush",
-  date:12,
-  qty:1,
-  },
-  {
-  img:"https://cdn15.nnnow.com/web-images/medium/styles/QFFYFKQLBCB/1626067274186/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Full Face Brush Set",
-  pop:60,
-  price:2800,
-  cat:"Face Brush",
-  date:9,
-  qty:1
-  },
-  {
-  img:"https://cdn01.nnnow.com/web-images/medium/styles/6VSPH657G7L/1560852958771/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Multitasker Brush #06",
-  pop:62,
-  price:1200,
-  cat:"Face Brush",
-  date:10,
-  qty:1,
-  },
-  {
-  img:"https://cdn16.nnnow.com/web-images/medium/styles/8CNXO3WNP02/1533194318316/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Face Konjac Radiance Sponge",
-  pop:30,
-  price:950,
-  cat:"Sponge",
-  date:8,
-  qty:1
-  },
-  {
-  img:"https://cdn12.nnnow.com/web-images/medium/styles/7VMQWKOB44R/1560852958779/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Concealer Brush #02",
-  pop:30,
-  price:800,
-  cat:"Face Brush",
-  date:7,
-  qty:1
-  },
-  {
-  img:"https://cdn08.nnnow.com/web-images/medium/styles/SY7PKN4DCD6/1560852958817/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Featherweight Powder Brush #91",
-  pop:50,
-  price:2340,
-  cat:"Face Brush",
-  date:11,
-  qty:1,
-  },
-  {
-  img:"https://cdn13.nnnow.com/web-images/medium/styles/IN62GHTXOY8/1491393101968/1.jpg",
-  name:"STILA",
-  description:"24 Double Ended lluminating Powder Brush",
-  pop:30,
-  price:3072,
-  cat:"Face Brush",
-  date:5,
-  qty:1
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/Q44W3TYUVVE/1560852958775/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Powder Brush #03",
-  pop:37,
-  price:1500,
-  cat:"Face Brush",
-  date:13,
-  qty:1,
-  },
-];
-
-// High tech Tools
-let toolshighTechTools=[
-  
-  {
-  img:"https://cdn01.nnnow.com/web-images/medium/styles/1O7T64B0PJ9/1583391378166/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"4-Step Buffer",
-  price:380,
-  qty:1,
-  pop:2,
-  cat: "Eye Brushes",
-  date:4,
-  },
-  {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/2I790D9UT7O/1652089065578/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Cuticle Nipper",
-  price:2400,
-  qty:1,
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/5F6JJIT6VSC/1600752475867/1.jpg",
+  name:"COSTUME NATIONAL",
+  description:"So Nude Eau De Toilette",
   pop:4,
-  cat: "Face Brushes",
-  date:4,
+  price:5600,
+  cat:"Perfume",
+  date:15,
   },
   {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/A05XEE6C8EP/1633933976478/1.jpg",
-  name:"FOREO",
-  description:"LUNATM mini 3 Midnight",
-  price:1590,
-  qty:1,
-  pop:7,
-  cat: "Sponge",
-  date:9,
-  },
-  {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/VTDCZ7YJD7V/1495780516953/1.jpg",
-  name:"FOREO",
-  description:"LUNATM Mini 2 Facial Cleansing Device All Skin Types",
-  price:1349,
-  qty:1,
-  pop:1,
-  cat: "Brush Cleaner",
-  date:6,
-  },
-  {
-  img:"https://cdn18.nnnow.com/web-images/medium/styles/PXOHLMXF9VP/1650558360800/1.jpg",
-  name:"FOREO",
-  description:"UFO Smart Face Treatment - Pearl Pink",
-  price:1890,
-  qty:1,
-  pop:5,
-  cat: "Eye Brushes",
-  date:3,
-  },
-  {
-  img:"https://cdn16.nnnow.com/web-images/medium/styles/1XXYANS1HCO/1580451959408/1.jpg",
-  name:"FOREO",
-  description:"Luna Mini 3",
-  price:1600,
-  qty:1,
-  pop:8,
-  cat: "Sponge",
-  date:7,
-  },
-  {
-  img:"https://cdn01.nnnow.com/web-images/medium/styles/AV44YHJPXLF/1650557954967/1.jpg",
-  name:"FOREO",
-  description:"UFO Mini Smart Face Treatment Fuchsia",
-  price:9600,
-  qty:1,
-  pop:2,
-  cat: "Face Brushes",
-  date:6,
-  },
-  {
-  img:"https://cdn10.nnnow.com/web-images/medium/styles/RU1UWVX0TTA/1636383743531/1.jpg",
-  name:"FOREO",
-  description:"LUNA 3 for Combination Skin",
-  price:1890,
-  qty:1,
-  pop:5,
-  cat: "Eye Brushes",
-  date:9,
-  },
-  {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/QD9NC7HMDQE/1491888383498/1.jpg",
-  name:"FOREO",
-  description:"IRISTM Iluminating Eye Massager",
-  price:1290,
-  qty:1,
-  pop:9,
-  cat: "Face Brushes",
-  date:6,
-  },
-  {
-  img:"https://cdn08.nnnow.com/web-images/medium/styles/53YADCMD2BT/1636383743565/1.jpg",
-  name:"FOREO",
-  description:"Luna 3 for Normal Skin",
-  price:1890,
-  qty:1,
-  pop:5,
-  cat: "Eye Brushes",
-  date:8,
-  },
-  {
-  img:"https://cdn18.nnnow.com/web-images/medium/styles/IEJJUB51XOU/1650558067798/1.jpg",
-  name:"FOREO",
-  description:"UFO Mini Smart Face Treatment - Pearl Pink",
-  price:9600,
-  qty:1,
-  pop:4,
-  cat: "Sponge Brushes",
-  date:6,
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/DGJDTF7SUO9/1650558075716/1.jpg",
-  name:"FOREO",
-  description:"UFO Mini Smart Face Treatment Mint",
-  price:9600,
-  qty:1,
-  pop:9,
-  cat: "Face Brushes",
-  date:1,
-  },
-  {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/FHLKJOGYT7Z/1635850597463/1.jpg",
-  name:"FOREO",
-  description:"ESPADATM Blue Light Acne Treatment Cobalt Blue",
-  price:1390,
-  qty:1,
-  pop:2,
-  cat: "Brush Cleaner",
-  date:3,
-  },
-  {
-  img:"https://cdn04.nnnow.com/web-images/medium/styles/PZXLHXYYCU0/1635851563878/1.jpg",
-  name:"FOREO",
-  description:"ESPADATM Blue Light Acne Treatment Magenta",
-  price:1390,
-  qty:1,
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/AWSXWW1MCB0/1529906811438/1.jpg",
+  name:"ERMENEGILDO ZEGNA",
+  description:"Elements of Man Passion Eau De Parfum",
   pop:6,
-  cat: "Eye Brushes",
+  price:17000,
+  cat:"Perfume",
+  date:18
+  },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/RO62IZO7E44/1602228145463/1.jpg",
+  name:"ERMENEGILDO ZEGNA",
+  description:"Acqua Di Bergamotto Eau De Toilette",
+  pop:5,
+  price:7800,
+  cat:"Perfume",
+  date:18,
+  },
+  {
+  img:"https://cdn16.nnnow.com/web-images/medium/styles/4102PSN00G3/1644494062149/1.jpg",
+  name:"CHOPARD",
+  description:"Happy Bigaradia Eau De Parfum",
+  pop:5,
+  price:8999,
+  cat:"Perfume",
+  date:4,
+  },
+  {
+  img:"https://cdn07.nnnow.com/web-images/medium/styles/DF36OYB9553/1604552492842/1.jpg",
+  name:"DIESEL",
+  description:"Sprit Of The Brave Eau De Toilette ",
+  pop:12,
+  price:5800,
+  cat:"Perfume",
+  date:4,
+  },
+  {
+  img:"https://cdn16.nnnow.com/web-images/medium/styles/6NRQA1NTKZR/1529906811428/1.jpg",
+  name:"ERMENEGILDO ZEGNA",
+  description:"Elements Of Man Integrity Eau De Parfum",
+  pop:14,
+  price:17000,
+  cat:"Perfume",
+  date:5,
+  },
+  {
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/TDX3WVWG5EC/1604658376921/1.jpg",
+  name:"KENZO",
+  description:"Flower By Kenzo Eau De Vie Eau De",
+  pop:8,
+  price:5300,
+  cat:"Perfum",
+  date:5,
+  },
+  {
+  img:"https://cdn11.nnnow.com/web-images/medium/styles/Q0VOLPS69D6/1593590000733/1.jpg",
+  name:"CAROLINA HERRERA",
+  description:"212 VIP Sweat To Sparkle Sport Collector Edition Eau De Parfum",
+  pop:7,
+  price:6700,
+  cat:"Perfum",
   date:6,
   },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/MESW798WZYQ/1535611149372/1.jpg",
+  name:"DAVIDOFF",
+  description:"Cool Water Woman Wave Eau De Toilette",
+  pop:1,
+  price:4600,
+  cat:"Perfum",
+  date:7,
+  },
 ];
-
-
-
-display(toolsjustarrived);
+// Just Arrived
+let fragrancedatajustarrived=[
+  {
+  img:"https://cdn08.nnnow.com/web-images/medium/styles/R1DQOG5MQLY/1655275910931/1.jpg",
+  name:"GIVENCHY",
+  description:"Gentleman Reserve Privee Eau De Parfum",
+  pop:7,
+  price:9875,
+  cat:"Deodorant",
+  date:2,
+  },
+  {
+  img:"https://cdn07.nnnow.com/web-images/medium/styles/D7MJYULTEGZ/1652776303560/1.jpg",
+  name:"PACO RABANNE",
+  description:"1 Million Elixir Eau De Parfum",
+  pop:9,
+  price:11350,
+  cat:"Perfume",
+  date:7
+  },
+  {
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/1HO7W7XAPUR/1652413416999/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"CK Everyone Eau De Parfum",
+  pop:15,
+  price:6100,
+  cat:"Deodorant",
+  date:15,
+  },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/YNSNR56EXVY/1650545656519/1.jpg",
+  name:"BVLGARI",
+  description:"Bvlgari Rose Goldea Blossom Delight Eau de Toilette",
+  pop:20,
+  price:9150,
+  cat:"Deodorant",
+  date:15,
+  },{
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/KU2MM9G9RZE/1650002581278/1.jpg",
+  name:"DIESEL",
+  description:"Bad Eau De Toilette",
+  pop:17,
+  price:4500,
+  cat:"Perfume",
+  date:15,
+  },{
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/9ANXW5ZJDM6/1648186544636/1.jpg",
+  name:"CHLOE",
+  description:"Nomade Naturelle Eau De Parfum",
+  pop:5,
+  price:10600,
+  cat:"Deodorant",
+  date:16,
+  },
+  {
+  img:"https://cdn01.nnnow.com/web-images/medium/styles/PMP0XO0CP3G/1647235697400/1.jpg",
+  name:"HUGO BOSS",
+  description:"Boss Bottled Eau De Parfum",
+  pop:5,
+  price:8650,
+  cat:"Perfume",
+  date:19,
+  },
+  {
+  img:"https://cdn16.nnnow.com/web-images/medium/styles/03ADD3EG7P4/1645701168218/1.jpg",
+  name:"CAROLINA HERRERA",
+  description:"212 Heroes For Her Eau De Parfum ",
+  pop:15,
+  price:8000,
+  cat:"Deodorant",
+  date:19,
+  },
+  {
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/XL27VHQEIMT/1645680546949/1.jpg",
+  name:"GIVENCHY",
+  description:"L'Interdit Eau De Parfum Rouge",
+  pop:14,
+  price:10770,
+  cat:"Perfume",
+  date:20,
+  },
+  {
+  img:"https://cdn19.nnnow.com/web-images/medium/styles/6YXF1SN5MC4/1645442982932/1.jpg",
+  name:"CHOPARD",
+  description:"Love Chopard Eau de Parfum",
+  pop:12,
+  price:6950,
+  cat:"Deodrant",
+  date:25,
+  },
+  {
+  img:"https://cdn11.nnnow.com/web-images/medium/styles/Q0VOLPS69D6/1593590000733/1.jpg",
+  name:"MARC JACOBS",
+  description:"Perfect Intense Eau De Parfum",
+  pop:7,
+  price:9200,
+  cat:"Deodorant",
+  date:25
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/YSEXKORYALZ/1643810302317/1.jpg",
+  name:"SALVATORE FERRAGAMO",
+  description:"Ferragamo Intense Leather Eau De Parfum",
+  pop:16,
+  price:4600,
+  cat:"Perfum",
+  date:17,
+  },
+];
+// Best Sellers
+let fragranceBestSallers=[
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/6QFRWWY6GN7/1589003350410/1.jpg",
+  name:"TOM FORD",
+  description:"Oud Wood Eau De Parfum",
+  pop:25,
+  price:23500,
+  cat:"Perfume",
+  date:5,
+  },{
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/G5JPJ9IWPUU/1615870725188/1.jpg",
+  name:"GIORGIO ARMANI",
+  description:"Acqua Di Gio Profondo Eau De Parfum",
+  pop:8,
+  price:7100,
+  cat:"Perfume",
+  date:5,
+  },{
+  img:"https://cdn12.nnnow.com/web-images/medium/styles/GHMU19530AA/1615975549685/1.jpg",
+  name:"DOLCE & GABBANA",
+  description:"Be Eau De Toilette",
+  pop:5,
+  price:7550,
+  cat:"Deodorant",
+  date:17,
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/E9E5DRYRB44/1603181767610/1.jpg",
+  name:"PACO RABANNE",
+  description:"1 Million Eau De Toilette",
+  pop:9,
+  price:6100,
+  cat:"Perfume",
+  date:19,
+  },
+  {
+  img:"https://cdn04.nnnow.com/web-images/medium/styles/E8MATF2IDYU/1605084283131/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"Green Tea Scent Spray",
+  pop:11,
+  price:17000,
+  cat:"Perfume",
+  date:18
+  },
+  {
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/P4FI87Z9XKE/1607690426098/1.jpg",
+  name:"EUZABETH ARDEN",
+  description:"My Fifth Avenue Eau De Parfum",
+  pop:11,
+  price:5150,
+  cat:"Deodorant",
+  date:6,
+  },
+  {
+  img:"https://cdn08.nnnow.com/web-images/medium/styles/LZMRQSG216A/1580465663363/1.jpg",
+  name:"BURBERRY",
+  description:"London Men Eau De Toilette",
+  pop:5,
+  price:5050,
+  cat:"Deodorant",
+  date:4,
+  },
+  {
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/2SDH63OIOLM/1487241079903/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"Be Eau De Toilette ",
+  pop:5,
+  price:4525,
+  cat:"Perfume",
+  date:4,
+  },
+  {
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/802F37DQLZ7/1487245292175/1.jpg",
+  name:"DAVIDOFF",
+  description:"Cool Water Eau De Toilette",
+  pop:5,
+  price:4750,
+  cat:"Perfume",
+  date:9,
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/7TQ9BRQ4HE3/1584959779851/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"Eterntiy Man Eau De Parfum",
+  pop:5,
+  price:4750,
+  cat:"Perfum",
+  date:9,
+  },
+  {
+  img:"https://cdn06.nnnow.com/web-images/medium/styles/FEZSSY7OW5A/1632460367395/1.jpg",
+  name:"DAVIDOFF",
+  description:"Cool Water Eau De Parfum",
+  pop:6,
+  price:5050,
+  cat:"Perfum",
+  date:8,
+  },
+  {
+  img:"https://cdn12.nnnow.com/web-images/medium/styles/4O91OGGF6Z7/1592541998240/1.jpg",
+  name:"BURBERRY",
+  description:"Her Eau De Parfum",
+  pop:4,
+  price:8250,
+  cat:"Perfum",
+  date:7,
+  },
+];
+// Perfume for womens
+let fragranceForWomen=[
+  {
+  img:"https://cdn04.nnnow.com/web-images/medium/styles/E8MATF2IDYU/1605084283131/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"Green Tea Scent Spray",
+  pop:2,
+  price:3500,
+  cat:"Perfume",
+  date:3,
+  },{
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/P4FI87Z9XKE/1607690426098/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"My Fifth Avenue Eau De Parfum",
+  pop:5,
+  price:5150,
+  cat:"Perfume",
+  date:5,
+  },{
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/2SDH63OIOLM/1487241079903/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"Be Eau De Toilette",
+  pop:3,
+  price:4525,
+  cat:"Perfume",
+  date:17,
+  },
+  {
+  img:"https://cdn06.nnnow.com/web-images/medium/styles/FEZSSY7OW5A/1632460367395/1.jpg",
+  name:"DAVIDOFF",
+  description:"Cool Water Eau De Parfum",
+  pop:6,
+  price:5050,
+  cat:"Perfume",
+  date:2,
+  },
+  {
+  img:"https://cdn12.nnnow.com/web-images/medium/styles/4O91OGGF6Z7/1592541998240/1.jpg",
+  name:"BURBERRY",
+  description:"Her Eau De Parfum",
+  pop:11,
+  price:8250,
+  cat:"Perfume",
+  date:8
+  },
+  {
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/OSEF40XVRIA/1583403862430/1.jpg",
+  name:"BURBERRY",
+  description:"Her Blossom Eau De Toilette",
+  pop:11,
+  price:6800,
+  cat:"Perfume",
+  date:8,
+  },
+  {
+  img:"https://cdn14.nnnow.com/web-images/medium/styles/SL9B2177HQZ/1487241079920/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"CK One Eau De Toilette",
+  pop:5,
+  price:4750,
+  cat:"Perfume",
+  date:6,
+  },
+  {
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/R6O86CT29U7/1604582394846/1.jpg",
+  name:"BURBERRY",
+  description:"Burberry Classic Eau De Parfum",
+  pop:7,
+  price:6050,
+  cat:"Perfume",
+  date:6,
+  },
+  {
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/F6X58N6L2DM/1605083781834/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"Red Door Eau De Toilette",
+  pop:7,
+  price:6475,
+  cat:"Perfume",
+  date:9,
+  },
+  {
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/KMD9ASCOK68/1604582394823/1.jpg",
+  name:"BURBERRY",
+  description:"Burberry Weekend Eau De Parfum",
+  pop:6,
+  price:5300,
+  cat:"Perfum",
+  date:19,
+  },
+  {
+  img:"https://cdn01.nnnow.com/web-images/medium/styles/APO1MI8SE9T/1604487730463/1.jpg",
+  name:"HUGO BOSS",
+  description:"Boss The Scent Private Accord For Her Eau De Parfum",
+  pop:6,
+  price:5400,
+  cat:"Perfum",
+  date:28,
+  },
+  {
+  img:"https://cdn14.nnnow.com/web-images/medium/styles/JNDWBL8HTUR/1605083781849/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"5th Avenue Eau De Parfum",
+  pop:7,
+  price:5550,
+  cat:"Perfum",
+  date:28,
+  },
+];
+  display(fragranceOnSale);
 // change the array of obj name
-  function display(toolsjustarrived) {
+  function display(fragranceOnSale) {
     let count = 0;
-    toolsjustarrived.forEach(function (elm) {
-      // change the arrayof obj (ex.toolsjustarrived);
+    fragranceOnSale.forEach(function (elm) {
+      // change the arrayof obj (ex.fragranceOnSale);
       let div = document.createElement("div");
       div.setAttribute("class", "child");
       count++;
@@ -626,13 +542,13 @@ display(toolsjustarrived);
       return;
     }
   } 
-  display1(toolsbestSellers);
+  display1(fragrancedatajustarrived);
 
-  function display1(toolsbestsellers) {
+  function display1(fragrancedatajustarrived) {
     let count1 = 0;
     // ------count1
     // console.log(menData);
-    toolsbestsellers.forEach(function (elm) {
+    fragrancedatajustarrived.forEach(function (elm) {
       let div = document.createElement("div");
       div.setAttribute("class", "child1");
       count1++;
@@ -734,13 +650,13 @@ display(toolsjustarrived);
     }
   }
 
-  display2(toolsBrushes);
+  display2(fragranceBestSallers);
 
-  function display2(toolsBrushes) {
+  function display2(fragranceBestSallers) {
     let count2 = 0;
     // ------count1
     // console.log(menData);
-    toolsBrushes.forEach(function (elm) {
+    fragranceBestSallers.forEach(function (elm) {
       let div = document.createElement("div");
       div.setAttribute("class", "child2");
       count2++;
@@ -841,13 +757,13 @@ display(toolsjustarrived);
       return;
     }
   }
-  display3(toolshighTechTools);
+  display3(fragranceForWomen);
 
-  function display3(toolshighTechTools) {
+  function display3(fragranceForWomen) {
     let count3 = 0;
     // ------count1
     // console.log(menData);
-    toolshighTechTools.forEach(function (elm) {
+    fragranceForWomen.forEach(function (elm) {
       let div = document.createElement("div");
       div.setAttribute("class", "child3");
       count3++;
@@ -1100,8 +1016,3 @@ function addtobag(elm){
       console.log(opt2,select,user);
     } 
     
-
-
-
-
- 

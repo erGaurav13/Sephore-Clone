@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools & Brushes Products</title>
-    <link rel="icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <title>makeup-newarrivals</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -354,6 +353,38 @@
     margin-right: 0px;
     z-index: +1;
   }
+  #navbars ul li {
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 0px;
+  padding: 0px;
+  display: grid;
+  align-items: center;
+ 
+  text-align: center;
+}
+#navbars>div ul {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+}
+#navbars li:hover .homediv {
+  opacity: 1;
+  color: black;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 200px;
+  left: 0px;
+  padding: 0px 100px;
+  top: 58px;
+ 
+  bottom: 10px;
+  visibility: visible;
+  display: flex;
+  margin-right: 0px;
+}
   .homediv>div p{
     font-size: 12px;
     color: black;
@@ -638,41 +669,6 @@
         background: #21DFCF;
       color: #21DFCF;
     }
-    #navbars ul li {
-  width: 150px;
-  margin-top: 15px;
-  margin-left: 0px;
-  padding: 0px;
-  display: grid;
-  align-items: center;
- 
-  text-align: center;
-
-}
-/* ++++++++++++++++++++++++++++++++++*/
-#navbars li:hover .homediv {
-  opacity: 1;
-  color: black;
-  background-color: #FFFFFF;
-  display: block;
-  width: 100%;
-  height: 200px;
-  left: 0px;
-  padding: 0px 100px;
-  top: 58px;
- 
-  bottom: 10px;
-  visibility: visible;
-  display: flex;
-  margin-right: 0px;
-}
-/* +++++++++++++ */
-#navbars>div ul {
-  list-style: none;
-  display: flex;
-  font-weight: 700;
-  width: 100%;
-}
 
 </style>
 </head>
@@ -686,7 +682,7 @@
         alt=""
       />
       <p>
-         <span class="material-symbols-outlined"> pin_drop </span> Store
+        | <span class="material-symbols-outlined"> pin_drop </span> Store
         Locator
       </p>
     </div>
@@ -1073,26 +1069,13 @@
             change the value,innertext and in label change innertext -->
             <h3>Category</h3>
             <div>
-            <input class="rd1" type="radio" value="Eye Brushes" name="category">
-            <label for="Eye Brushes">Eye Brushes</label>
+            <input class="rd1" type="radio" value="Conditioner" name="category">
+            <label for="Nail">Conditioner</label>
             </div>
            <div>
-            <input class="rd1" type="radio" value="Face Brushes" name="category">
-            <label for="Face Brushes">Face Brushes</label>
+            <input class="rd1" type="radio" value="Shampoo" name="category">
+            <label for="Nail">Shampoo</label>
            </div>
-           <div>
-            <input class="rd1" type="radio" value="Sponge" name="category">
-            <label for="Sponge">Sponge</label>
-           </div>
-           <div>
-            <input class="rd1" type="radio" value="Lip Brushes" name="category">
-            <label for="Lip Brushes">Lip Brushes</label>
-           </div>
-           <div>
-            <input class="rd1" type="radio" value="Brush Cleaner" name="category">
-            <label for="Brush Cleaner">Brush Cleaner</label>
-           </div>
-           
         </div>
         <div id="product1">
             <div>
@@ -1356,7 +1339,7 @@
 </html>
 <script>
 //  Keep in mind do not chane the array name according to you
-// just copy paste your array of object AND give the name =>toolsBrushes
+// just copy paste your array of object AND give the name =>hairCareShampooAndCondi
 // insid your array of objects the keys are 
 // {  img:"",
 //    name:"",
@@ -1366,133 +1349,120 @@
 //    cat:"",
 //    date:"",
 //  },
-//Makeup Brushes
-let toolsBrushes=[
-  {
-  img:"https://cdn15.nnnow.com/web-images/medium/styles/366XPCD0TVA/1560852958825/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Blush Brush #04",
-  pop:45,
-  price:960,
-  cat:"Face Brushes",
-  date:8,
-  qty:1
-  },
-  {
-  img:"https://cdn11.nnnow.com/web-images/medium/styles/V3WGKJS6KW8/1583391560342/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Multi-Texture Sponge",
-  pop:62,
-  price:500,
-  cat:"Sponge",
-  date:27,
-  qty:1,
-  },
-  {
-  img:"https://cdn01.nnnow.com/web-images/medium/styles/JT4ECFC9Q96/1560852958783/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Foundation Brush #01",
-  pop:64,
-  price:1200,
-  cat:"Face Brushes",
-  date:22,
-  qty:1,
-  },
-  {
-  img:"https://cdn15.nnnow.com/web-images/medium/styles/2OQ5IHLJNL4/1644913483501/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Concealer Brush # 57",
-  pop:35,
-  price:2100,
-  cat:"Eye Brushes",
-  date:15,
-  qty:1,
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/17DJ9WVMCKA/1560852958821/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Brow Brush # 12",
-  pop:48,
-  price:720,
-  cat:"Brush Cleaner",
-  date:12,
-  qty:1,
-  },
-  {
-  img:"https://cdn15.nnnow.com/web-images/medium/styles/QFFYFKQLBCB/1626067274186/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Full Face Brush Set",
-  pop:60,
-  price:2800,
-  cat:"Lip Brushes",
-  date:9,
-  qty:1
-  },
-  {
-  img:"https://cdn01.nnnow.com/web-images/medium/styles/6VSPH657G7L/1560852958771/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Multitasker Brush #06",
-  pop:62,
-  price:1200,
-  cat:"Eye Brushes",
-  date:10,
-  qty:1,
-  },
-  {
-  img:"https://cdn16.nnnow.com/web-images/medium/styles/8CNXO3WNP02/1533194318316/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Face Konjac Radiance Sponge",
-  pop:30,
-  price:950,
-  cat:"Sponge",
-  date:8,
-  qty:1
-  },
-  {
-  img:"https://cdn12.nnnow.com/web-images/medium/styles/7VMQWKOB44R/1560852958779/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Concealer Brush #02",
-  pop:30,
-  price:800,
-  cat:"Eye Brushes",
-  date:7,
-  qty:1
-  },
-  {
-  img:"https://cdn08.nnnow.com/web-images/medium/styles/SY7PKN4DCD6/1560852958817/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Featherweight Powder Brush #91",
-  pop:50,
-  price:2340,
-  cat:"Face Brushes",
-  date:11,
-  qty:1,
-  },
-  {
-  img:"https://cdn13.nnnow.com/web-images/medium/styles/IN62GHTXOY8/1491393101968/1.jpg",
-  name:"STILA",
-  description:"24 Double Ended lluminating Powder Brush",
-  pop:30,
-  price:3072,
-  cat:"Eye Brushes",
-  date:5,
-  qty:1
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/Q44W3TYUVVE/1560852958775/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Classic Powder Brush #03",
-  pop:37,
-  price:1500,
-  cat:"Brush Cleaner",
-  date:13,
-  qty:1,
-  },
-];
 
- displayTable(toolsBrushes);
- function displayTable(toolsBrushes){
-    toolsBrushes.forEach(element => {
+let hairCareShampooAndCondi=[
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/NAG35MWAZB5/1603956012732/1.jpg",
+  name:"OLAPLEX",
+  description:"N°4 Bond Maintenance Shampoo",
+  pop:30,
+  price:2950,
+  cat:"Shampoo",
+  date:10,
+  },
+  {
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/RB2GD0T4W14/1603859985717/1.jpg",
+  name:"OLAPLEX",
+  description:"N°5 Bond Maintenance Conditioner",
+  pop:32,
+  price:1395,
+  cat:"Conditioner",
+  date:3,
+  },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/626PU93RNYO/1652252610567/1.jpg",
+  name:"OUAI",
+  description:"Leave In Conditioner",
+  pop:30,
+  price:2200,
+  cat:"Conditioner",
+  date:5,
+  },
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/FCNE5T2TV5T/1634887143628/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Moisture Repair Shampoo",
+  pop:80,
+  price:1890,
+  cat:"Shampoo",
+  date:4,
+  },
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/FCNE5T2TV5T/1634887143628/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Hydrating Shampoo",
+  pop:60,
+  price:2160,
+  cat:"Shampoo",
+  date:9,
+  },
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/FCNE5T2TV5T/1634887143628/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Extra Volume Shampoo",
+  pop:42,
+  price:2160,
+  cat:"Shampoo",
+  date:4,
+  },
+  {
+  img:"https://cdn10.nnnow.com/web-images/medium/styles/SE57NC8WB0K/1634887017703/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Extra Volume Conditioner",
+  pop:21,
+  price:2160,
+  cat:"Conditioner",
+  date:2,
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/ROAP1AH5IAH/1634887017734/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Moisture Repair Conditioner",
+  pop:55,
+  price:1890,
+  cat:"Conditioner",
+  date:13,
+  },
+  {
+  img:"https://cdn11.nnnow.com/web-images/medium/styles/KR54NI5C40N/1652252614163/1.jpg",
+  name:"OUAI",
+  description:"Detox Shampoo",
+  pop:48,
+  price:3200,
+  cat:"Shampoo",
+  date:25,
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/E4PUAGOMU8E/1653375921600/1.jpg",
+  name:"MOROCCANOIL",
+  description:"All In One Leave In Conditioner",
+  pop:22,
+  price:1125,
+  cat:"Conditioner",
+  date:16,
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/9BHLC320FI7/1634888036622/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Hydrating Conditioner",
+  pop:66,
+  price:2160,
+  cat:"Conditioner",
+  date:18,
+  },
+  {
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/ZWAHDO65HEF/1634886962142/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Smoothing Shampoo",
+  pop:56,
+  price:2160,
+  cat:"Shampoo",
+  date:5,
+  },
+]; 
+displayTable(hairCareShampooAndCondi);
+function displayTable(hairCareShampooAndCondi){
+    hairCareShampooAndCondi.forEach(element => {
     let div=document.createElement("div");
     let img=document.createElement("img");
     img.setAttribute("src",element.img)
@@ -1559,43 +1529,43 @@ let toolsBrushes=[
  function changefunction(){
     let selected=document.querySelector("#sort").value;
     if(selected==" "){
-        displayTable(toolsBrushes);
+        displayTable(hairCareShampooAndCondi);
     }
     else if(selected=="lowtohigh"){
-        let x=toolsBrushes.sort(function(a,b){
+        let x=hairCareShampooAndCondi.sort(function(a,b){
             if(a.price>b.price) return 1;
             if(a.price<b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsBrushes);
+        displayTable(hairCareShampooAndCondi);
     }
     else if(selected=="hightolow"){
-        let x=toolsBrushes.sort(function(a,b){
+        let x=hairCareShampooAndCondi.sort(function(a,b){
             if(a.price<b.price) return 1;
             if(a.price>b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsBrushes);
+        displayTable(hairCareShampooAndCondi);
     }
     else if(selected=="Newest"){
-        let x=toolsBrushes.sort(function(a,b){
+        let x=hairCareShampooAndCondi.sort(function(a,b){
             if(a.date<b.date) return 1;
             if(a.date>b.date) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsBrushes);
+        displayTable(hairCareShampooAndCondi);
     }
     else if(selected=="Popularity"){
-        let x=toolsBrushes.sort(function(a,b){
+        let x=hairCareShampooAndCondi.sort(function(a,b){
             if(a.pop>b.pop) return 1;
             if(a.pop<b.pop) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsBrushes);
+        displayTable(hairCareShampooAndCondi);
     }
     
  }
@@ -1605,7 +1575,7 @@ checkbox.forEach(element => {
     element.addEventListener("change",myfunction);
 function myfunction(event){
     let x=event.target.value;
-    let y=toolsBrushes;
+    let y=hairCareShampooAndCondi;
     arr=[];
     y.forEach(ele => {
         if(x===ele.cat){

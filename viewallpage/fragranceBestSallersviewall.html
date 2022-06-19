@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools & Brushes Products</title>
-    <link rel="icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <title>makeup-newarrivals</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -589,9 +588,39 @@
       background: #21DFCF;
       color: #21DFCF;
       opacity: 1;
-
     }
-
+  #navbars ul li {
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 0px;
+  padding: 0px;
+  display: grid;
+  align-items: center;
+ 
+  text-align: center;
+}
+#navbars>div ul {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+}
+#navbars li:hover .homediv {
+  opacity: 1;
+  color: black;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 200px;
+  left: 0px;
+  padding: 0px 100px;
+  top: 58px;
+ 
+  bottom: 10px;
+  visibility: visible;
+  display: flex;
+  margin-right: 0px;
+}
 
     #cartcollection button {
       /* border: 1px solid rgb(255, 47, 220); */
@@ -638,41 +667,7 @@
         background: #21DFCF;
       color: #21DFCF;
     }
-    #navbars ul li {
-  width: 150px;
-  margin-top: 15px;
-  margin-left: 0px;
-  padding: 0px;
-  display: grid;
-  align-items: center;
- 
-  text-align: center;
 
-}
-/* ++++++++++++++++++++++++++++++++++*/
-#navbars li:hover .homediv {
-  opacity: 1;
-  color: black;
-  background-color: #FFFFFF;
-  display: block;
-  width: 100%;
-  height: 200px;
-  left: 0px;
-  padding: 0px 100px;
-  top: 58px;
- 
-  bottom: 10px;
-  visibility: visible;
-  display: flex;
-  margin-right: 0px;
-}
-/* +++++++++++++ */
-#navbars>div ul {
-  list-style: none;
-  display: flex;
-  font-weight: 700;
-  width: 100%;
-}
 </style>
 </head>
 <body>
@@ -685,7 +680,7 @@
         alt=""
       />
       <p>
-         <span class="material-symbols-outlined"> pin_drop </span> Store
+        | <span class="material-symbols-outlined"> pin_drop </span> Store
         Locator
       </p>
     </div>
@@ -1072,25 +1067,13 @@
             change the value,innertext and in label change innertext -->
             <h3>Category</h3>
             <div>
-              <input class="rd1" type="radio" value="Eye Brushes" name="category">
-              <label for="Eye Brushes">Eye Brushes</label>
-              </div>
-             <div>
-              <input class="rd1" type="radio" value="Face Brushes" name="category">
-              <label for="Face Brushes">Face Brushes</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Sponge" name="category">
-              <label for="Sponge">Sponge</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Lip Brushes" name="category">
-              <label for="Lip Brushes">Lip Brushes</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Brush Cleaner" name="category">
-              <label for="Brush Cleaner">Brush Cleaner</label>
-             </div>
+            <input class="rd1" type="radio" value="Perfume" name="category">
+            <label for="Nail">Perfume</label>
+            </div>
+           <div>
+            <input class="rd1" type="radio" value="Deodorant" name="category">
+            <label for="Nail">Deodorant</label>
+           </div>
         </div>
         <div id="product1">
             <div>
@@ -1354,7 +1337,7 @@
 </html>
 <script>
 //  Keep in mind do not chane the array name according to you
-// just copy paste your array of object AND give the name =>toolsjustarrived
+// just copy paste your array of object AND give the name =>fragranceBestSallers
 // insid your array of objects the keys are 
 // {  img:"",
 //    name:"",
@@ -1365,134 +1348,117 @@
 //    date:"",
 //  },
 
-// Just Arrived
-let toolsjustarrived=[
+let fragranceBestSallers=[
   {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/UPN1DIYDEOO/1539585373094/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Advanced Brush Set",
-  pop:80,
-  price:3175,
-  cat:"Face Brushes",
-  date:5,
-  qty:1
-  },
-  {
-  img:"https://cdn10.nnnow.com/web-images/medium/styles/E3ATWR0QI78/1533194318319/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Retractable Lip Brush",
-  pop:64,
-  price:1820,
-  cat:"Lip brushes",
-  date:8
-,
-qty:1},
-  {
-  img:"https://cdn17.nnnow.com/web-images/medium/styles/DQ4XG8LX9KO/1533194318318/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Solid Brush Cleaner",
-  pop:45,
-  price:625,
-  cat:"Brush Cleaner",
-  date:8,
-  qty:1
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/7V2LWZ4JE2N/1533194318313/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Silicone Makeup Sponge",
-  pop:60,
-  price:460,
-  cat:"Sponge",
-  date:7,
-  qty:1
-  },
-  {
-  img:"https://cdn16.nnnow.com/web-images/medium/styles/8CNXO3WNP02/1533194318316/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Face Konjac Radiance Sponge",
-  pop:46,
-  price:950,
-  cat:"Sponge",
-  date:22,
-  qty:1,
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/DTFXF1QNQOF/1525433681244/1.jpg",
-  name:"SMASHBOX",
-  description:"Contour Shadow Brush",
-  pop:35,
-  price:2400,
-  cat:"Eye Brushes",
-  date:11,
-  qty:1,
-  },
-  {
-  img:"https://cdn16.nnnow.com/web-images/medium/styles/QBNUP4RRW6N/1525433681249/1.jpg",
-  name:"SMASHBOX",
-  description:"Blurring Concealer Brush",
-  pop:55,
-  price:2000,
-  cat:"Face Brushes",
-  date:9,
-  qty:1
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/9HN17UR8VKI/1525433681240/1.jpg",
-  name:"SMASHBOX",
-  description:"Buildable Foundation Brush",
-  pop:46,
-  price:3300,
-  cat:"Face Brushes",
-  date:23,
-  qty:1,
-  },
-  {
-  img:"https://cdn07.nnnow.com/web-images/medium/styles/B52J53900ZD/1525433681241/1.jpg",
-  name:"SMASHBOX",
-  description:"Buildable Cheek Brush",
-  pop:66,
-  price:3600,
-  cat:"Eye Brushes",
-  date:14,
-  qty:1,
-  },
-  {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/EM25HKPUWSF/1525433681246/1.jpg",
-  name:"SMASHBOX",
-  description:"Lip Brush",
-  pop:45,
-  price:2050,
-  cat:"Lip Brushes",
-  date:14,
-  qty:1,
-  },
-  {
-  img:"https://cdn19.nnnow.com/web-images/medium/styles/X8JIWKM2HL1/1517466587226/1.jpg",
-  name:"MAKE UP FOR EVER",
-  description:"Instant Brush Cleanser",
+  img:"https://cdn13.nnnow.com/web-images/medium/styles/6QFRWWY6GN7/1589003350410/1.jpg",
+  name:"TOM FORD",
+  description:"Oud Wood Eau De Parfum",
   pop:25,
-  price:1800,
-  cat:"Brush Cleanser",
-  date:8
-,
-qty:1},
-  {
-  img:"https://cdn18.nnnow.com/web-images/medium/styles/SM1PSOO14H5/1525433681251/1.jpg",
-  name:"SAMASHBOX",
-  description:"Pricise Brow & Liner Brush",
+  price:23500,
+  cat:"Perfume",
+  date:5,
+  },{
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/G5JPJ9IWPUU/1615870725188/1.jpg",
+  name:"GIORGIO ARMANI",
+  description:"Acqua Di Gio Profondo Eau De Parfum",
+  pop:8,
+  price:7100,
+  cat:"Perfume",
+  date:5,
+  },{
+  img:"https://cdn12.nnnow.com/web-images/medium/styles/GHMU19530AA/1615975549685/1.jpg",
+  name:"DOLCE & GABBANA",
+  description:"Be Eau De Toilette",
   pop:5,
-  price:2000,
-  cat:"Eye Brushes",
+  price:7550,
+  cat:"Deodorant",
+  date:17,
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/E9E5DRYRB44/1603181767610/1.jpg",
+  name:"PACO RABANNE",
+  description:"1 Million Eau De Toilette",
+  pop:9,
+  price:6100,
+  cat:"Perfume",
+  date:19,
+  },
+  {
+  img:"https://cdn04.nnnow.com/web-images/medium/styles/E8MATF2IDYU/1605084283131/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"Green Tea Scent Spray",
+  pop:11,
+  price:17000,
+  cat:"Perfume",
+  date:18
+  },
+  {
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/P4FI87Z9XKE/1607690426098/1.jpg",
+  name:"EUZABETH ARDEN",
+  description:"My Fifth Avenue Eau De Parfum",
+  pop:11,
+  price:5150,
+  cat:"Deodorant",
   date:6,
-  qty:1
+  },
+  {
+  img:"https://cdn08.nnnow.com/web-images/medium/styles/LZMRQSG216A/1580465663363/1.jpg",
+  name:"BURBERRY",
+  description:"London Men Eau De Toilette",
+  pop:5,
+  price:5050,
+  cat:"Deodorant",
+  date:4,
+  },
+  {
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/2SDH63OIOLM/1487241079903/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"Be Eau De Toilette ",
+  pop:5,
+  price:4525,
+  cat:"Perfume",
+  date:4,
+  },
+  {
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/802F37DQLZ7/1487245292175/1.jpg",
+  name:"DAVIDOFF",
+  description:"Cool Water Eau De Toilette",
+  pop:5,
+  price:4750,
+  cat:"Perfume",
+  date:9,
+  },
+  {
+  img:"https://cdn18.nnnow.com/web-images/medium/styles/7TQ9BRQ4HE3/1584959779851/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"Eterntiy Man Eau De Parfum",
+  pop:5,
+  price:4750,
+  cat:"Perfum",
+  date:9,
+  },
+  {
+  img:"https://cdn06.nnnow.com/web-images/medium/styles/FEZSSY7OW5A/1632460367395/1.jpg",
+  name:"DAVIDOFF",
+  description:"Cool Water Eau De Parfum",
+  pop:6,
+  price:5050,
+  cat:"Perfum",
+  date:8,
+  },
+  {
+  img:"https://cdn12.nnnow.com/web-images/medium/styles/4O91OGGF6Z7/1592541998240/1.jpg",
+  name:"BURBERRY",
+  description:"Her Eau De Parfum",
+  pop:4,
+  price:8250,
+  cat:"Perfum",
+  date:7,
   },
 ];
- 
-
-displayTable(toolsjustarrived);
- function displayTable(toolsjustarrived){
-    toolsjustarrived.forEach(element => {
+displayTable(fragranceBestSallers);
+ function displayTable(fragranceBestSallers){
+    fragranceBestSallers.forEach(element => {
     let div=document.createElement("div");
     let img=document.createElement("img");
     img.setAttribute("src",element.img)
@@ -1559,43 +1525,43 @@ displayTable(toolsjustarrived);
  function changefunction(){
     let selected=document.querySelector("#sort").value;
     if(selected==" "){
-        displayTable(toolsjustarrived);
+        displayTable(fragranceBestSallers);
     }
     else if(selected=="lowtohigh"){
-        let x=toolsjustarrived.sort(function(a,b){
+        let x=fragranceBestSallers.sort(function(a,b){
             if(a.price>b.price) return 1;
             if(a.price<b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsjustarrived);
+        displayTable(fragranceBestSallers);
     }
     else if(selected=="hightolow"){
-        let x=toolsjustarrived.sort(function(a,b){
+        let x=fragranceBestSallers.sort(function(a,b){
             if(a.price<b.price) return 1;
             if(a.price>b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsjustarrived);
+        displayTable(fragranceBestSallers);
     }
     else if(selected=="Newest"){
-        let x=toolsjustarrived.sort(function(a,b){
+        let x=fragranceBestSallers.sort(function(a,b){
             if(a.date<b.date) return 1;
             if(a.date>b.date) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsjustarrived);
+        displayTable(fragranceBestSallers);
     }
     else if(selected=="Popularity"){
-        let x=toolsjustarrived.sort(function(a,b){
+        let x=fragranceBestSallers.sort(function(a,b){
             if(a.pop>b.pop) return 1;
             if(a.pop<b.pop) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsjustarrived);
+        displayTable(fragranceBestSallers);
     }
     
  }
@@ -1605,7 +1571,7 @@ checkbox.forEach(element => {
     element.addEventListener("change",myfunction);
 function myfunction(event){
     let x=event.target.value;
-    let y=toolsjustarrived;
+    let y=fragranceBestSallers;
     arr=[];
     y.forEach(ele => {
         if(x===ele.cat){
