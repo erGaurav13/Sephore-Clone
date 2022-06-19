@@ -59,8 +59,8 @@
       </div>
       <div><h1>SEPHORA</h1></div>
       <div>
-        <div><span class="material-symbols-outlined"> favorite </span></div>
-        <div><span class="material-symbols-outlined"> shopping_bag </span></div>
+        <div><a href="favourite.html"><span class="material-symbols-outlined"> favorite </span></a></div>
+        <div><a href="cart.html"><span class="material-symbols-outlined"> shopping_bag </span></a></div>
         
         <div id="logDiv"></div>
       </div>
@@ -247,7 +247,7 @@
         <p>BRANDS</p>
       </div>
       <div >
-        <span class="material-symbols-outlined"> shopping_bag </span>
+        <div><a href="cart.html"><span class="material-symbols-outlined"> shopping_bag </span></a></div>
         <div id="logDivSticky"></div>
       </div>
     </div>
@@ -606,149 +606,7 @@
   </body>
 </html>
 
-
-
-<!-- Navbar -->
-<script>
-    window.addEventListener("scroll", function () {
-    scrollFunction();
-  });
-
-  function scrollFunction() {
-    if (document.documentElement.scrollTop > 243) {
-      let x = document.querySelector("#sticky");
-      x.style.visibility = "visible"; //= "block";
-      x.style.display = "flex";
-      // console.log(x);
-      // console.log("scroll function", scroll);
-    } else {
-      let x = document.querySelector("#sticky");
-      x.style.display = "none";
-      console.log(
-        "scroll function yet to reach ",
-        document.documentElement.scrollTop
-      );
-    }
-  }
-</script>
-
-<!-- Login -->
-<script>
-   document.getElementById("top").addEventListener("click", function () {
-    document.documentElement.scrollTop = 0;
-  });
-  document.getElementById("container_login").style.display = "none";
-  function login() {
-    console.log(document.getElementById("container_login"));
-    document.getElementById("container_login").style.display = "block";
-    document.querySelector("body").disabled = true;
-  }
-</script>
-<script>
-  function closeLogin(){
-    document.getElementById("container_login").style.display = "none";
-  }
-</script>
-
-<script>
-  let arrFrmLS = JSON.parse(localStorage.getItem("userData")) || [];
-  document.querySelector("#form1").addEventListener("submit", mySignIn);
-
-  function mySignIn(event) {
-    event.preventDefault();
-
-    checkEmailPwd(arrFrmLS);
-  }
-  function checkEmailPwd(arrFrmLS) {
-    let flagx=0;
-    arrFrmLS.forEach(function (el) {
-      let iUserEmail = document.querySelector("#ipMail").value;
-      let iUserPwd = document.querySelector("#ipPassword").value;
-
-      if (el.userEmail == iUserEmail && el.userPwd == iUserPwd) {
-        flagx=1;
-        localStorage.setItem("userName",el.userName);
-      } else if (el.userEmail == iUserEmail || el.userPwd == iUserPwd) {
-        flagx=2;
-      } 
-    });
-
-    if(flagx==1){
-        alert("Login Sucessful!");
-        localStorage.setItem("islogin", true);
-        window.location.href = "sale.html";
-    }else if(flagx==2){
-        alert("Entered Email or Password are wrong!");
-        localStorage.setItem("islogin", false);
-
-    }else {
-        alert("Entered Credentials are wrong, Please Create Account!");
-        localStorage.setItem("islogin", false);
-        window.location.href = "SignUp.html";
-    }
-  }
-</script>
-
-<script>
-
-  // login option for navmid
-   let x=localStorage.getItem("islogin");
-   let user = localStorage.getItem("userName");
-
- if(x=="false"){
-      document.querySelector("#logDiv").innerHTML= '<div onclick="login()"><span class="material-symbols-outlined"> person </span> Login</div>';
-      // document.querySelector("#logDiv").style.display = "1px";
- }else 
-    if(x=="true"){
-      let loginDiv= document.querySelector("#logDiv");
-      loginDiv.innerHTML = "";
-      let select  =  document.createElement("select");
-      select.style.border = "none";
-      select.setAttribute("id","logOut");
-      select.setAttribute("onchange","logoutFun()");
-      let opt1 = document.createElement("option");
-      opt1.innerHTML = '<span onclick="" class="material-symbols-outlined"> person </span>';
-      opt1.innerText = user;
-      let opt2 = document.createElement("option");
-      opt2.setAttribute("value", "log_out")
-      opt2.innerText="Log Out";
-      select.append(opt1,opt2);
-      loginDiv.append(select);
-      console.log(opt2,select,user);
-    } 
-    function logoutFun(){
-    let logSelect = document.querySelector("#logOut").value;
-    if(logSelect=="log_out"){
-          localStorage.setItem("islogin", false);
-          window.location.reload();
-    }
- }
-
-       // login option for sticky
- if(x=="false"){
-      document.querySelector("#logDivSticky").innerHTML= '<div onclick="login()"><span class="material-symbols-outlined"> person </span> Login</div>';
-      // document.querySelector("#logDiv").style. = "1px";
- }else 
-    if(x=="true"){
-      let loginDiv= document.querySelector("#logDivSticky");
-      loginDiv.innerHTML = "";
-      let select  =  document.createElement("select");
-      select.style.border = "none";
-      select.setAttribute("id","logOut1");
-      select.setAttribute("onchange","logoutFun()");
-      let opt1 = document.createElement("option");
-      opt1.innerHTML = '<span onclick="" class="material-symbols-outlined"> person </span>';
-      opt1.innerText = user;
-      let opt2 = document.createElement("option");
-      opt2.setAttribute("value", "log_out")
-      opt2.innerText="Log Out";
-      select.append(opt1,opt2);
-      loginDiv.append(select);
-      console.log(opt2,select,user);
-    } 
-    
-</script>
-
+<script src="common.js"></script>
 <!-- Bootstrap -->
 <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="addressBar.css" />
     <style>
       * {
         margin: 0px;
@@ -45,7 +46,7 @@
         margin-left: 10px;
         width: 200px;
       }
-      #cartbx > div > div:nth-child(2) > button {
+      /* #cartbx > div > div:nth-child(2) > button {
         border: none;
         background-color: white;
         margin-right: 10px;
@@ -53,10 +54,10 @@
         margin-top: 15px;
         color: rgb(44, 42, 42);
         border-bottom: 1px solid grey;
-      }
-      #cartbx > div > div:nth-child(2) > button:hover {
+      } */
+      /* #cartbx > div > div:nth-child(2) > button:hover {
         color: rgb(244, 105, 195);
-      }
+      } */
       #cartbx > div > div:nth-child(3) {
         display: flex;
         margin-top: 20px;
@@ -65,11 +66,11 @@
         width: 40px;
         height: 40px;
       }
-      #cartbx > div > div:nth-child(4) > h2 {
+      /* #cartbx > div > div:nth-child(4) > h2 {
         margin: 10px 0px 0px 70px;
         font-weight: lighter;
         font-size: 16px;
-      }
+      } */
       /* bill session CSS */
       #parentbx > div:nth-child(2) {
         width: 45%;
@@ -102,6 +103,7 @@
       #parentbx > div:nth-child(2) > div:nth-child(2) > h3 {
         padding: 20px;
       }
+
       /* billing session */
       .billsection > div {
         display: flex;
@@ -120,13 +122,13 @@
         padding-top: 20px;
       }
       /* #parentbx > div:nth-child(2) > div:nth-child(2) > div {
-        display: flex;
-        border: 1px solid blue;
-        width: 85%;
-        margin: auto;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      } */
+          display: flex;
+          border: 1px solid blue;
+          width: 85%;
+          margin: auto;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        } */
       #parentbx > div:nth-child(2) > div:nth-child(3) {
         width: 95%;
         height: 35px;
@@ -138,7 +140,7 @@
         font-weight: bold;
         padding-top: 20px;
       }
-      #parentbx > div:nth-child(2) > div:nth-child(4) {
+      /* #parentbx > div:nth-child(2) > div:nth-child(4) {
         border: 2px solid black;
         width: 94%;
         height: 35px;
@@ -148,19 +150,31 @@
         padding-top: 20px;
         font-weight: bold;
       }
-      #parentbx > div:nth-child(2) > div:nth-child(4):hover {
-        color: rgb(239, 21, 137);
-        border: 2px solid rgb(239, 21, 137);
-      }
-      #parentbx > div:nth-child(2) > div:nth-child(5) {
+       */
+      /* #parentbx > div:nth-child(2) > div:nth-child(5) {
         width: 95%;
         height: 100px;
         margin: auto;
         margin-top: 20px;
+      } */
+
+      /* edit */
+      #edit {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
       }
-      #parentbx > div:nth-child(2) > div:nth-child(5) > img {
-        width: 100%;
-        height: 95px;
+      #box {
+        position: absolute;
+        left: 20%;
+        top: 20%;
+        display: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: white;
+        padding: 20px;
       }
     </style>
     <style>
@@ -214,17 +228,52 @@
       </div>
       <input id="promobtn" type="submit" />
     </div>
+    <div id="box">
+      <h1>Add Address</h1>
+      <form>
+        <label for="name">Name*:</label><br />
+        <input type="text" id="nam" name="name" /><br /><br />
+        <label for="address">Address*:</label><br />
+        <input
+          type="text"
+          id="add"
+          name="address"
+          placeholder="(House/Flat No.,Building,Street,Area/Locality)"
+        /><br /><br />
+        <label for="phone">Phone*:</label>
+        <label for="num">Alternate Number:</label>
+        <input type="number" id="mob" name="Phone" />
+        <input type="number" id="num" name="Alternate Number" /><br /><br />
+        <label for="Pincode">Pincode*:</label>
+        <label for="landmark">Landmark:</label>
+        <input type="number" id="pinC" name="pincode" />
+        <input
+          type="text"
+          id="landmark"
+          name="Landmark"
+        /><br /><br /><br /><br /><br /><br />
+        <input type="submit" value="SAVE" />
+      </form>
+    </div>
     <div id="container">
       <div style="letter-spacing: 5px">SEPHORA</div>
-      <div id="navbar"></div>
+      <div id="navbar">CHECKOUT</div>
       <div id="parentbx">
         <div id="cartbx">
+          <div>
+            <h3>IMPORTANT</h3>
+            <p>
+              Dear customer, the actual delivery timelines may vary depending on
+              the government restrictions in your location
+            </p>
+          </div>
           <!-- <div divparent>
-                       <div>img</div>
-                       <div>text</div>
-                       <div>select</div>
-                </div> -->
+                         <div>img</div>
+                         <div>text</div>
+                         <div>select</div>
+                  </div> -->
         </div>
+
         <div>
           <div id="getpromo">
             <img
@@ -259,15 +308,7 @@
               </div>
             </div>
           </div>
-          <div>
-            <a href="shipping.html" style="text-decoration: none; color: white">
-              CHECKOUT
-            </a>
-          </div>
-          <div>SHOP MORE</div>
-          <div>
-            <img src="https://static.nnnow.com/mybag_offer_banner.jpg" alt="" />
-          </div>
+          <div id="continue">CONTINUE</div>
         </div>
       </div>
     </div>
@@ -277,18 +318,33 @@
   let cart = JSON.parse(localStorage.getItem("addtoBag")) || [];
   let discount = 0;
   display(cart);
-  sum(cart);
+  // sum(cart);
   subt = subtotal(cart);
   total(subt, discount);
 
   function display(cart) {
     document.querySelector("#cartbx").innerHTML = "";
-
+    let divmsg = document.createElement("div");
+    divmsg.style.display = "flex";
+    divmsg.style.flexDirection = "column";
+    divmsg.style.padding = "20px";
+    divmsg.style.margin = "10px";
+    divmsg.style.border = "2px solid orange";
+    let h4 = document.createElement("h4");
+    h4.innerText = "Important !! ";
+    h4.style.marginBottom = "10px";
+    h4.style.marginleft = "-10px";
+    let p = document.createElement("p");
+    p.innerText =
+      "Dear customer, the actual delivery timelines may vary" +
+      "depending on the government restrictions in your location";
+    divmsg.append(h4, p);
+    document.querySelector("#cartbx").append(divmsg);
     cart.forEach(function (elem, index) {
       let div1 = document.createElement("div");
       let div2 = document.createElement("div");
       let div3 = document.createElement("div");
-      let div4 = document.createElement("div");
+      // let div4 = document.createElement("div");
       let divparent = document.createElement("div");
       // div1
       let photo = document.createElement("img");
@@ -301,82 +357,38 @@
       let head2 = document.createElement("h4");
       head2.innerText = elem.price;
 
-      let btn1 = document.createElement("button");
-      btn1.innerText = "Move to Favourite";
-      btn1.addEventListener("click", function () {
-        movetofavorite(elem, index);
-      });
-
-      let btn2 = document.createElement("button");
-      btn2.innerText = "Remove";
-      btn2.addEventListener("click", function () {
-        removeItm(index);
-      });
-      // div3
-
       let qnty = document.createElement("p");
-      qnty.innerText = "Qty:";
-      let box = document.createElement("select");
-      box.setAttribute("value", elem.qty);
-      let opt1 = document.createElement("option");
-      opt1.setAttribute("value", 1);
-      opt1.innerText = 1;
-      let opt2 = document.createElement("option");
-      opt2.setAttribute("value", 2);
-      opt2.innerText = 2;
-      let opt3 = document.createElement("option");
-      opt3.setAttribute("value", 3);
-      opt3.innerText = 3;
-      let opt4 = document.createElement("option");
-      opt4.setAttribute("value", 4);
-      opt4.innerText = 4;
-      let opt5 = document.createElement("option");
-      opt5.setAttribute("value", 5);
-      opt5.innerText = 5;
-      box.append(opt1, opt2, opt3, opt4, opt5);
-      box.addEventListener("change", function () {
-        // console.log("From box event listener ", box.value, elem);
-        qtyAdd(box.value, elem);
-      });
-      // div4
-      let cost = document.createElement("h2");
+      qnty.innerText = "Qt - " + elem.qty;
+      qnty.style.marginBottom = "30px";
+
+      let cost = document.createElement("h4");
       cost.innerText = "Rs." + Number(elem.qty) * Number(elem.price);
 
       div1.append(photo);
-      div2.append(head1, para, head2, btn1, btn2);
-      div3.append(qnty, box);
-      div4.append(cost);
-      divparent.append(div1, div2, div3, div4);
+      div2.append(head1, para, qnty, cost);
+      //  div3.append(qnty);
+      // div4.append(cost);
+      divparent.append(div1, div2, div3);
       document.querySelector("#cartbx").append(divparent);
     });
-  }
 
-  function removeItm(index) {
-    cart.splice(index, 1);
-    localStorage.setItem("addtoBag", JSON.stringify(cart));
-    display(cart);
-    sum(cart);
-    subt = subtotal(cart);
-    total(subt, discount);
-    console.log("removeItm");
-  }
-
-  function movetofavorite(elem, index) {
-    let fav = JSON.parse(localStorage.getItem("addtoFav")) || [];
-    fav.push(elem);
-    removeItm(index);
-    localStorage.setItem("addtoFav", JSON.stringify(fav));
+    let div5 = document.createElement("div");
+    div5.innerText = "Edit";
+    div5.addEventListener("click", function () {
+      window.location = "cart.html";
+    });
+    div5.setAttribute("id", "edit");
+    document.querySelector("#cartbx").append(div5);
   }
 
   let count = 0;
   function qtyAdd(qty, elem) {
     elem.qty = qty;
     console.log(elem);
-    sum(cart);
+    // sum(cart);
     changeprice(cart);
     let subt = subtotal(cart);
     total(subt, discount);
-    localStorage.setItem("addtoBag", JSON.stringify(cart));
   }
   function subtotal(cart) {
     let subtotal = 0;
@@ -387,6 +399,7 @@
       ".billsection> div:first-child>p:last-child"
     );
     x.innerText = "Rs." + subtotal;
+    localStorage.setItem("subPay", subtotal);
     return subtotal;
   }
 
@@ -394,22 +407,26 @@
     let total = subt - discount;
     let x = document.querySelector(".billsection>div:last-child>h3:last-child");
     x.innerText = "Rs." + total;
+    localStorage.setItem("Pay", total);
   }
   function changeprice(cart) {
-    console.log("Running this");
     let up = document.querySelectorAll("#cartbx>div>div:nth-child(4)>h2");
     for (let i = 0; i < up.length; i++) {
       let itmtotalcost = Number(cart[i].qty) * Number(cart[i].price);
       up[i].innerText = "Rs." + itmtotalcost;
     }
   }
-  function sum(cart) {
-    let ans = 0;
-    for (let i = 0; i < cart.length; i++) {
-      ans += Number(cart[i].qty);
-    }
-    document.querySelector("#navbar").innerText = "MY BAG (" + ans + ")";
-    console.log(cart);
+  document.querySelector("#continue").addEventListener("click", function () {
+    document.getElementById("box").style.display = "block";
+  });
+
+  document.querySelector("form").addEventListener("submit", function () {
+    paymentPage();
+  });
+  function paymentPage() {
+    event.preventDefault();
+    document.querySelector("#box").style.display = "none";
+    window.location.href = "paymentPage.html";
   }
 
   document.querySelector("#getpromo").addEventListener("click", function () {
@@ -419,6 +436,7 @@
   document.querySelector("#promobtn").addEventListener("click", function () {
     let x = document.querySelector("#promovalue").value;
     if (x == "masai 30") {
+      console.log(subt);
       discount = subt * 0.3;
       document.querySelector("#promocode").style.display = "none";
       document.querySelector("#dis").innerText = "-Rs" + discount;
