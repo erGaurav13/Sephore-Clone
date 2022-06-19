@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makeup Products</title>
-    <link rel="icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <title>makeup-newarrivals</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -79,6 +78,38 @@
     justify-content: center;
     align-items: center;
   }
+  #navbars ul li {
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 0px;
+  padding: 0px;
+  display: grid;
+  align-items: center;
+ 
+  text-align: center;
+}
+#navbars>div ul {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+}
+#navbars li:hover .homediv {
+  opacity: 1;
+  color: black;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 200px;
+  left: 0px;
+  padding: 0px 100px;
+  top: 58px;
+ 
+  bottom: 10px;
+  visibility: visible;
+  display: flex;
+  margin-right: 0px;
+}
   .navmid {
     display: flex;
     justify-content: space-between;
@@ -638,41 +669,6 @@
         background: #21DFCF;
       color: #21DFCF;
     }
-    #navbars ul li {
-  width: 150px;
-  margin-top: 15px;
-  margin-left: 0px;
-  padding: 0px;
-  display: grid;
-  align-items: center;
- 
-  text-align: center;
-
-}
-/* ++++++++++++++++++++++++++++++++++*/
-#navbars li:hover .homediv {
-  opacity: 1;
-  color: black;
-  background-color: #FFFFFF;
-  display: block;
-  width: 100%;
-  height: 200px;
-  left: 0px;
-  padding: 0px 100px;
-  top: 58px;
- 
-  bottom: 10px;
-  visibility: visible;
-  display: flex;
-  margin-right: 0px;
-}
-/* +++++++++++++ */
-#navbars>div ul {
-  list-style: none;
-  display: flex;
-  font-weight: 700;
-  width: 100%;
-}
 
 </style>
 </head>
@@ -686,7 +682,7 @@
         alt=""
       />
       <p>
-         <span class="material-symbols-outlined"> pin_drop </span> Store
+        | <span class="material-symbols-outlined"> pin_drop </span> Store
         Locator
       </p>
     </div>
@@ -882,7 +878,6 @@
   </div>
   
 
- 
   <div id="sticky">
     <div>
       <p>SEPHORA</p>
@@ -1074,32 +1069,12 @@
             change the value,innertext and in label change innertext -->
             <h3>Category</h3>
             <div>
-            <input class="rd1" type="radio" value="Nail" name="category">
-            <label for="Nail">Nail</label>
+            <input class="rd1" type="radio" value="Perfume" name="category">
+            <label for="Nail">Perfume</label>
             </div>
            <div>
-            <input class="rd1" type="radio" value="Lip Stick" name="category">
-            <label for="Nail">Lip Stick</label>
-           </div>
-           <div>
-            <input class="rd1" type="radio" value="Eye Shadow" name="category">
-            <label for="Nail">Eye Shadow</label>
-           </div>
-           <div>
-            <input class="rd1" type="radio" value="Foundation" name="category">
-            <label for="Nail">Foundation</label>
-           </div>
-           <div>
-            <input class="rd1" type="radio" value="Lip Stain" name="category">
-            <label for="Nail">Lip Stain</label>
-           </div>
-           <div>
-            <input class="rd1" type="radio" value="Eye Liner" name="category">
-            <label for="Nail">Eye Liner</label>
-           </div>
-           <div>
-            <input class="rd1" type="radio" value="Eye Brows" name="category">
-            <label for="Nail">Eye Brows</label>
+            <input class="rd1" type="radio" value="Deodorant" name="category">
+            <label for="Nail">Deodorant</label>
            </div>
         </div>
         <div id="product1">
@@ -1364,7 +1339,7 @@
 </html>
 <script>
 //  Keep in mind do not chane the array name according to you
-// just copy paste your array of object AND give the name =>makeupfoundationArr
+// just copy paste your array of object AND give the name =>fragranceForWomen
 // insid your array of objects the keys are 
 // {  img:"",
 //    name:"",
@@ -1374,132 +1349,118 @@
 //    cat:"",
 //    date:"",
 //  },
-let makeupfoundationArr=[
-    {
-    img:"https://cdn00.nnnow.com/web-images/medium/styles/43XZWEELVOJ/1631790324267/1.jpg",
-    name:"HUDA BEAUTY",
-    description:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation 320G Tres Leches",
-    pop:6,
-    price:3300,
-    cat:"Foundation",
-    date:22,
-    qty:1,
-    },
-    {
-    img:"https://cdn00.nnnow.com/web-images/medium/styles/43XZWEELVOJ/1631790324267/1.jpg",
-    name:"HUDA BEAUTY",
-    description:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation 310G Amaretti",
-    pop:6,
-    price:2805,
-    cat:"Eye Liner",
-    date:22,
-    qty:1,
-    },
-    {
-    img:"https://cdn11.nnnow.com/web-images/medium/styles/KUN3RAI983U/1566801848576/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Glow Perfection Foundation - Intense Camel",
-    pop:8,
-    price:1352,
-    cat:"Eye Brows",
-    date:12,
-    qty:1,
-    },
-    {
-    img:"https://cdn06.nnnow.com/web-images/medium/styles/VHI8O3X339G/1631791089772/1.jpg",
-    name:"HUDA BEAUTY",
-    description:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 21,0B Chai",
-    pop:40,
-    price:2805,
-    cat:"Lip Stain",
-    date:4,
-    qty:1
-    },
-    {
-    img:"https://cdn16.nnnow.com/web-images/medium/styles/CH65NKWC2ZU/1533201155002/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Glow Perfection Foundation - 25 Beige",
-    pop:5,
-    price:1352,
-    cat:"Foundation",
-    date:16,
-    qty:1,
-    },
-    {
-    img:"https://cdn16.nnnow.com/web-images/medium/styles/CH65NKWC2ZU/1533201155002/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Glow Perfection Foundation - 33 Walnut",
-    pop:5,
-    price:1352,
-    cat:"Nail",
-    date:16,
-    qty:1,
-    },
-    {
-    img:"https://cdn06.nnnow.com/web-images/medium/styles/VHI8O3X339G/1631791089772/1.jpg",
-    name:"HUDA BEAUTY",
-    description:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 21,0B Chai",
-    pop:40,
-    price:2805,
-    cat:"Nail",
-    date:4,
-    qty:1
-    },
-    {
-    img:"https://cdn14.nnnow.com/web-images/medium/styles/N4VRB01L4U7/1567571858059/1.jpg",
-    name:"ANASTASIA BEVERLY HILLS",
-    description:"Luminous Foundation 300C",
-    pop:6,
-    price:4500,
-    cat:"Lip Stick",
-    date:7,
-    qty:1
-    },
-    {
-    img:"https://cdn06.nnnow.com/web-images/medium/styles/VHI8O3X339G/1631791089772/1.jpg",
-    name:"HUDA BEAUTY",
-    description:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 21,0B Chai",
-    pop:40,
-    price:2805,
-    cat:"Eye Brows",
-    date:4,
-    qty:1
-    },
-    {
-    img:"https://cdn12.nnnow.com/web-images/medium/styles/AY18RX6IFV1/1551249758307/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Matte Perfection Powder Foundation 31 Almond",
-    pop:30,
-    price:1500,
-    cat:"Eye Shadows",
-    date:8,
-    qty:1
-    },
-    {
-    img:"https://cdn16.nnnow.com/web-images/medium/styles/CH65NKWC2ZU/1533201155002/1.jpg",
-    name:"SEPHORA COLLECTION",
-    description:"Glow Perfection Foundation - 23 Natural Beige",
-    pop:5,
-    price:1352,
-    cat:"Eye Shadows",
-    date:16,
-    qty:1,
-    },
-    {
-    img:"https://cdn02.nnnow.com/web-images/medium/styles/KO2GNHYI7VN/1539589546533/1.jpg",
-    name:"HUDA BEAUTY",
-    description:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 14,0G Cashew",
-    pop:70,
-    price:2805,
-    cat:"Foundation",
-    date:6,
-    qty:1
-    },
- ];
 
- displayTable(makeupfoundationArr);
- function displayTable(makeupfoundationArr){
-    makeupfoundationArr.forEach(element => {
+let fragranceForWomen=[
+  {
+  img:"https://cdn04.nnnow.com/web-images/medium/styles/E8MATF2IDYU/1605084283131/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"Green Tea Scent Spray",
+  pop:2,
+  price:3500,
+  cat:"Perfume",
+  date:3,
+  },{
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/P4FI87Z9XKE/1607690426098/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"My Fifth Avenue Eau De Parfum",
+  pop:5,
+  price:5150,
+  cat:"Perfume",
+  date:5,
+  },{
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/2SDH63OIOLM/1487241079903/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"Be Eau De Toilette",
+  pop:3,
+  price:4525,
+  cat:"Perfume",
+  date:17,
+  },
+  {
+  img:"https://cdn06.nnnow.com/web-images/medium/styles/FEZSSY7OW5A/1632460367395/1.jpg",
+  name:"DAVIDOFF",
+  description:"Cool Water Eau De Parfum",
+  pop:6,
+  price:5050,
+  cat:"Perfume",
+  date:2,
+  },
+  {
+  img:"https://cdn12.nnnow.com/web-images/medium/styles/4O91OGGF6Z7/1592541998240/1.jpg",
+  name:"BURBERRY",
+  description:"Her Eau De Parfum",
+  pop:11,
+  price:8250,
+  cat:"Perfume",
+  date:8
+  },
+  {
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/OSEF40XVRIA/1583403862430/1.jpg",
+  name:"BURBERRY",
+  description:"Her Blossom Eau De Toilette",
+  pop:11,
+  price:6800,
+  cat:"Perfume",
+  date:8,
+  },
+  {
+  img:"https://cdn14.nnnow.com/web-images/medium/styles/SL9B2177HQZ/1487241079920/1.jpg",
+  name:"CALVIN KLEIN FRAGRANCES",
+  description:"CK One Eau De Toilette",
+  pop:5,
+  price:4750,
+  cat:"Perfume",
+  date:6,
+  },
+  {
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/R6O86CT29U7/1604582394846/1.jpg",
+  name:"BURBERRY",
+  description:"Burberry Classic Eau De Parfum",
+  pop:7,
+  price:6050,
+  cat:"Perfume",
+  date:6,
+  },
+  {
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/F6X58N6L2DM/1605083781834/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"Red Door Eau De Toilette",
+  pop:7,
+  price:6475,
+  cat:"Perfume",
+  date:9,
+  },
+  {
+  img:"https://cdn15.nnnow.com/web-images/medium/styles/KMD9ASCOK68/1604582394823/1.jpg",
+  name:"BURBERRY",
+  description:"Burberry Weekend Eau De Parfum",
+  pop:6,
+  price:5300,
+  cat:"Deodorant",
+  date:19,
+  },
+  {
+  img:"https://cdn01.nnnow.com/web-images/medium/styles/APO1MI8SE9T/1604487730463/1.jpg",
+  name:"HUGO BOSS",
+  description:"Boss The Scent Private Accord For Her Eau De Parfum",
+  pop:6,
+  price:5400,
+  cat:"Perfume",
+  date:28,
+  },
+  {
+  img:"https://cdn14.nnnow.com/web-images/medium/styles/JNDWBL8HTUR/1605083781849/1.jpg",
+  name:"ELIZABETH ARDEN",
+  description:"5th Avenue Eau De Parfum",
+  pop:7,
+  price:5550,
+  cat:"Deodorant",
+  date:28,
+  },
+];
+displayTable(fragranceForWomen);
+ function displayTable(fragranceForWomen){
+    fragranceForWomen.forEach(element => {
     let div=document.createElement("div");
     let img=document.createElement("img");
     img.setAttribute("src",element.img)
@@ -1566,43 +1527,43 @@ let makeupfoundationArr=[
  function changefunction(){
     let selected=document.querySelector("#sort").value;
     if(selected==" "){
-        displayTable(makeupfoundationArr);
+        displayTable(fragranceForWomen);
     }
     else if(selected=="lowtohigh"){
-        let x=makeupfoundationArr.sort(function(a,b){
+        let x=fragranceForWomen.sort(function(a,b){
             if(a.price>b.price) return 1;
             if(a.price<b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeupfoundationArr);
+        displayTable(fragranceForWomen);
     }
     else if(selected=="hightolow"){
-        let x=makeupfoundationArr.sort(function(a,b){
+        let x=fragranceForWomen.sort(function(a,b){
             if(a.price<b.price) return 1;
             if(a.price>b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeupfoundationArr);
+        displayTable(fragranceForWomen);
     }
     else if(selected=="Newest"){
-        let x=makeupfoundationArr.sort(function(a,b){
+        let x=fragranceForWomen.sort(function(a,b){
             if(a.date<b.date) return 1;
             if(a.date>b.date) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeupfoundationArr);
+        displayTable(fragranceForWomen);
     }
     else if(selected=="Popularity"){
-        let x=makeupfoundationArr.sort(function(a,b){
+        let x=fragranceForWomen.sort(function(a,b){
             if(a.pop>b.pop) return 1;
             if(a.pop<b.pop) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(makeupfoundationArr);
+        displayTable(fragranceForWomen);
     }
     
  }
@@ -1612,7 +1573,7 @@ checkbox.forEach(element => {
     element.addEventListener("change",myfunction);
 function myfunction(event){
     let x=event.target.value;
-    let y=makeupfoundationArr;
+    let y=fragranceForWomen;
     arr=[];
     y.forEach(ele => {
         if(x===ele.cat){

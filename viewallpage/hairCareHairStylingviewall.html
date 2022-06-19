@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools & Brushes Products</title>
-    <link rel="icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <title>makeup-newarrivals</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -335,6 +334,38 @@
       color: #FF42A3;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
+  #navbars ul li {
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 0px;
+  padding: 0px;
+  display: grid;
+  align-items: center;
+ 
+  text-align: center;
+}
+#navbars>div ul {
+  list-style: none;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+}
+#navbars li:hover .homediv {
+  opacity: 1;
+  color: black;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 200px;
+  left: 0px;
+  padding: 0px 100px;
+  top: 58px;
+ 
+  bottom: 10px;
+  visibility: visible;
+  display: flex;
+  margin-right: 0px;
+}
   #navbar li:hover .homediv {
     opacity: 1;
     color: black;
@@ -638,41 +669,7 @@
         background: #21DFCF;
       color: #21DFCF;
     }
-    #navbars ul li {
-  width: 150px;
-  margin-top: 15px;
-  margin-left: 0px;
-  padding: 0px;
-  display: grid;
-  align-items: center;
- 
-  text-align: center;
 
-}
-/* ++++++++++++++++++++++++++++++++++*/
-#navbars li:hover .homediv {
-  opacity: 1;
-  color: black;
-  background-color: #FFFFFF;
-  display: block;
-  width: 100%;
-  height: 200px;
-  left: 0px;
-  padding: 0px 100px;
-  top: 58px;
- 
-  bottom: 10px;
-  visibility: visible;
-  display: flex;
-  margin-right: 0px;
-}
-/* +++++++++++++ */
-#navbars>div ul {
-  list-style: none;
-  display: flex;
-  font-weight: 700;
-  width: 100%;
-}
 </style>
 </head>
 <body>
@@ -685,7 +682,7 @@
         alt=""
       />
       <p>
-         <span class="material-symbols-outlined"> pin_drop </span> Store
+        | <span class="material-symbols-outlined"> pin_drop </span> Store
         Locator
       </p>
     </div>
@@ -1071,26 +1068,14 @@
             <!-- change as per yorur requirement
             change the value,innertext and in label change innertext -->
             <h3>Category</h3>
-            <div>
-              <input class="rd1" type="radio" value="Eye Brushes" name="category">
-              <label for="Eye Brushes">Eye Brushes</label>
-              </div>
-             <div>
-              <input class="rd1" type="radio" value="Face Brushes" name="category">
-              <label for="Face Brushes">Face Brushes</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Sponge" name="category">
-              <label for="Sponge">Sponge</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Lip Brushes" name="category">
-              <label for="Lip Brushes">Lip Brushes</label>
-             </div>
-             <div>
-              <input class="rd1" type="radio" value="Brush Cleaner" name="category">
-              <label for="Brush Cleaner">Brush Cleaner</label>
-             </div>
+           <div>
+            <input class="rd1" type="radio" value="Hair Styling Products" name="category">
+            <label for="Nail">Hair Styling Products</label>
+            </div>
+           <div>
+            <input class="rd1" type="radio" value="Hair Spray" name="category">
+            <label for="Nail">Hair Spray</label>
+           </div>
         </div>
         <div id="product1">
             <div>
@@ -1354,7 +1339,7 @@
 </html>
 <script>
 //  Keep in mind do not chane the array name according to you
-// just copy paste your array of object AND give the name =>toolsbestSellers
+// just copy paste your array of object AND give the name =>hairCareHairStyling
 // insid your array of objects the keys are 
 // {  img:"",
 //    name:"",
@@ -1365,133 +1350,119 @@
 //    date:"",
 //  },
 
-//Best Sellers
-let toolsbestSellers=[
+let hairCareHairStyling=[
   {
-  img:"https://cdn15.nnnow.com/web-images/medium/styles/8TD6SKRKEP5/1583391378169/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"All-In-One Makeup Sponge",
-  pop:46,
-  price:475,
-  cat:"Sponge",
-  date:4,
-  qty:1
-  },
-  {
-  img:"https://cdn11.nnnow.com/web-images/medium/styles/V3WGKJS6KW8/1583391560342/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Multi-Texture Sponge",
-  pop:62,
-  price:500,
-  cat:"Sponge",
-  date:27,
-  qty:1,
-  },
-  {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/SFJGB37DTO2/1560852958803/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Foundation Brush # 47",
-  pop:49,
-  price:2000,
-  cat:"Face Brushes",
-  date:24,
-  qty:1,
-  },
-  {
-  img:"https://cdn07.nnnow.com/web-images/medium/styles/SZAQ4AGR2OK/1560421515006/1.jpg",
-  name:"ANASTASIA BEVERLY HILLS",
-  description:"Tapered Blending Brush #23A",
-  pop:52,
-  price:2240,
-  cat:"Face Brushes",
-  date:19,
-  qty:1,
-  },
-  {
-  img:"https://cdn05.nnnow.com/web-images/medium/styles/UPN1DIYDEOO/1539585373094/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Advanced Brush Set",
-  pop:69,
-  price:3175,
-  cat:"Face Brushes",
-  date:18,
-  qty:1,
-  },
-  {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/LQGCQXH1YN7/1518007568657/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Bronzer Brush 48",
-  pop:72,
-  price:3550,
-  cat:"Eye Brushes",
-  date:29,
-  qty:1,
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/4TA594MACAP/1585728189786/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Eyelash Curler",
-  pop:58,
-  price:885,
-  cat:"Eye Brushes",
-  date:18,
-  qty:1,
-  },
-  {
-  img:"https://cdn06.nnnow.com/web-images/medium/styles/O1YJQ3LMNO6/1585728189816/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Eyelash Curler",
-  pop:46,
-  price:1770,
-  cat:"Eye Brushes",
+  img:"https://cdn17.nnnow.com/web-images/medium/styles/PSY9GYLUMYU/1634887017760/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Texture Clay Hair Cream",
+  pop:20,
+  price:2340,
+  cat:"Hair Styling Products",
   date:3,
-  qty:1
   },
   {
-  img:"https://cdn02.nnnow.com/web-images/medium/styles/FSKQ5AJQA76/1491888383474/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Precision Crease Brush 17",
-  pop:76,
-  price:1115,
-  cat:"Eye Brushes",
-  date:17,
-  qty:1,
+  img:"https://cdn12.nnnow.com/web-images/medium/styles/QJ2QNWIE87T/1652252637863/1.jpg",
+  name:"OUAI",
+  description:"Wave Spray",
+  pop:45,
+  price:2200,
+  cat:"Hair Spray",
+  date:13,
   },
   {
-  img:"https://cdn18.nnnow.com/web-images/medium/styles/Z4JQV20T2HM/1518073456727/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Bent Liner Brush 23",
-  pop:77,
-  price:2110,
-  cat:"Eye Brushes",
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/5WTNETORKC9/1634886109156/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Perfect Defense",
+  pop:70,
+  price:2700,
+  cat:"Hair Styling Products",
+  date:7,
+  },
+  {
+  img:"https://cdn11.nnnow.com/web-images/medium/styles/NXSX9L9VBBL/1652252632363/1.jpg",
+  name:"OUAI",
+  description:"Matte Pomade",
+  pop:30,
+  price:2400,
+  cat:"Hair Styling Products",
+  date:2,
+  },
+  {
+  img:"https://cdn03.nnnow.com/web-images/medium/styles/FE8NPG7ZIZF/1586865417819/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Luminous Hairspray Extra Strong",
+  pop:60,
+  price:2160,
+  cat:"Hair Spray",
   date:27,
-  qty:1,
   },
   {
-  img:"https://cdn11.nnnow.com/web-images/medium/styles/T5HJJAPLWBM/1491393102208/1.jpg",
-  name:"SEPHORA COLLECTION",
-  description:"Pro Flawless Airbrush 56",
-  pop:89,
-  price:1735,
-  cat:"Lip Brushes",
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/644ZRGY12NH/1652252610548/1.jpg",
+  name:"OUAI",
+  description:"Finishing Crème",
+  pop:65,
+  price:2400,
+  cat:"Hair Styling Products",
+  date:22,
+  },
+  {
+  img:"https://cdn07.nnnow.com/web-images/medium/styles/4Y2H758XO93/1634886109115/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Molding Hair Cream",
+  pop:21,
+  price:2160,
+  cat:"Hair Styling Products",
+  date:7,
+  },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/W51E0I7CNW1/1634886962106/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Luminous Hairspray Strong",
+  pop:45,
+  price:2160,
+  cat:"Hair Spray",
+  date:10,
+  },
+  {
+  img:"https://cdn19.nnnow.com/web-images/medium/styles/X1XO2C0IMAC/1634886167233/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Luminous Hairspray Strong",
+  pop:65,
+  price:2700,
+  cat:"Hair Styling Products",
   date:17,
-  qty:1
   },
   {
-  img:"https://cdn03.nnnow.com/web-images/medium/styles/VTDCZ7YJD7V/1495780516953/1.jpg",
-  name:"LUNATM Mini 2 Facial Cleansing Device",
-  description:"All Skin Types",
-  pop:57,
-  price:2000,
-  cat:"Brush Cleaner",
-  date:15,
-  qty:1,
+  img:"https://cdn00.nnnow.com/web-images/medium/styles/V73BE2NW20M/1652252643744/1.jpg",
+  name:"OUAI",
+  description:"Volume Spray",
+  pop:25,
+  price:2700,
+  cat:"Hair Spray",
+  date:9,
   },
-];
- 
- displayTable(toolsbestSellers);
- function displayTable(toolsbestSellers){
-    toolsbestSellers.forEach(element => {
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/VF7GS6611AY/1634886962122/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Thickening Lotion",
+  pop:54,
+  price:2340,
+  cat:"Hair Spray",
+  date:8,
+  },
+  {
+  img:"https://cdn09.nnnow.com/web-images/medium/styles/A6CPZPO5HOS/1634887756893/1.jpg",
+  name:"MOROCCANOIL",
+  description:"Hydrating Styling Hair Cream",
+  pop:8,
+  price:2700,
+  cat:"Hair Styling Products",
+  date:16,
+  },
+]; 
+displayTable(hairCareHairStyling);
+function displayTable(hairCareHairStyling){
+    hairCareHairStyling.forEach(element => {
     let div=document.createElement("div");
     let img=document.createElement("img");
     img.setAttribute("src",element.img)
@@ -1558,43 +1529,43 @@ let toolsbestSellers=[
  function changefunction(){
     let selected=document.querySelector("#sort").value;
     if(selected==" "){
-        displayTable(toolsbestSellers);
+        displayTable(hairCareHairStyling);
     }
     else if(selected=="lowtohigh"){
-        let x=toolsbestSellers.sort(function(a,b){
+        let x=hairCareHairStyling.sort(function(a,b){
             if(a.price>b.price) return 1;
             if(a.price<b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsbestSellers);
+        displayTable(hairCareHairStyling);
     }
     else if(selected=="hightolow"){
-        let x=toolsbestSellers.sort(function(a,b){
+        let x=hairCareHairStyling.sort(function(a,b){
             if(a.price<b.price) return 1;
             if(a.price>b.price) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsbestSellers);
+        displayTable(hairCareHairStyling);
     }
     else if(selected=="Newest"){
-        let x=toolsbestSellers.sort(function(a,b){
+        let x=hairCareHairStyling.sort(function(a,b){
             if(a.date<b.date) return 1;
             if(a.date>b.date) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsbestSellers);
+        displayTable(hairCareHairStyling);
     }
     else if(selected=="Popularity"){
-        let x=toolsbestSellers.sort(function(a,b){
+        let x=hairCareHairStyling.sort(function(a,b){
             if(a.pop>b.pop) return 1;
             if(a.pop<b.pop) return -1;
             return 0;
         });
         document.querySelector("#product2").innerHTML="";
-        displayTable(toolsbestSellers);
+        displayTable(hairCareHairStyling);
     }
     
  }
@@ -1604,7 +1575,7 @@ checkbox.forEach(element => {
     element.addEventListener("change",myfunction);
 function myfunction(event){
     let x=event.target.value;
-    let y=toolsbestSellers;
+    let y=hairCareHairStyling;
     arr=[];
     y.forEach(ele => {
         if(x===ele.cat){
